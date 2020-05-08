@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  8 MAY 2020 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  8 MAY 2020 14:38
 entering extended mode
 **c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
 (c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
@@ -642,7 +642,7 @@ Overfull \hbox (9.6339pt too wide) in paragraph at lines 4--5
 \T1/txr/m/n/12 na pod-zbio-rze j[]zyka Ja-va-Script. JSON prze-cho-wu-je da-ne okre-±lo-ne przez stan-dard ECMA-
  []
 
-<./img/rysunek_1.png, id=139, 505.89pt x 505.13719pt>
+<./img/rysunek_1.png, id=129, 505.89pt x 505.13719pt>
 File: ./img/rysunek_1.png Graphic file (type png)
 <use ./img/rysunek_1.png>
 Package pdftex.def Info: ./img/rysunek_1.png  used on input line 24.
@@ -658,29 +658,29 @@ Overfull \hbox (8.27989pt too wide) in paragraph at lines 43--46
 \T1/txr/m/n/12 50.0.26661.102m. Naj-now-sza wer-sja chro-me, w cza-sie pi-sa-nia te-go tek-stu, to wer-sja \T1/txr/m/it/12 80.0.3987.16
  []
 
-<./img/rysunek_2.png, id=161, 606.76688pt x 392.96812pt>
+<./img/rysunek_2.png, id=151, 606.76688pt x 392.96812pt>
 File: ./img/rysunek_2.png Graphic file (type png)
 <use ./img/rysunek_2.png>
 Package pdftex.def Info: ./img/rysunek_2.png  used on input line 51.
 (pdftex.def)             Requested size: 341.43306pt x 221.12796pt.
-<./img/rysunek_3.png, id=165, 606.76688pt x 400.49625pt>
+<./img/rysunek_3.png, id=155, 606.76688pt x 400.49625pt>
 File: ./img/rysunek_3.png Graphic file (type png)
 <use ./img/rysunek_3.png>
 Package pdftex.def Info: ./img/rysunek_3.png  used on input line 61.
 (pdftex.def)             Requested size: 341.43306pt x 225.36414pt.
 [6 <./img/rysunek_1.png>]
-<./img/rysunek_4.png, id=179, 478.03593pt x 297.36093pt>
+<./img/rysunek_4.png, id=169, 478.03593pt x 297.36093pt>
 File: ./img/rysunek_4.png Graphic file (type png)
 <use ./img/rysunek_4.png>
 Package pdftex.def Info: ./img/rysunek_4.png  used on input line 71.
 (pdftex.def)             Requested size: 341.43306pt x 212.38458pt.
  [7 <./img/rysunek_2.png> <./img/rysunek_3.png>] [8 <./img/rysunek_4.png>]
-<./img/rysunek_5.png, id=201, 665.48625pt x 264.23718pt>
+<./img/rysunek_5.png, id=191, 665.48625pt x 264.23718pt>
 File: ./img/rysunek_5.png Graphic file (type png)
 <use ./img/rysunek_5.png>
 Package pdftex.def Info: ./img/rysunek_5.png  used on input line 113.
 (pdftex.def)             Requested size: 341.43306pt x 135.56958pt.
-<./img/rysunek_6.png, id=205, 657.2053pt x 252.19218pt>
+<./img/rysunek_6.png, id=195, 657.2053pt x 252.19218pt>
 File: ./img/rysunek_6.png Graphic file (type png)
 <use ./img/rysunek_6.png>
 Package pdftex.def Info: ./img/rysunek_6.png  used on input line 124.
@@ -697,20 +697,26 @@ Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is usel
 
  (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\praktyczna.tex
 Rozdzia\PlPrIeC {\l } 3.
-LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 12.
-
-Overfull \hbox (3.80002pt too wide) in paragraph at lines 12--12
-[]  $[]$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--12
-
- []
-
-LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 12.
+<./img/rysunek_7.png, id=216, 758.835pt x 381.3447pt>
+File: ./img/rysunek_7.png Graphic file (type png)
+<use ./img/rysunek_7.png>
+Package pdftex.def Info: ./img/rysunek_7.png  used on input line 6.
+(pdftex.def)             Requested size: 341.43306pt x 171.58606pt.
+<./img/rysunek_8.png, id=217, 706.5597pt x 758.835pt>
+File: ./img/rysunek_8.png Graphic file (type png)
+<use ./img/rysunek_8.png>
+Package pdftex.def Info: ./img/rysunek_8.png  used on input line 13.
+(pdftex.def)             Requested size: 341.43306pt x 366.70297pt.
+<./img/rysunek_9.png, id=218, 758.835pt x 466.1415pt>
+File: ./img/rysunek_9.png Graphic file (type png)
+<use ./img/rysunek_9.png>
+Package pdftex.def Info: ./img/rysunek_9.png  used on input line 20.
+(pdftex.def)             Requested size: 341.43306pt x 209.74039pt.
+<./img/rysunek_10.png, id=219, 529.7391pt x 111.5367pt>
+File: ./img/rysunek_10.png Graphic file (type png)
+<use ./img/rysunek_10.png>
+Package pdftex.def Info: ./img/rysunek_10.png  used on input line 27.
+(pdftex.def)             Requested size: 341.43306pt x 71.8904pt.
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 96.
@@ -718,7 +724,7 @@ Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is usel
 [12
 
 
-]
+ <./img/rysunek_7.png> <./img/rysunek_8.png>] [13 <./img/rysunek_9.png> <./img/rysunek_10.png>]
 \openout2 = `podsumowanie.aux'.
 
  (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\podsumowanie.tex
@@ -727,7 +733,7 @@ Rozdzia\PlPrIeC {\l } 4.
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 98.
 
-[13
+[14
 
 
 
@@ -769,7 +775,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 74.
 
-[14
+[15
 
 
 
@@ -784,7 +790,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--132
 [][][]$\T1/txtt/m/n/12 https : / / developer . mozilla . org / en-[]US / docs / Learn / Common _ questions /
  []
 
-[15]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 194--195
 [][][]$\T1/txtt/m/n/12 https : / / www . selenium . dev / documentation / en / introduction / the _ selenium _
  []
@@ -794,7 +800,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--214
 [][][]$\T1/txtt/m/n/12 https : / / developer . mozilla . org / en-[]US / docs / Web / JavaScript / Memory _
  []
 
-[16]) [17]
+[17]) [18]
 \openout2 = `spis.aux'.
 
  (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\spis.tex (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.lof)
@@ -805,7 +811,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 103.
 
-[18
+[19
 
 
 
@@ -856,7 +862,7 @@ Underfull \hbox (badness 6575) in paragraph at lines 54--54
 []\T1/txr/m/n/12 Tytuª pra-cy dy-plo-mo-wej:  Ana-li-za po-rów-naw-cza no-wo-cze-snych
  []
 
-[19
+[20
 
 
 
@@ -917,33 +923,37 @@ Overfull \hbox (8.2079pt too wide) in paragraph at lines 54--61
 \T1/txr/m/n/12 orze-cze-nia przez komisj[] dyscyplinarn[] oraz zªo-»e-nie za-wia-do-mie-nia o po-peª-nie-niu przest[]pstwa. 
  []
 
-[20
+[21
 
 
 
 
 ])
+
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 30.
+See the caption package documentation for explanation.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
- (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.aux (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\front.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\wstep.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\przegladowa.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\praktyczna.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\podsumowanie.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\bibliografia.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\spis.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\Oswiadczenie_udostepnienie.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\Oswiadczenie_autorskie.aux))
+(c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.aux (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\front.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\wstep.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\przegladowa.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\praktyczna.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\podsumowanie.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\bibliografia.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\spis.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\Oswiadczenie_udostepnienie.aux) (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\Oswiadczenie_autorskie.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `all.out' has not changed.
-(rerunfilecheck)             Checksum: 037F19FF69F8741723FF8542E768A6FB;3285.
+(rerunfilecheck)             Checksum: 81399104AC0173945D7D786BA3A5C91E;3185.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 15957 strings out of 480930
- 234115 string characters out of 2909548
- 496913 words of memory out of 3000000
- 31368 multiletter control sequences out of 15000+200000
- 642109 words of font info for 185 fonts, out of 3000000 for 9000
+ 15737 strings out of 480930
+ 232640 string characters out of 2909548
+ 486235 words of memory out of 3000000
+ 31164 multiletter control sequences out of 15000+200000
+ 635933 words of font info for 179 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,15n,49p,809b,1101s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,15n,49p,809b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (21 pages, 452646 bytes).
+Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (22 pages, 7149511 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
- 199 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 203 words of extra memory for PDF output out of 10000 (max. 10000000)
 
