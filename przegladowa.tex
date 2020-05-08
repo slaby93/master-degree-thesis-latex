@@ -97,3 +97,37 @@ Tak więc jesteśmy w stanie otrzymać informacje o wydajności ładowania aplik
 jednak narzędzie w żaden sposób nie wspiera pomiarów działania aplikacji po etapie ładowania, a właśnie na tym skupia się ta praca.
 
 \subsection{Porównanie narzędzi do tworzenia aplikacji typu SPA na przykładzie Angular2 i React}
+
+Praca Pań Jadwiga Kalinowska oraz Beata Pańczyk \cite{polibuda} także ma na celu porównanie aplikacja typu SPA, tym razem Angular2 oraz React.
+Autorzy przedstawiają szereg metryk według których porównywać będą obydwa narzędzia.
+Pierwszą metryką jest sama struktura aplikacji czyli jak wygląda architektura wewnętrzna rozpatrywanego frameworka.
+I jak autorki trafnie zauważają, obydwa rozwiązania czerpią garściami z nowoczesnej szkoły tworzenia wysoce skalowalnych i wydajnych rozwiązań implementując naturę tworzenia złożonych aplikacji z małych komponentów.
+Z komponentów takich składamy coraz to większą i bardziej złożoną aplikację.
+Drugą metryką rozpatrywaną przez autorki jest metryka kodu przedstawiona na rysunku \ref{fig:rysunek_5}.
+Innymi słowy, jak wiele kodu boilerplate należy napisać, aby osiągnąć ten sam efekt.
+Ma to wpływ przede wszystkim na końcowy rozmiar pliku który należy przesłać pomiędzy serwerem a klientem.
+Im niższa wartość, tym lepiej.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_5.png}
+    \caption{Porównanie metryk kodu dla pojedynczego komponentu \cite{polibuda}}
+    \label{fig:rysunek_5}
+\end{figure}
+
+Wnioskiem płynącym z otrzymanych danych jest fakt, iż React jest finalnie znacznie mniejszym frameworkiem co bezpośrednie redukuje koszt wytworzenia oraz utrzymania kodu.
+Ostatnim interesującym punktem jest metryka badająca bezpośrednią wydajność aplikacji przedstawiona na rysunku \ref{fig:rysunek_6}.
+Badanie miało na celu zmierzenie czasu, jaki potrzebny jest aby pobrać rekordy z przygotowanej bazy danych.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_6.png}
+    \caption{Porównanie czasów pobrania danych z bazy \cite{polibuda}}
+    \label{fig:rysunek_6}
+\end{figure}
+
+Interesującym wynikiem jest fakt, iż React w przeglądarce Google Chrome dla 1,5 oraz 10 wyników otrzymał bardzo zbliżone czasy bliskie błędowi pomiaru.
+Jednak im większa liczba rekordów pobrana z bazy, tym większą przewagę osiągał React. 
+Wszystkie metryki które zostały zastosowane podczas porównania dobrze obrazują różnicę pomiędzy tymi rozwiązaniami, ale tylko w ujęciu wysoko poziomowym.
+Badanie zawiera w sobie serwer WWW oraz bazę danych, których czasy stanowią znaczną część czasu uzyskanego w wynikach.
+Nie pozwala to nam na jednoznaczne stwierdzenie, które narzędzie jest wydajniejsze, gdyż wykonano tylko jedno badanie, które nie pozwala na ocenę tych narzędzi pod kątem różnych przypadków użycia.
