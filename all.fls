@@ -299,7 +299,6 @@ INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\txexa.t
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\txexa.tfm
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\t1xr.tfm
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\t1xb.tfm
-OUTPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.toc
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\vf\public\txfonts\t1xb.vf
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\rtxptmb.tfm
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\rtxb.tfm
@@ -312,6 +311,11 @@ INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\rtxr.tf
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\vf\public\txfonts\t1xb.vf
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\rtxptmb.tfm
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\rtxb.tfm
+OUTPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.toc
+INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\t1xr.tfm
+INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\vf\public\txfonts\t1xr.vf
+INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\rtxptmr.tfm
+INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\rtxr.tfm
 OUTPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\wstep.aux
 INPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\wstep.tex
 INPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\wstep.tex
@@ -320,10 +324,6 @@ INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\t1xb.tf
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\vf\public\txfonts\t1xb.vf
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\rtxptmb.tfm
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\rtxb.tfm
-INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\t1xr.tfm
-INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\vf\public\txfonts\t1xr.vf
-INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\rtxptmr.tfm
-INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\rtxr.tfm
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\t1xr.tfm
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\t1xb.tfm
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\vf\public\txfonts\t1xb.vf
