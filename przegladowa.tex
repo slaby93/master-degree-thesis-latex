@@ -1,39 +1,86 @@
 \chapter{Część przeglądowa}
 
-\section{Przykładowa sekcja}
+\begin{itemize}
+	\item JSON \cite{JSON} (JavaScript Object Notation) - jest to tekstowy format wymiany danych, bazującym na podzbiorze języka JavaScript. JSON przechowuje dane określone przez standard ECMA-262 3-cia edycja - Grudzień 1999.
+	\item Transpilacja \cite{Transpilator} - Transpilatory lub kompilatory typu źródło-źródło to narzędzia, które odczytują kod źródłowy napisany w jednym języku programowania i wytwarzają równoważny kod w innym języku. Języki, które piszesz, które są transpilowane na JavaScript, są często nazywane językami kompilacji do JS i mówi się, że są ukierunkowane na JavaScript.
+	\item SPA \cite{SPA} (także Single Page Application) - jednostronna aplikacja internetowa, czyli taka, która posiada tylko jeden plik HTML. Taka aplikacja nie przeładowuje strony w trakcie użytkowania. Może w tym celu korzystać z technologii AJAX lub innych dostępnych w przeglądarkach internetowych. Logika aplikacji SPA napisana jest w JavaScript lub w języku transpilowanym do języka JavaScript Framework.
+\end{itemize}
 
 
-\subsection{Przykładowa subsekcja}
-Quia ipsam non animi placeat amet sed. Cumque aut ratione velit expedita occaecati rerum qui. Cumque aut et quo repellat. Dolorem minima molestiae accusamus laboriosam qui. Neque quam qui natus optio quae. Przykładowy Refferal do obrazka nr \ref{fig:przykladowy-obrazek}.
+\section{Słowniczek Pojęć}
 
-\begin{figure}[ht]
-        \centering
-        \includegraphics[width=16cm]{rysunek_1.png}
-        \caption{Grafika przedstawiająca ocenę wpływu wybranego elementu na atrakcyjność danego narzędzia}
-        \label{fig:rysunek_1}
+\section{Przegląd prac o podobnej tematyce}
+
+W części tej zajmiemy się przeglądem dostępnych rozwiązań oraz prac dotyczących pomiaru wydajności aplikacji internetowych z naciskiem na aplikacje typu SPA.
+
+\subsection{Comparison of Single-Page Application Frameworks}
+
+Pierwszą pozycją jest praca autorstwa Pan Eric'a Molina z instytutu KTH Royal Institute of Technology w Sztokholmie \cite{Molin}.
+Autor stara się porównać frameworki na pełnej płazczyźnie ich złożoności.
+W jego pracy znaleźć możemy pełen spis kryteriów oceny frameworków wraz z wagami przypisanymi do cech określonymi za pomocą wywiadu środowiskowego jaki autor przeprowadził na grupie 10 profesjonalnych deweloperów mających doświadczenie w tych zagadnieniach przedstawionych na rysunku \ref{fig:rysunek_1}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_1.png}
+    \caption{Grafika przedstawiająca ocenę wpływu wybranego elementu na atrakcyjność danego narzędzia \cite{Molin}}
+    \label{fig:rysunek_1}
 \end{figure}
 
-\newpage
 
-\section{Druga sekcja}
-Quia ipsam non animi placeat amet sed. Cumque aut ratione velit expedita occaecati rerum qui. Cumque aut et quo repellat. Dolorem minima molestiae accusamus laboriosam qui. Neque quam qui natus optio quae. Przykładowy Refferal do obrazka nr \ref{table:przykladowa-tabela}.
 
-\begin{table}[htb]
-	\centering
-	\caption{Przykładowa tabela}
-	\label{table:przykladowa-tabela}
 
-    \begin{tabular}{| l | l |}
-    \hline
-    Nazwa komponentu & Licencja \\ \hline
-    Graylog 2.5 & GNU General Public License v3 \\ \hline
-    MongoDB 3.4 & GNU Affero General Public License v3 \\ \hline
-    Elasticsearch 6.5.1 & Elastic License \cite{elastic-license} \\ \hline
-    rsyslog 8.24.0 & GNU General Public License v3  \\ \hline
-    NXLog CE 2.10.2150& NXLog Public License  \\ \hline
-    Docker 18.09.1 & Apache License 2.0  \\
-    \hline
-    \end{tabular}
-\end{table}
+W pracy tej, porównywanymi frameworkami są AngularJS, Angular2 oraz React.
+I tutaj wyróżnić możemy już pierwsze różnice pomiędzy pracami. Praca Pana Molina została wykonana w 2016 roku.
+JavaScript jest jednym z najszybciej rozwijających  się oraz najczęściej spotykanych technologii webowych na świecie \cite{octoverse}.
+Przez okres 4 lat, firmy masowo porzuciły technologie AngularJS na rzecz Angular 2 oraz Reacta.
+Dodatkowo, w między czasie do wyścigu dołączył Vue.Js \cite{vue}.
+Przez ten okres, także implementacja tychże rozwiązań znacznie dojrzała.
+Angular z wersji 2 ewoluował już do wersji 9 \cite{angular-changelog}.
+Także React ewoluował z wersji 0.14.8 (użyta w pracy  Pana Molina) do wersji 16.13.1 \cite{react-changelog}.
+Najważniejszą zmianą którą należy tutaj wspomnieć jest zmiana silnika reacta nosząca nazwę React Fiber która nastąpiła w wersji 16.0.0.
+Był to kamień milowy, i z punktu widzenia badania wydajności, jest to całkowicie nowe rozwiązanie. 
 
-\newpage
+Następną sekcją która jest dla nas interesująca jest sekcja 5.2 w której autor prezentuje wyniki swoich testów.
+Wartym zauważenia jest wersja przeglądarki chrome, która wynosi 50.0.26661.102m.
+Najnowsza wersja chrome, w czasie pisania tego tekstu, to wersja \textit{80.0.3987.16} czyli aż o 30 wersji nowszej. 
+
+W pierwszym teście, autor porównuje wydajność pomiędzy rozwiązaniami na przykładzie ładowania elementów od 10 aż do 5000 przedstawionym na rysunku \ref{fig:rysunek_2}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_2.png}
+    \caption{Grafika przedstawiająca wzrost czasu ładowania elementów od 10 do 5000 przy użyciu AngularJS Angular2 oraz React \cite{Molin}}
+    \label{fig:rysunek_2}
+\end{figure}
+
+Z badania tego, możemy zauważyć jak bardzo AngularJS różni się od pozostałych, nowszych rozwiązań. Do pierwszych 100 elementów, wyniki są zbliżone, natomiast powyżej tej wartości, mamy nagłą zmianę stopnia nachylenia funkcji. Przyczyną takiego zachowania jest fakt, iż AngularJS nigdy nie był zoptymalizowany dla takich przypadków użycia podczas, gdy React oraz Angular2 już tak.
+W drugim teście, autor bada czas potrzebny do załadowania określonej ilości elementów. Wyniki przedstawiono na rysunku \ref{fig:rysunek_3}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_3.png}
+    \caption{Grafika przedstawiająca wykres zależności czasu do ilości edytowanych elementów na stronie \cite{Molin}}
+    \label{fig:rysunek_3}
+\end{figure}
+
+Widzimy znaczną dysproporcję pomiędzy każdym z rozwiązań. Z jednej strony AngularJS przypomina funkcję wykładniczą gdzie po przeciwnej stronie Angular2 zachowuje się jak funkcja liniowa. Pokazuje to jak bardzo istotne zmiany zaszły pomiędzy zmianą generacji oraz wpływ doświadczenia jakie zebraliśmy w okresie panowania frameworka AngularJS. Wszak AngularJS był pierwszym podejściem do generycznego narzędzia dla dynamicznych aplikacji internetowych.
+W ostatnim teście wydajnościowym, autor porównuje czas ładowania się aplikacji. Wyniki przedstawiono na rysunku \ref{fig:rysunek_4}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_4.png}
+    \caption{Grafika przedstawiająca wykres czasu ładowania aplikacji \cite{Molin}}
+    \label{fig:rysunek_4}
+\end{figure}
+
+O ile autor faktycznie porównuje wydajność rozwiązań, nie określa on w sposób klarowny jak zaimplementowano mechanizm dodawania oraz aktualizacji elementów w pierwszym oraz drugim teście.
+Są to informacje bardzo istotne, gdyż każdy z frameworków działa w inny sposób, i ma to bezpośredni wpływ na otrzymane wyniki.
+Dodatkowo, autor nie podaje błędu pomiaru \cite{probalistyka} który wyznaczył podczas przeprowadzania badania.
+Jest to bardzo istotna informacja, gdyż frameworki takie opierają się na całej piramidzie warstw oprogramowania które współdzielą zasoby komputera z innymi procesami.
+Ponadto auto nie zastosował żadnej warstwy abstrakcji nad systemem operacyjnym co powoduje, że wyniki mogą znacząco różnić się pomiędzy różnymi wersjami systemu.
+
+\subsection{Lighthouse}
+
+
+
+\subsection{Porównanie narzędzi do tworzenia aplikacji typu SPA na przykładzie Angular2 i React}
