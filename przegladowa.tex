@@ -81,6 +81,19 @@ Ponadto auto nie zastosował żadnej warstwy abstrakcji nad systemem operacyjnym
 
 \subsection{Lighthouse}
 
+Jest to narzędzie open-source stworzone przez firmę Google do badania wydajności stron internetowych oraz aplikacji webowych \cite{lighthouse}. Jest ono integralną częścią przeglądarki Chrome, tak więc jest ono niezwykle łatwe w użytkowaniu. Narzędzie to pozwala nam na ocenę naszej aplikacji w kilku wybranych kategoriach w tym wydajności. Dodatkowo, narzędzie pozwala nam na określenie trybu badania gdzie do wyboru mamy tryb mobilny oraz tryb użytkownika komputera domowego. Ma to bardzo duży wpływ na wynik testu, gdyż wydajność urządzeń mobilnych jest z reguły bardzo ograniczona w porównaniu do pełnoprawnej platformy domowej. Metrykami jakie możemy otrzymać to:
+\begin{itemize}
+	\item Czas rozpoczęcia pierwszego renderowania
+	\item Czas gdy strona faktycznie została wyrenderowana w całości
+	\item Indeks szybkości - czas, gdy główna treść strony została wyrenderowana
+	\item Czas do interakcji - czyli czas, gdy użytkownik faktycznie może zacząć interakcję ze stroną
+\end{itemize}
 
+Jednak o ile informacje te są jak najbardziej przydatne z punktu widzenia ładowania strony,
+narzędzie to nie jest w stanie określić faktycznego czasu interakcji ze stroną.
+Wpływ na taki czas ma wiele czynników z których najważniejszym jest ilość elementów na stronie.
+Jest to istotne, gdyż JavaScript jest językiem jednowątkowym z mechanizmem event loop \cite{you-dont-know-js}.
+Tak więc jesteśmy w stanie otrzymać informacje o wydajności ładowania aplikacji przez przeglądarkę,
+jednak narzędzie w żaden sposób nie wspiera pomiarów działania aplikacji po etapie ładowania, a właśnie na tym skupia się ta praca.
 
 \subsection{Porównanie narzędzi do tworzenia aplikacji typu SPA na przykładzie Angular2 i React}

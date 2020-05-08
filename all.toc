@@ -9,13 +9,13 @@
 \contentsline {section}{\numberline {2.2}Przegląd prac o podobnej tematyce}{5}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Comparison of Single-Page Application Frameworks}{5}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Lighthouse}{8}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Porównanie narzędzi do tworzenia aplikacji typu SPA na przykładzie Angular2 i React}{8}{subsection.2.2.3}%
-\contentsline {part}{\hspace {1em}Część praktyczna}{9}{part.2}%
-\contentsline {chapter}{\numberline {3}Część praktyczna}{10}{chapter.3}%
-\contentsline {section}{\numberline {3.1}}{10}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}}{10}{subsection.3.1.1}%
-\contentsline {chapter}{\numberline {4}Podsumowanie}{11}{chapter.4}%
-\contentsline {chapter}{Bibliografia}{12}{section*.6}%
-\contentsline {chapter}{Spis rysunków}{16}{section*.8}%
-\contentsline {chapter}{Oświadczenie o udostępnianiu pracy dyplomowej}{17}{chapter*.9}%
-\contentsline {chapter}{Oświadczenie autorskie}{18}{chapter*.9}%
+\contentsline {subsection}{\numberline {2.2.3}Porównanie narzędzi do tworzenia aplikacji typu SPA na przykładzie Angular2 i React}{9}{subsection.2.2.3}%
+\contentsline {part}{\hspace {1em}Część praktyczna}{10}{part.2}%
+\contentsline {chapter}{\numberline {3}Część praktyczna}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}}{11}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}}{11}{subsection.3.1.1}%
+\contentsline {chapter}{\numberline {4}Podsumowanie}{12}{chapter.4}%
+\contentsline {chapter}{Bibliografia}{13}{section*.6}%
+\contentsline {chapter}{Spis rysunków}{17}{section*.8}%
+\contentsline {chapter}{Oświadczenie o udostępnianiu pracy dyplomowej}{18}{chapter*.9}%
+\contentsline {chapter}{Oświadczenie autorskie}{19}{chapter*.9}%
