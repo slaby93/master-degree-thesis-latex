@@ -176,6 +176,53 @@ Pozwala to na wyrenderowanie tylko tych elementów, które różnią się międz
 Znając już konkretny problem, z którym aplikacje SPA muszą się mierzyć, postanowiono zaprojektować szereg akcji manipulujących listą elementów oraz zbadać, ile czasu zajmie konkretnego frameworkowi wykonanie takiej czynności.
 
 \subsection{Budowa aplikacji}
+
+Każda aplikacja będzie składać się z szeregu przycisków. W wewnętrznym stanie aplikacji, będziemy trzymać listę wartości do wyrenderowania. Wartości które będziemy renderować będą stringiem o długości 10 znaków. Proces zmiany aplikacji prezentuję na poniższym rysunku.
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_13.png}
+    \caption{Ilustracja mechanizmu przebiegu badania}
+    \label{fig:rysunek_13}
+\end{figure}
+
+Na początku stan wewnętrzny aplikacji będzie pustą tablicą. Spowoduje to wyrenderowanie stanu minimalnego, czyli bloku <ul>.
+Akcja naciśnięcia przycisku spowoduje wygenerowanie 250 wpisów zawierających wylosowane alfanumeryczne wartości. Wartości te muszą być, w miarę możliwości unikatowe.
+Zmiana stanu z kolei spowoduje ponowne wyrenderowanie komponentu wyświetlającego listę. Kolejne akcje będą działać w myśl tej samej zasady.
+
+Na rysunku poniżej przedstawiam listę akcji jakie aplikacja musi implementować:
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_14.png}
+    \caption{Grafika przedstawiająca zaimplementowane przyciski w aplikacji}
+    \label{fig:rysunek_14}
+\end{figure}
+
+\begin{itemize}
+    \item \emph{Append 250 rows start} - dodaj 250 wierszy na początku listy.
+    \item \emph{Append 250 rows end} - dodaj 250 wierszy na końcu listy.
+    \item \emph{Replace all rows} - wygeneruj na nowo pełną listę wartości
+    \item \emph{Update N rows} - wybierz losowo 250 wierszy i zaktualizuj ich wartości
+    \item \emph{Swap rows} - zamień miejscami 2 wiersze
+    \item \emph{Remove row} - usuń jeden wiesz
+    \item \emph{Clear rows} - usuń wszystkie wiersze
+\end{itemize}
+
+Na początku części praktycznej wprowadzono definicję akcji aplikacji. Widzimy tutaj, iż samo przyciśnięcie przycisku dodania aplikacji nie jest wystarczające, gdyż przed wyrenderowaniem listy musimy wygenerować listę wpisów.
+Renderowanie aplikacji także jest nie deterministyczne, i wpływ na nie ma szereg czynników niezależnych od przeglądarki.
+Spowoduje to znaczne różnice w wynikach pomiaru czasu akcji aplikacji, z tego też powodu istotnym jest upewnienie się, iż kolejne iteracje badania są od siebie możliwie niezależne.
+
+Ostatnim elementem składającym się na aplikację jest jej infrastruktura. Każda aplikacja tworzona jest w całkowicie inny sposób, dlatego istotnym jest, aby ujednolicić proces budowania i pakowania plików wynikowych.
+Z racji tego, każda aplikacja musi posiadać w sobie plik Makefile \cite{gnu-makefile} z dwoma możliwymi celami:
+
+\begin{itemize}
+    \item install
+    \item Production
+\end{itemize}
+
+Cel \emph{install} jak sama nazwa wskazuje, przygotuje folder \emph{node\_modules} zawierający pobrane biblioteki z platformy NPM \cite{npm}
+Drugi cel \emph{production} zajmie się procesem pakowania aplikacji i optymalizacji kodu w celach produkcyjnych \cite{react-perf}.
+
 \subsection{Przygotowanie aplikacji do badania}
 \subsection{Konteneryzacja aplikacji}
 \subsection{Moduł badania}
@@ -192,208 +239,187 @@ Znając już konkretny problem, z którym aplikacje SPA muszą się mierzyć, po
 \subsection{Usunięcie wszystkich wierszy}
 
 
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_15.png}
+%     \caption{Ilustracja procesu przygotowania aplikacji do konteneryzacji}
+%     \label{fig:rysunek_15}
+% \end{figure}
 
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_16.png}
+%     \caption{Ilustracja przedstawiająca warstwy składające się na  przykładowy obraz dockera}
+%     \label{fig:rysunek_16}
+% \end{figure}
 
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_17.png}
+%     \caption{Grafika przedstawiająca plik index.html wraz z dostępnymi aplikacjami do badania}
+%     \label{fig:rysunek_17}
+% \end{figure}
 
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_18.png}
+%     \caption{Ilustracja mechanizmu działania strony statycznej na przykładzie aplikacji kalendarza przy użyciu języka PHP}
+%     \label{fig:rysunek_18}
+% \end{figure}
 
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_19.png}
+%     \caption{Grafika przedstawiająca proces przeładowania strony statycznej}
+%     \label{fig:rysunek_19}
+% \end{figure}
 
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_20.png}
+%     \caption{Ilustracja procesu ładowania aplikacji oraz zdarzenia rejestrowane przez przeglądarkę}
+%     \label{fig:rysunek_20}
+% \end{figure}
 
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_21.png}
+%     \caption{Ilustracja mechanizmu zmiany daty w przypadku aplikacji dynamicznej}
+%     \label{fig:rysunek_21}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_13.png}
-    \caption{Ilustracja mechanizmu przebiegu badania}
-    \label{fig:rysunek_13}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_22.png}
+%     \caption{Ilustracja przedstawiająca proces zmiany treści strony w przypadku aplikacji dynamicznej}
+%     \label{fig:rysunek_22}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_14.png}
-    \caption{Grafika przedstawiająca zaimplementowane przyciski w aplikacji}
-    \label{fig:rysunek_14}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_23.png}
+%     \caption{Ilustracja procesu współpracy pomiędzy Selenium a przeglądarką}
+%     \label{fig:rysunek_23}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_15.png}
-    \caption{Ilustracja procesu przygotowania aplikacji do konteneryzacji}
-    \label{fig:rysunek_15}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_24.png}
+%     \caption{Wycinek wpisów skryptu przeprowadzającego badanie w środowisku docker-compose. Ilustruje on inicjalizację skryptu oraz mechanizm uzyskiwania połączenia pomiędzy Skryptem - Przeglądarką - Selenium}
+%     \label{fig:rysunek_24}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_16.png}
-    \caption{Ilustracja przedstawiająca warstwy składające się na  przykładowy obraz dockera}
-    \label{fig:rysunek_16}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_25.png}
+%     \caption{Wycinek skryptu ukazujący uzyskanie połączenia do Selenium pomimo początkowych problemów}
+%     \label{fig:rysunek_25}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_17.png}
-    \caption{Grafika przedstawiająca plik index.html wraz z dostępnymi aplikacjami do badania}
-    \label{fig:rysunek_17}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_26.png}
+%     \caption{Grafika przedstawia rozpoczęcie badania}
+%     \label{fig:rysunek_26}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_18.png}
-    \caption{Ilustracja mechanizmu działania strony statycznej na przykładzie aplikacji kalendarza przy użyciu języka PHP}
-    \label{fig:rysunek_18}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_27.png}
+%     \caption{Grafika przedstawia skrypt zakańczający badanie po zapisaniu zebranych danych na dysk - widzimy, że ważnym elementem jest zamknięcie połączenia do Selenium}
+%     \label{fig:rysunek_27}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_19.png}
-    \caption{Grafika przedstawiająca proces przeładowania strony statycznej}
-    \label{fig:rysunek_19}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_28.png}
+%     \caption{Ilustracja struktury wyniku badania na które zostanie poddane dalszej obróbce}
+%     \label{fig:rysunek_28}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_20.png}
-    \caption{Ilustracja procesu ładowania aplikacji oraz zdarzenia rejestrowane przez przeglądarkę}
-    \label{fig:rysunek_20}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_29.png}
+%     \caption{Grafika przedstawiająca wpis zebranego pomiaru}
+%     \label{fig:rysunek_29}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_21.png}
-    \caption{Ilustracja mechanizmu zmiany daty w przypadku aplikacji dynamicznej}
-    \label{fig:rysunek_21}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_30.png}
+%     \caption{Diagram kolumnowy ukazujący wynik badania czasu potrzebnego do rozpoczęcia malowania strony}
+%     \label{fig:rysunek_30}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_22.png}
-    \caption{Ilustracja przedstawiająca proces zmiany treści strony w przypadku aplikacji dynamicznej}
-    \label{fig:rysunek_22}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_31.png}
+%     \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji Angular2}
+%     \label{fig:rysunek_31}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_23.png}
-    \caption{Ilustracja procesu współpracy pomiędzy Selenium a przeglądarką}
-    \label{fig:rysunek_23}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_32.png}
+%     \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji React}
+%     \label{fig:rysunek_32}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_24.png}
-    \caption{Wycinek wpisów skryptu przeprowadzającego badanie w środowisku docker-compose. Ilustruje on inicjalizację skryptu oraz mechanizm uzyskiwania połączenia pomiędzy Skryptem - Przeglądarką - Selenium}
-    \label{fig:rysunek_24}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_33.png}
+%     \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji Vue}
+%     \label{fig:rysunek_33}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_25.png}
-    \caption{Wycinek skryptu ukazujący uzyskanie połączenia do Selenium pomimo początkowych problemów}
-    \label{fig:rysunek_25}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_34.png}
+%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu dodania 1000 elementów na początek listy}
+%     \label{fig:rysunek_34}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_26.png}
-    \caption{Grafika przedstawia rozpoczęcie badania}
-    \label{fig:rysunek_26}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_35.png}
+%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu dodania 1000 elementów na koniec listy}
+%     \label{fig:rysunek_35}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_27.png}
-    \caption{Grafika przedstawia skrypt zakańczający badanie po zapisaniu zebranych danych na dysk - widzimy, że ważnym elementem jest zamknięcie połączenia do Selenium}
-    \label{fig:rysunek_27}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_36.png}
+%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zmiany wszystkich wartości listy dla 1000 elementów}
+%     \label{fig:rysunek_36}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_28.png}
-    \caption{Ilustracja struktury wyniku badania na które zostanie poddane dalszej obróbce}
-    \label{fig:rysunek_28}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_37.png}
+%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zmiany wartości dla 500 elementów listy}
+%     \label{fig:rysunek_37}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_29.png}
-    \caption{Grafika przedstawiająca wpis zebranego pomiaru}
-    \label{fig:rysunek_29}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_38.png}
+%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zamiany miejscami dwóch wartości na liście elementów}
+%     \label{fig:rysunek_38}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_30.png}
-    \caption{Diagram kolumnowy ukazujący wynik badania czasu potrzebnego do rozpoczęcia malowania strony}
-    \label{fig:rysunek_30}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_39.png}
+%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu usunięcia pojedynczej wartości z listy elementów}
+%     \label{fig:rysunek_39}
+% \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_31.png}
-    \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji Angular2}
-    \label{fig:rysunek_31}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_32.png}
-    \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji React}
-    \label{fig:rysunek_32}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_33.png}
-    \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji Vue}
-    \label{fig:rysunek_33}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_34.png}
-    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu dodania 1000 elementów na początek listy}
-    \label{fig:rysunek_34}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_35.png}
-    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu dodania 1000 elementów na koniec listy}
-    \label{fig:rysunek_35}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_36.png}
-    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zmiany wszystkich wartości listy dla 1000 elementów}
-    \label{fig:rysunek_36}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_37.png}
-    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zmiany wartości dla 500 elementów listy}
-    \label{fig:rysunek_37}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_38.png}
-    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zamiany miejscami dwóch wartości na liście elementów}
-    \label{fig:rysunek_38}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_39.png}
-    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu usunięcia pojedynczej wartości z listy elementów}
-    \label{fig:rysunek_39}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_40.png}
-    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu usunięcia wszystkich wartości z listy elementów}
-    \label{fig:rysunek_40}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=12cm]{rysunek_40.png}
+%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu usunięcia wszystkich wartości z listy elementów}
+%     \label{fig:rysunek_40}
+% \end{figure}
 
 %czyści puste strony
 \let\cleardoublepage\clearpage
