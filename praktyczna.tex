@@ -289,6 +289,195 @@ Należy tylko pamiętać o poprawieniu portu, czyli aby przejść do implementac
 
 
 \subsection{Moduł badania}
+
+Przechodzimy teraz do najbardziej skomplikowanego modułu całej pracy.
+Mając już przygotowane aplikacje, wystawione do badania za pomocą serwera webowego, możemy w tym momencie zacząć interakcję z aplikacjami.
+Nie mniej pojawia się duży problem pod tytułem, w jaki sposób możemy zacząć interakcję z aplikacjami?
+Jak już wspomniano w poprzednich rozdziałach, akcje aplikacji są nie deterministyczne, co znacząco utrudnia możliwość badania takich aplikacji.
+Ale na czym dokładnie polega problem?
+
+W ramach pracy, posłużono się narzędziami powszechnie stosowanymi w celach testów end-to-end.
+Ale najpierw, spójrzmy na problem z którym mamy do czynienia aby zrozumieć, jaki wpływ ma on na wyniki badania.
+
+W statycznych aplikacjach internetowych, interakcja użytkownika ze stroną jest zazwyczaj bardzo uproszczona.
+Znacząca większość akcji, będzie prowadziła do przeładowania treści strony (o czym mówiliśmy już w poprzednich rozdziałach pracy).
+Zobrazowano to na przykładzie języka PHP na rysunku \ref{fig:rysunek_18}.
+
+Oto najprostszy, wiekowy już przykład aplikacji kalendarza napisanej w PHP. Gdy będziemy chcieli zmienić miesiąc z marca na kwiecień, nastąpi przeładowanie całej strony.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_18.png}
+    \caption{Ilustracja mechanizmu działania strony statycznej na przykładzie aplikacji kalendarza przy użyciu języka PHP}
+    \label{fig:rysunek_18}
+\end{figure}
+
+Teraz, z punktu badawczego chcemy ustalić ile trwała cała akcja. Prosimy nasz automat o naciśnięcie przycisku.
+Poszukujemy odpowiedzi na pytanie, ile czasu upłynie, od momentu naciśnięcia przycisku do momentu wyrenderowania nowej treści. Przeanalizujmy więc cały proces ukazany na rysunku \ref{fig:rysunek_19}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_19.png}
+    \caption{Grafika przedstawiająca proces przeładowania strony statycznej}
+    \label{fig:rysunek_19}
+\end{figure}
+
+Z punktu widzenia automatu do testów end-to-end, cały proces, o ile skomplikowany ma jasno zdefiniowany koniec.
+Końcem całego procesu jest przeładowanie strony przez przeglądarkę oraz wyrenderowanie treści.
+Przeglądarka posiada wbudowane w swoje API szereg zdarzeń które deweloperzy, a więc także automaty, mogą nasłuchiwać.
+W naszym przypadku, będzie to First Meaningful Paint \cite{rail-model} które oznacza, kiedy pierwsza treść dostępna dla użytkownika zostaje w pełni namalowana.
+Kolejność zdarzeń ukazano na rysunku \ref{fig:rysunek_20}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_20.png}
+    \caption{Ilustracja procesu ładowania aplikacji oraz zdarzenia rejestrowane przez przeglądarkę}
+    \label{fig:rysunek_20}
+\end{figure}
+
+Tak więc widzimy, że w procesie interakcji ze stroną statyczną, czas jaki będzie potrzebny na przeładowanie strony to nie tylko czas kliknięcia na przycisk, ale także:
+\begin{itemize}
+    \item Czas potrzebny na wysłanie zapytania z automatu do przeglądarki z żądaniem wykonania akcji.
+    \item Czas, jaki przeglądarka potrzebuje na naciśnięcie przycisku.
+    \item Czas wysłania zapytania do serwera.
+    \item Czas, jaki serwer WWW potrzebuje na skonstruowanie odpowiedzi z plikiem HTML dla przeglądarki. Dla nietrywialnych stron, może to stanowić większą część czasu całej akcji.
+    Przykładem takiego mechanizmu są strony napisane przy użyciu Ruby on Rails gdzie do skonstruowania nowej strony HTML,
+    należy przekształcić wzorce HAML \cite{ruby} na plik HTML, często po drodze wykonując zapytanie do bazy (może wielu baz?) danych.
+    \item Czas ponownego przesłania treści nowej strony do przeglądarki.
+    \item Czas procesowania nowego pliku HTML oraz wyrenderowanie nowej strony.    
+\end{itemize}
+
+Możemy wyróżnić 3 bazowe serwisy stanowiące rdzeń całej operacji.
+Jest to przeglądarka, serwer HTTP oraz automat.
+W zależności od maszyny jaką dysponujemy, przeprowadzając takie badanie, wpływ na czas każdej z operacji pośrednich ma to co dzieje się aktualnie na komputerze.
+I tak, wpływ będzie miał na przykład program antywirusowy działający w tle, lub inna przeglądarka otworzona obok.
+Oczywiście im więcej rdzeni \cite{threads} posiada nasz procesor, tym mniejszy wpływ na badanie będą miały programy współdziałające.
+Z tego względu podczas badania należy wykonać nie tylko pojedynczy pomiar, ale pomiary należy wykonywać wielokrotnie tak, aby wyliczyć na przykład
+odchylenie standardowe czasów od uśrednionej wartości.
+
+Mając już wiedzę, jak wygląda akcja naciśnięcia przycisku na stronie statycznej, możemy porównać ją do strony aplikacji SPA.
+Jako przykład mamy podobny kalendarz jak na stronie statycznej, tym razem z użyciem dynamicznej biblioteki JavaScript.
+Na rysunku \ref{fig:rysunek_21} przedstawiono zmianę daty aplikacji dynamicznej z punktu widzenia użytkownika.
+Na rysunku \ref{fig:rysunek_22} przedstawiono rozpisaną kolejność zdarzeń z punktu widzenia komputera.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_21.png}
+    \caption{Ilustracja mechanizmu zmiany daty w przypadku aplikacji dynamicznej z punktu widzenia użytkownika}
+    \label{fig:rysunek_21}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_22.png}
+    \caption{Ilustracja przedstawiająca proces zmiany treści strony w przypadku aplikacji dynamicznej z punktu widzenia komputera}
+    \label{fig:rysunek_22}
+\end{figure}
+
+Początek procesu jest taki sam, lecz zarządca stanu aplikacji widząc prośbę o zmianę miesiąca, wysyła zapytanie do serwera.
+Serwer przygotuje odpowiedź ale zamiast strony HTML, serwer odpowie ze strukturą danych typu JSON.
+Następnie zarządca stanu zmieni stan i poprosi nasz framework o prze renderowanie strony.
+Teraz, z punktu widzenia automatu, nie ma tutaj jednoznacznego punktu końca całej operacji.
+Tak jak na stronie statycznej mogliśmy oczekiwać na przeładowanie strony oraz zdarzenie First Meaningful Paint,
+tak w tym przypadku nie istnieje żadne API pozwalające na precyzyjne określenie czy cała akcja została zakończona.
+Jest to bardzo kosztowny problem z którym branża informatyczna zmaga się od bardzo dawna. Wiodącym jak na razie rozwiązaniem tego problemu,
+które i tak nie jest idealne jest sposób testowania narzędzie Cypress.io.
+
+\begin{itemize}
+    \item Sprawdza, czy w przeglądarce istnieją nierozwiązane zapytania HTTP
+    \item Sprawdza, czy aktualnie renderowana jest jakaś nowa zawartość
+    \item Wykonuje serię screenshotów i porównuje, czy zawartość zmienia się w czasie.
+    \item Periodycznie próbkuje, czy zawartość DOM została już zmieniona.
+\end{itemize}
+
+Jednak nawet nowoczesne metody zastosowane w narzędziu Cypress nie są wystarczające aby zapewni, iż nawet poprawnie napisane testy zawsze zakończą się sukcesem.
+Zjawisko to nazywamy testami flaky, gdyż ze względu na czynniki zewnętrzne takie jak na przykład test A/B, mimo, iż sama implementacja testu jest poprawna,
+nadal może on zakończyć się niepowodzeniem \cite{flaky-cypress}. Ze względu na opisane powyżej problemy, postanowiono zbudować moduł badania strony w oparciu o narzędzie Selenium \cite{selenium}.
+Jest to najbardziej dojrzałe narzędzie na rynku, które stanowi bazę całego badania.
+
+Pierwszym krokiem potrzebnym do zbudowania modułu, jest konteneryzacja samego Selenium.
+W tym celu, wykorzystam narzędzie docker compose \cite{docker-compose}.
+Pozwala ono na uruchomienie wielu obrazów dockera, oraz połączyć je ze sobą na przykład za pomocą zwirtualizowanej sieci \cite{docker-compose-network}.
+Bazowym obrazem będzie \emph{selenium/hub:3.141.59-zinc}.
+Selenium hub, posiada w sobie selenium driver, jednak naszym zadanie jest podłączenie do niego wybranej przez nas przeglądarki.
+Drugim elementem jest sama przeglądarka, w tym celu wykorzystam obraz \emph{selenium/node-chrome:3.141.59-zinc}.
+Ostatnim elementem jest skrypt który wykorzystując stworzony serwis Selenium, wyśle on odpowiednie informacje do przeglądarki,
+zagreguje dane oraz zachowa je na dyski do dalszego procesowania i analizy. Proces ten zobrazowano na rysunku \ref{fig:rysunek_23}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_23.png}
+    \caption{Ilustracja procesu współpracy pomiędzy Selenium a przeglądarką}
+    \label{fig:rysunek_23}
+\end{figure}
+
+Skrypt do obsługi Selenium składa się z kilku głównych elementów. Pierwszym z nich jest moduł odpowiadający za oczekiwanie na gotowość systemu.
+Z racji, iż Docker compose stara się uruchomić wszystkie obrazy na raz, nie możemy od razu zacząć badania gdyż w pierwszej kolejności,
+Selenium hub musi zostać zainicjalizowane, oraz przeglądarka Chrome musi zarejestrować się w systemie.
+Z tego powodu stworzono funkcje które pingują Selenium oraz Serwer HTTP w oczekiwaniu na odpowiedź z kodem 200.
+Próbujemy połączyć się trzykrotnie z jednosekundowym odstępem czasu. Obydwa mechanizmy pracują asynchronicznie.
+Jeżeli którykolwiek z nich po 3 próbach nadal nie będzie mógł się połączyć, cały skrypt zwróci stosowną wiadomość która pomoże nam określić przyczynę problemu.
+Próbę uzyskania połączenia zobrazowano na rysunku \ref{fig:rysunek_24}.
+Z kolei na rysunku \ref{fig:rysunek_25} widzimy, iż pomimo początkowych problemów z uzyskaniem połączenia, mechanizm zadziałał poprawnie i udało się nawiązać połączenie.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_24.png}
+    \caption{Wycinek wpisów skryptu przeprowadzającego badanie w środowisku docker-compose. Ilustruje on inicjalizację skryptu oraz mechanizm uzyskiwania połączenia pomiędzy Skryptem - Przeglądarką - Selenium}
+    \label{fig:rysunek_24}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_25.png}
+    \caption{Wycinek skryptu ukazujący uzyskanie połączenia do Selenium pomimo początkowych problemów}
+    \label{fig:rysunek_25}
+\end{figure}
+
+Następnie łączymy się do serwera WWW. Odczytujemy z niego listę dostępnych aplikacji.
+Dzięki temu, nie musimy zmieniać implementacji kodu testu przy dodawaniu kolejnych implementacji lub badań.
+Przed każdym badaniem chcemy jak najbardziej odizolować od siebie testy, z tego też powodu wysyłamy komendę przeładowania strony oraz wyczyszczenia pamięci cache
+oraz wołamy komendę garbage collection \cite{mozilla-memory}.
+Wreszcie, mając już tak przygotowane środowisko oraz połączenie do Selenium możemy przejść do faktycznej implementacji testu badania.
+
+Obsługa testów została zaprojektowana tak, aby można było dodać dowolną ilość testów oraz dowolnie sprecyzować ilość powtórzeń.
+Powtórzenia są dla nas istotne gdyż musimy wykonać ten sam test wielokrotnie w celach porównania wyników i analizy różnicy w czasach w poszczególnych obiegach.
+Następnie zostanie omówiona struktura badania którą napisano stricte na potrzeby analizy czasów akcji aplikacji w frameworkach aplikacji SPA.
+Test ten otwiera stronę WWW, i dla każdej kolejnej funkcji na początku dopisuje 1000 elementów (tak, aby kolejne komendy miały materiał do pracy)
+i po zakończeniu testu danej funkcji czyści wszystkie wiersze. W badaniu następują kolejne zdarzenia:
+
+\begin{itemize}
+    \item Wykonuje akcje dopisania 1000 elementów na początku listy, i powtarza ją 100 razy.
+    \item Wykonuje akcje dopisania 1000 elementów na końcu listy, i powtarza ją 100 razy.
+    \item Wykonuje akcje zamiany wszystkich wartości na liście, i powtarza ją 100 razy.
+    \item Wykonuje akcje podmiany wartości dla 500 wierszy, i powtarza ją 100 razy.
+    \item Wykonuję akcję zamiany wiersza 0 z 1, i powtarzam ją 100 razy.
+    \item Wykonuję akcję usunięcia pierwszego w kolejności wiersza, i powtarzam ją 100 razy.
+    \item Wykonuję akcję usunięcia wszystkich wierszy, i powtarzam ją 100 razy.
+\end{itemize}
+
+Każda akcja jest stworzona jako funkcja, która w momencie uruchomienia tworzy wpis w przeglądarce używając wysoce precyzyjnego API wbudowanego
+w przeglądarkę jakim jest Performance API \cite{mozilla-perf}. Wpis taki, posiada precyzję sięgającą 5 mikrosekund \cite{mozilla-high-res-api}.
+Tak więc dla jednego obiegu takiego testu mamy 700 wpisów. Całą operację przedstawiono na rysunku \ref{fig:rysunek_26}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_26.png}
+    \caption{Grafika przedstawia rozpoczęcie badania}
+    \label{fig:rysunek_26}
+\end{figure}
+
+Po zakończeniu testu (rysunek \ref{fig:rysunek_27}), skrypt komunikuje się z Selenium i pobiera listę wpisów zarchiwizowanych po badaniu.
+Wpisy te zostają zapisane w postaci pliku JSON w folderze results.
+Dla każdej badanej aplikacji i każdego testu, zostaną zapisane 3 pliki wynikowe, po jednym dla każdego z dostępnych logów.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_27.png}
+    \caption{Grafika przedstawia skrypt zakańczający badanie po zapisaniu zebranych danych na dysk - widzimy, że ważnym elementem jest zamknięcie połączenia do Selenium}
+    \label{fig:rysunek_27}
+\end{figure}
+
 \subsection{Moduł analizy}
 
 \section{Analiza wyników}
@@ -303,75 +492,12 @@ Należy tylko pamiętać o poprawieniu portu, czyli aby przejść do implementac
 
 
 
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_18.png}
-%     \caption{Ilustracja mechanizmu działania strony statycznej na przykładzie aplikacji kalendarza przy użyciu języka PHP}
-%     \label{fig:rysunek_18}
-% \end{figure}
 
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_19.png}
-%     \caption{Grafika przedstawiająca proces przeładowania strony statycznej}
-%     \label{fig:rysunek_19}
-% \end{figure}
 
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_20.png}
-%     \caption{Ilustracja procesu ładowania aplikacji oraz zdarzenia rejestrowane przez przeglądarkę}
-%     \label{fig:rysunek_20}
-% \end{figure}
 
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_21.png}
-%     \caption{Ilustracja mechanizmu zmiany daty w przypadku aplikacji dynamicznej}
-%     \label{fig:rysunek_21}
-% \end{figure}
 
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_22.png}
-%     \caption{Ilustracja przedstawiająca proces zmiany treści strony w przypadku aplikacji dynamicznej}
-%     \label{fig:rysunek_22}
-% \end{figure}
 
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_23.png}
-%     \caption{Ilustracja procesu współpracy pomiędzy Selenium a przeglądarką}
-%     \label{fig:rysunek_23}
-% \end{figure}
 
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_24.png}
-%     \caption{Wycinek wpisów skryptu przeprowadzającego badanie w środowisku docker-compose. Ilustruje on inicjalizację skryptu oraz mechanizm uzyskiwania połączenia pomiędzy Skryptem - Przeglądarką - Selenium}
-%     \label{fig:rysunek_24}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_25.png}
-%     \caption{Wycinek skryptu ukazujący uzyskanie połączenia do Selenium pomimo początkowych problemów}
-%     \label{fig:rysunek_25}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_26.png}
-%     \caption{Grafika przedstawia rozpoczęcie badania}
-%     \label{fig:rysunek_26}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_27.png}
-%     \caption{Grafika przedstawia skrypt zakańczający badanie po zapisaniu zebranych danych na dysk - widzimy, że ważnym elementem jest zamknięcie połączenia do Selenium}
-%     \label{fig:rysunek_27}
-% \end{figure}
 
 % \begin{figure}[!ht]
 %     \centering

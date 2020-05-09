@@ -18,4 +18,14 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Ilustracja procesu przygotowania aplikacji do konteneryzacji\relax }}{22}{figure.caption.16}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Ilustracja przedstawiająca warstwy składające się na przykładowy obraz dockera\relax }}{23}{figure.caption.17}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Grafika przedstawiająca plik index.html wraz z dostępnymi aplikacjami do badania\relax }}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Ilustracja mechanizmu działania strony statycznej na przykładzie aplikacji kalendarza przy użyciu języka PHP\relax }}{25}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Grafika przedstawiająca proces przeładowania strony statycznej\relax }}{26}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Ilustracja procesu ładowania aplikacji oraz zdarzenia rejestrowane przez przeglądarkę\relax }}{26}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Ilustracja mechanizmu zmiany daty w przypadku aplikacji dynamicznej z punktu widzenia użytkownika\relax }}{27}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Ilustracja przedstawiająca proces zmiany treści strony w przypadku aplikacji dynamicznej z punktu widzenia komputera\relax }}{28}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Ilustracja procesu współpracy pomiędzy Selenium a przeglądarką\relax }}{29}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Wycinek wpisów skryptu przeprowadzającego badanie w środowisku docker-compose. Ilustruje on inicjalizację skryptu oraz mechanizm uzyskiwania połączenia pomiędzy Skryptem - Przeglądarką - Selenium\relax }}{30}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Wycinek skryptu ukazujący uzyskanie połączenia do Selenium pomimo początkowych problemów\relax }}{30}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Grafika przedstawia rozpoczęcie badania\relax }}{31}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Grafika przedstawia skrypt zakańczający badanie po zapisaniu zebranych danych na dysk - widzimy, że ważnym elementem jest zamknięcie połączenia do Selenium\relax }}{31}{figure.caption.28}%
 \addvspace {10\p@ }
