@@ -1,5 +1,20 @@
 \chapter{Podsumowanie}
 
+Celem pracy było stworzenie narzędzia pozwalającego na pomiar akcji aplikacji zachodzących już po załadowaniu strony oraz pomiar różnych interakcji ze stroną na przykładzie trzech wiodących rozwiązań na rynku.
+Stworzenie narzędzia było niemałym wyzwaniem, gdyż problem pomiaru dynamicznych aplikacji nie jest problemem trywialnym i wymaga szeregu narzędzi współpracujących ze sobą.
+Powoduje to także, iż sam pomiar będzie zanieczyszczony przez niedokładności narzędzie Selenium.
+Jesteśmy w stanie jednak przeciwdziałać niektórym czynnikom mającym negatywny wpływ na pomiar, dzięki zastosowaniu warstwy izolacja systemu badającego od faktycznego systemu operacyjnego hosta badania dzięki użyciu platformy Docker.
+Także poprawne przygotowanie badania na przykład poprzez przeładowanie strony i wyczyszczenie pamięci podręcznej przeglądarki poprawia stabilność i dokładność testów.
+Istotnym podczas testów jest wielokrotny pomiar wartości tak, abyśmy mogli wyliczyć graniczne wartości pomiarów. Dzięki temu i wiedzy uzyskanej podczas studiów możemy przeprowadzić poprawnę analizę wyników.
+
+Same badania wykazały, iż Angular2 najczęściej jest najszybszym narzędziem, jednak bardzo często odchylenie standardowe wskazywało, iż także istnieje duży rozrzut wartości wokół średniej.
+React jest najbardziej stabilnym rozwiązaniem, gdyż w dwóch badaniach uzyskał odchylenie standardowe na poziomie poniżej 2 milisekund. W reszcie przypadków, różnica pomiędzy Vue i Reactem mieściła się w granicy błędu pomiarowego.
+
+Podsumowując -najważniejszym wnioskiem który udało się potwierdzić dzięki przeprowadzonym badaniom jest wykazanie, iż różnica pomiędzy przedstawionymi rozwiązaniami nie przekracza 20 milisekund dla pojedynczego zadania.
+Jest to istotny argument podczas dyskusji nad przewagą konkretnych narzędzi pomiędzy sobą.
+Jest to wniosek zgodny także z pracami cytowanych autorów, iż najistotniejsze jest środowisko programistyczne dostarczone wraz z narzędziem oraz popularność narzędzia która bezpośrednio ma wpływ na przykład
+na ilość informacji dostępnych w internecie na temat częstych problemów niżeli wydajność pojedynczego narzędzia w skali mikro.
+
 
 %czyści puste strony
 \let\cleardoublepage\clearpage

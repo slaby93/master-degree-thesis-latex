@@ -505,104 +505,176 @@ Atomowym wpisem dla każdego badania jest pomiar. Pomiar zawiera w sobie nazwę 
 
 
 \section{Analiza wyników}
+
+Finalny zestaw badań jakie wykonano objęły następujące parametry:
+\begin{itemize}
+    \item Test wykonano dla 20 powtórzeń dla każdej aplikacji, czyli łącznie 60 powtórzeń
+    \item Każda akcja została powtórzona 100 razy w ramach jednego testu, czyli 2000 razy w ramach pojedynczego badania.
+    \item Łączna liczba punktów pomiarowych wyniosła 42000 pomiarów.
+    \item Na potrzeby pracy przyjęto błąd pomiarowy równy $\pm$ 1 milisekunda.
+\end{itemize}
+
 \subsection{Czas załadowania aplikacji}
+
+Pierwsze badanie polega na zmierzeniu czasu potrzebnego do rozpoczęcia malowania strony. Oczekujemy tutaj na zdarzenie first paint \cite{mdn-first-paint}.
+Wyniki zaprezentowano na rysunku \ref{fig:rysunek_30}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_30.png}
+    \caption{Diagram kolumnowy ukazujący wynik badania czasu potrzebnego do rozpoczęcia malowania strony}
+    \label{fig:rysunek_30}
+\end{figure}
+
+Każdy pomiar miał miejsce w czasie odświeżenia strony.
+Podane wartości są średnimi wartościami z 20 przeładowań.
+Widzimy ogromną różnicę w otrzymanych wynikach. React jest o 9.465 milisekundy szybszy, czyli o 39.290\% szybszy od Vue.
+Vue jest także o 19.04 milisekundy szybsze od Angulara co stanowi 56.743\% lepszy wynik.
+
+Główny wpływ na otrzymane wyniki będą mieć waga narzędzia oraz ilość kodu który musi być pobrany oraz uruchomiony zanim narzędzie zacznie renderować wymaganą treść.
+Dodatkowe informacje możemy wyłuskać patrząc na ilość bajtów pobranych przez przeglądarkę co ukazano na rysunku \ref{fig:rysunek_31} - Angular2, rysunek \ref{fig:rysunek_32} - React oraz rysunek \ref{fig:rysunek_33} - Vue.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_31.png}
+    \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji Angular2}
+    \label{fig:rysunek_31}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_32.png}
+    \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji React}
+    \label{fig:rysunek_32}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_33.png}
+    \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji Vue}
+    \label{fig:rysunek_33}
+\end{figure}
+
+Wniosek nasuwa się następujący. React który potrzebuje 134 kB danych potrzebuje 24.09 milisekund na wyrenderowanie pierwszego piksela.
+Vue który pobiera 122 kB czyli o 8.955\% mniej danych, ładuje się w czasie 33.555 milisekund.
+Wskazuje to jednoznacznie, że kod Reacta pomimo większej wagi, wykonuje mniej operacji przed pierwszym renderowaniem.
+Na ostatnim miejscu w tym badaniu znajduje się Angular2 który potrzebuje 185 kB oraz 52.595 milisekund na załadowanie pierwszego piksela.
+
 \subsection{Dodanie 1000 wierszy na początku listy}
+
+W badaniu tym do istniejącej listy 1000 elementów dodajemy kolejne 1000 elementów na początek listy.
+Akcję tą powtarzamy 100 krotnie, czyli zaczynając od 1000 elementów aż do 101 000 kończąc.
+Problem badawczy tego zadania opisano w rozdziale Projekt testu wydajności.
+Wyniki badania zobrazowano na rysunku \ref{fig:rysunek_34}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_34.png}
+    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu dodania 1000 elementów na początek listy}
+    \label{fig:rysunek_34}
+\end{figure}
+
+Z wykresu wartości, możemy odczytać, iż wartości brzegowe Angular2 wyznaczają dolną oraz górną granicę otrzymanych wartości czasu.
+Także odchylenie standardowe jest ponad dwukrotnie wyższe niż kolejny po nim React.
+Jednak średnia i mediana wskazują, że w uśrednionym przypadku, dopisywanie nowych elementów do listy jest najszybsze w frameworku Angular2.
+React oraz Vue w przypadku uśrednionym, plasują się na drugiej pozycji, gdyż ich wartości mieszczą się w wartości błędu pomiaru.
+Najmniejsze rozproszenie wyników prezentuje Vue, którego średnia i mediana są bardzo zbliżone,
+a odchylenie standardowe najniższe spośród badanych narzędzi, co świadczy o stabilności rozwiązania.
+
+
 \subsection{Dodanie 1000 wierszy na końcu listy}
+
+Dopisywanie elementów do końca listy jest mało obciążającym zadaniem dla naszych narzędzi. Nie musimy przesuwać żadnych elementów, jedynie wyrenderować nowo dodane.
+Oczekujemy, iż wyniki (rysunek \ref{fig:rysunek_35}) będą miały małe odchylenie standardowe (gdyż ilość poprzednich elementów nie powinna mieć wpływu na dodanie nowych).
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_35.png}
+    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu dodania 1000 elementów na koniec listy}
+    \label{fig:rysunek_35}
+\end{figure}
+
+Pierwszym, co można zauważyć, jest fakt iż dla przypadku minimalnej wartości oraz maksymalnej wartości, wyniki pomiędzy narzędziami są zbliżone.
+Jednak warto zaznaczyć, iż React jest najwolniejszy w skrajnych przypadkach.
+W uśrednionym przypadku, Angular2 jest najszybszym narzędziem bijąc React oraz Vue o 8 milisekund w przypadku średniej a w przypadku mediany o aż 12 milisekund.
+Jednak warto zaznaczyć, iż odchylenie standardowe tego badania wskazuje, że Angular2 jest najmniej przewidywalnym z całej trójki.
+Ciekawą sytuację natomiast możemy zaobserwować dla wyników średniej oraz mediany pomiędzy React oraz Vue.
+Wyniki są bardzo zbliżone, jednak odchylenie standardowe wskazuje, że to Vue jest stabilniejszym rozwiązaniem.
+
 \subsection{Zamiana wszystkich wierszy na liście}
+
+Badanie to wskazuje, jak szybko jesteśmy w stanie przerenderować listę 1000 elementów. Wyniki ukazano na rysunku \ref{fig:rysunek_36}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_36.png}
+    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zmiany wszystkich wartości listy dla 1000 elementów}
+    \label{fig:rysunek_36}
+\end{figure}
+
+Minimalna wartość jest bardzo zbliżona dla każdego z badanych narzędzi. Maksymalna wartość wskazuje nieznaczną przewagę około 2 milisekund na korzyść Vue.
+Średnia arytmetyczna wskazuje nam, iż Angular2 jest najszybszym narzędziem, jednak odchylenie standardowe wskazuje, iż jest także najbardziej niestabilnym.
+W tym badaniu React udało się uzyskać odchylenie poniżej 2 milisekund, co jest wynikiem bardzo dobrym.
+
 \subsection{Aktualizacja 500 wierszy}
+W badaniu tym, aktualizujemy tylko połowę wyrenderowanych wierszy. Wyniki ukazano na rysunku \ref{fig:rysunek_37}.
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_37.png}
+    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zmiany wartości dla 500 elementów listy}
+    \label{fig:rysunek_37}
+\end{figure}
+Wartości minimalne są bardzo zbliżone dla Reacta oraz Angular2. Vue odbiega tylko nieznacznie mniej niż 2 milisekundy.
+W przypadku wartości maksymalnych, Angular2 znacząco odbiega od reszty narzędzie wykazuje różnicę 12 milisekund do kolejnego na liście Vue.
+W uśrednionym przypadku, widzimy zgodność średniej arytmetycznej i mediany, które wskazują, iż Angular2 jest najszybszym narzędziem.
+Ponownie już odchylenie standardowe wskazuje iż jest także najmniej stabilnym czasowo narzędziem.
+
+
 \subsection{Zamiana miejscami dwóch wierszy}
+
+Zamiana miejscami dwóch wierszy jest najmniej wymagającym badania z całej pracy. Z tego powodu oczekujemy niskich wartości odchylenia standardowego. Wyniki ukazano na rysunku \ref{fig:rysunek_38}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_38.png}
+    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zamiany miejscami dwóch wartości na liście elementów}
+    \label{fig:rysunek_38}
+\end{figure}
+
+I tak wartość minimalna wskazuje, iż Angular2 jest najszybszy. Wartości maksymalne są prawie identyczne.
+Są one w granicy błędu pomiarowego. Średnia arytmetyczna i mediana zgodnie wskazują, iż Angular2 jest najszybszy w średnim przypadku, znowu z zastrzeżeniem, gdyż odchylenie standardowe wynosi aż 6.3 milisekundy.
+
 \subsection{Usunięcie pojedynczego wiersza}
+
+Badanie to polega na usunięciu pierwszego w kolejności wiersza na początku listy. Powoduje to przesunięcie całej listy o jeden wiersz. Wyniki ukazano na rysunku \ref{fig:rysunek_39}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_39.png}
+    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu usunięcia pojedynczej wartości z listy elementów}
+    \label{fig:rysunek_39}
+\end{figure}
+
+Po raz pierwszy obserwujemy Reacta jako najszybsze narzędzie w przypadku wartości minimalnej.
+Wartości maksymalne mieszczą się w granicy błędu pomiarowego dla każdego z badanych narzędzi. Średnia arytmetyczna i mediana ponownie wskazują na dominację Angulara 2.
+Jednak ponownie odchylenie standardowe wskazuje na znaczące wahania wartości wokół średniej wartości dla Angular2.
+Vue oraz React poza wartością minimalną mieszczą się w granicy błędu pomiarowego.
+
 \subsection{Usunięcie wszystkich wierszy}
 
+Ostatnie badanie skupia się na usunięciu wszystkich wierszy. Spowoduje to przerenderowanie całej listy. Wyniki ukazano na rysunku \ref{fig:rysunek_40}. 
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_40.png}
+    \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu usunięcia wszystkich wartości z listy elementów}
+    \label{fig:rysunek_40}
+\end{figure}
 
-
-
-
-
-
-
-
-
-
-
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_30.png}
-%     \caption{Diagram kolumnowy ukazujący wynik badania czasu potrzebnego do rozpoczęcia malowania strony}
-%     \label{fig:rysunek_30}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_31.png}
-%     \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji Angular2}
-%     \label{fig:rysunek_31}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_32.png}
-%     \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji React}
-%     \label{fig:rysunek_32}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_33.png}
-%     \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji Vue}
-%     \label{fig:rysunek_33}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_34.png}
-%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu dodania 1000 elementów na początek listy}
-%     \label{fig:rysunek_34}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_35.png}
-%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu dodania 1000 elementów na koniec listy}
-%     \label{fig:rysunek_35}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_36.png}
-%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zmiany wszystkich wartości listy dla 1000 elementów}
-%     \label{fig:rysunek_36}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_37.png}
-%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zmiany wartości dla 500 elementów listy}
-%     \label{fig:rysunek_37}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_38.png}
-%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zamiany miejscami dwóch wartości na liście elementów}
-%     \label{fig:rysunek_38}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_39.png}
-%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu usunięcia pojedynczej wartości z listy elementów}
-%     \label{fig:rysunek_39}
-% \end{figure}
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_40.png}
-%     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu usunięcia wszystkich wartości z listy elementów}
-%     \label{fig:rysunek_40}
-% \end{figure}
+Dla minimalnej wartości Angular2 wykazuje 2 milisekundy przewagi nad kolejnym Vue które z kolei wykazuje około 1.5 milisekundy przewagi nad React.
+Wartości maksymalne dla każdego badanego narzędzia mieszczą się w granicy błędu pomiarowego, z delikatnym wskazaniem przewagi dla Angular2.
+W średnim przypadku Angular2 jest ponownie najszybszy, lecz odchylenie standardowe wskazuje prawie 5.5 milisekundy zabiegu.
+W tym przypadku należy zauważyć, iż React ponownie uzyskał odchylenie standardowe na poziomie 1.5 milisekundy.
 
 %czyści puste strony
 \let\cleardoublepage\clearpage
