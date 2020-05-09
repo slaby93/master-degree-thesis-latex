@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  9 MAY 2020 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  9 MAY 2020 12:07
 entering extended mode
 **c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
 (c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
@@ -592,7 +592,7 @@ Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is usel
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 ...ojedynczego wiersza}{32}{subsection.3.4.7}
+l.31 ...ojedynczego wiersza}{33}{subsection.3.4.7}
                                                   % [1
 
 
@@ -863,7 +863,23 @@ File: ./img/rysunek_27.png Graphic file (type png)
 <use ./img/rysunek_27.png>
 Package pdftex.def Info: ./img/rysunek_27.png  used on input line 476.
 (pdftex.def)             Requested size: 341.43306pt x 144.72021pt.
-) [31 <./img/rysunek_26.png> <./img/rysunek_27.png>] [32]
+ [31 <./img/rysunek_26.png> <./img/rysunek_27.png>]
+<./img/rysunek_28.png, id=520, 389.2944pt x 455.301pt>
+File: ./img/rysunek_28.png Graphic file (type png)
+<use ./img/rysunek_28.png>
+Package pdftex.def Info: ./img/rysunek_28.png  used on input line 489.
+(pdftex.def)             Requested size: 341.43306pt x 399.33223pt.
+
+Overfull \hbox (10.0047pt too wide) in paragraph at lines 494--498
+[]\T1/txr/m/n/12 Dla ka»-de-go z dost[]pnych wpi-sów, przy-go-to-wa-no po jed-nej funk-cji pozwalaj[]cej na ekstrakcj[]
+ []
+
+<./img/rysunek_29.png, id=522, 261.6174pt x 143.0946pt>
+File: ./img/rysunek_29.png Graphic file (type png)
+<use ./img/rysunek_29.png>
+Package pdftex.def Info: ./img/rysunek_29.png  used on input line 501.
+(pdftex.def)             Requested size: 341.43306pt x 186.7653pt.
+) [32 <./img/rysunek_28.png>] [33 <./img/rysunek_29.png>]
 \openout2 = `podsumowanie.aux'.
 
  (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\podsumowanie.tex
@@ -872,7 +888,7 @@ Rozdzia\PlPrIeC {\l } 4.
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 98.
 
-[33
+[34
 
 
 
@@ -914,7 +930,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 74.
 
-[34
+[35
 
 
 
@@ -929,7 +945,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--132
 [][][]$\T1/txtt/m/n/12 https : / / developer . mozilla . org / en-[]US / docs / Learn / Common _ questions /
  []
 
-[35]
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 194--195
 [][][]$\T1/txtt/m/n/12 https : / / www . selenium . dev / documentation / en / introduction / the _ selenium _
  []
@@ -939,7 +955,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--214
 [][][]$\T1/txtt/m/n/12 https : / / developer . mozilla . org / en-[]US / docs / Web / JavaScript / Memory _
  []
 
-[36]) [37]
+[37]) [38]
 \openout2 = `spis.aux'.
 
  (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\spis.tex (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.lof
@@ -960,7 +976,7 @@ Overfull \hbox (31.64395pt too wide) in paragraph at lines 28--28
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 29.
 
-[38
+[39
 
 
 
@@ -969,7 +985,7 @@ Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is usel
 \tf@lof=\write6
 \openout6 = `all.lof'.
 
-) [39]
+) [40]
 \openout2 = `Oswiadczenie_udostepnienie.aux'.
 
  (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\Oswiadczenie_udostepnienie.tex
@@ -1015,7 +1031,7 @@ Underfull \hbox (badness 6575) in paragraph at lines 54--54
 []\T1/txr/m/n/12 Tytuª pra-cy dy-plo-mo-wej:  Ana-li-za po-rów-naw-cza no-wo-cze-snych
  []
 
-[40
+[41
 
 
 
@@ -1076,7 +1092,7 @@ Overfull \hbox (8.2079pt too wide) in paragraph at lines 54--61
 \T1/txr/m/n/12 orze-cze-nia przez komisj[] dyscyplinarn[] oraz zªo-»e-nie za-wia-do-mie-nia o po-peª-nie-niu przest[]pstwa. 
  []
 
-[41
+[42
 
 
 
@@ -1092,21 +1108,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `all.out' has not changed.
-(rerunfilecheck)             Checksum: BE72BDB4A944EF84BB495F4B59D89924;6793.
+(rerunfilecheck)             Checksum: DA3CD7AD4F3C7F4D263E42A3492BADD8;6793.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 15929 strings out of 480930
- 236090 string characters out of 2909548
- 492375 words of memory out of 3000000
- 31284 multiletter control sequences out of 15000+200000
+ 15946 strings out of 480930
+ 236417 string characters out of 2909548
+ 492573 words of memory out of 3000000
+ 31296 multiletter control sequences out of 15000+200000
  635933 words of font info for 179 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,16n,55p,809b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (42 pages, 33663419 bytes).
+Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (43 pages, 34039327 bytes).
 PDF statistics:
- 723 PDF objects out of 1000 (max. 8388607)
- 146 named destinations out of 1000 (max. 500000)
- 432 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 736 PDF objects out of 1000 (max. 8388607)
+ 149 named destinations out of 1000 (max. 500000)
+ 442 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -480,6 +480,30 @@ Dla każdej badanej aplikacji i każdego testu, zostaną zapisane 3 pliki wyniko
 
 \subsection{Moduł analizy}
 
+W module tym, zajmiemy się przygotowaniem zebranych danych i skondensowanym ich do postaci pojedynczego pliku JSON zawierającego istotne dla nas informacje.
+Skrypt ten jest napisany w sposób generyczny, tak więc dla każdego nowego rodzaju testu powinniśmy przygotować nowy skrypt parsujący.
+Podstawowa struktura pliku jest jednak ujednolicona i pozwala nam na generyczne procesowanie pliku. Struktura danych przedstawiona została na grafice poniżej:
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_28.png}
+    \caption{Ilustracja struktury wyniku badania na które zostanie poddane dalszej obróbce}
+    \label{fig:rysunek_28}
+\end{figure}
+
+Dla każdego z dostępnych wpisów, przygotowano po jednej funkcji pozwalającej na ekstrakcję wpisów.
+Do celów badania, jedynie wpisy przeglądarki zawierały istotne dane (rysunek \ref{fig:rysunek_29}).
+Wynikiem całego skryptu jest pojedyńczy plik index.json zawierający taki sam podział na aplikacje, badania i przebiegi.
+Atomowym wpisem dla każdego badania jest pomiar. Pomiar zawiera w sobie nazwę akcji jaka została wykonana oraz zmierzoną wartość.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_29.png}
+    \caption{Grafika przedstawiająca wpis zebranego pomiaru}
+    \label{fig:rysunek_29}
+\end{figure}
+
+
 \section{Analiza wyników}
 \subsection{Czas załadowania aplikacji}
 \subsection{Dodanie 1000 wierszy na początku listy}
@@ -499,19 +523,9 @@ Dla każdej badanej aplikacji i każdego testu, zostaną zapisane 3 pliki wyniko
 
 
 
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_28.png}
-%     \caption{Ilustracja struktury wyniku badania na które zostanie poddane dalszej obróbce}
-%     \label{fig:rysunek_28}
-% \end{figure}
 
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_29.png}
-%     \caption{Grafika przedstawiająca wpis zebranego pomiaru}
-%     \label{fig:rysunek_29}
-% \end{figure}
+
+
 
 % \begin{figure}[!ht]
 %     \centering
