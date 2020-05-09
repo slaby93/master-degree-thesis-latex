@@ -63,7 +63,6 @@ Aplikacja w stanie początkowym nie posiada żadnych filmów. Użytkownik klika 
 Menedżer stanu wysyła zapytanie do serwera o listę filmów do zaproponowania. Serwer odpowiada z danymi, i menadżera stanu przechodzi w nowy stan.
 Podstrona otrzymuje informacje o nowym stanie. Pobiera nowy stan z menedżera stanu i prze renderuje widok.
 
-
 Problem pojawia się gdy chcemy określić kiedy cała procedura została zakończona.
 Samo sprawdzenie czy przycisk został naciśnięty nie jest wystarczające, gdyż z perspektywy użytkownika, procedura obejmuje także rezultat efektu ubocznego.
 Zapytanie do serwera zajmie od kilkudziesięciu milisekund do nawet i kilku czy kilkunastu sekund.
@@ -78,8 +77,104 @@ Tak więc na potrzeby pracy istotnym jest, wprowadzenie jednoznacznej definicji 
 
 \section{Specyfikacja wymagań}
 
+W celu przeprowadzenia doświadczenia mającego na celu pomiar wydajności frameworków, należy posiadać odpowiednie środowisko badawcze.
+Jak pokazano w przeglądzie istniejących rozwiązań, na rynku brak jest narzędzi pozwalających na przeprowadzenie pełnego i dokładnego badania.
+
+Na potrzeby pracy stworzono narzędzie do rozwiązania zadanego problemu badawczego. W ramach projektu, założono co następuje:
+
+\begin{itemize}
+    \item Narzędzie jest generyczne - nie zakładamy konkretnej technologii aplikacji tak, że każdy istniejący jak i przyszły framework może zostać przebadany.
+    \item Stworzona zostanie ujednolicona lecz generyczna metoda dodawania nowej aplikacji do puli już istniejących. 
+    \item Narzędzie musi posiadać obsługę różnych typów akcji aplikacji.
+    \item Narzędzie musi potrafić działać w odizolowanym środowisku (docker)
+    \item Narzędzie będzie zautomatyzowane w znacznym stopniu.
+    \item Narzędzie będzie składać się z modułów tak, aby było łatwo rozwijalne w przyszłości.
+    \item Narzędzie pozwala na stworzenie różnych zestawów testów tak, aby użytkownik mógł dokładnie przebadać różne warianty akcji aplikacji.
+    \item Stworzony zostanie moduł parsowania danych z badania tak, aby można było otrzymać ujednolicony format wyniku.
+    \item Stworzony zostanie moduł wizualizujący wyniki.
+\end{itemize}
+
 \section{Architektura rozwiązania}
+
+Narzędzie które powinno powstać w celu rozwiązania tak skomplikowanego problemu nie jest łatwym zadaniem.
+Na wstępie przedstawiono ogólny zarys architektury rozwiązania które spełnia wymogi przedstawione powyżej.
+Z racji na obszerność rozwiązania, przedstawione zostanie ono w małych rozdziałach.
+
 \subsection{Projekt testu wydajności}
+Z założenia każda aplikacja którą chcemy porównać musi być zbudowana w możliwie zbliżony do siebie sposób.
+Z racji, iż aplikacje internetowe są tworzone w sposób generyczny, istnieje mnogość możliwości implementacji każdego wymagania.
+Innymi słowy, każde zadanie można wykonać na wiele różnych sposobów w ramach jednego narzędzia.
+Każde rozwiązanie posiada swoje wady oraz zalety. Niektóre narzędzia pozwalają na dodatkową optymalizację kodu pod konkretne zadanie, pozwalając uzyskać jeszcze lepsze wyniki.
+Niestety, mechanizmy takie polegają w znacznej mierze na zdolnościach i wiedzy programisty.
+W ramach badania, chcemy porównać wydajność frameworków, a nie zdolności programisty, dlatego też aplikacje powinny zostać zaprojektowane w taki sposób, aby:
+\begin{itemize}
+    \item Były zdolne wykonać te same zadania
+    \item Były możliwie proste
+    \item Nie wymagały dogłębnej wiedzy programisty
+    \item Posiadały ujednoliconą strukturę projektu
+    \item Z racji, iż dla przeglądarki najtrudniejszym zadaniem jest renderowanie elementów,     
+\end{itemize}
+Test który zaprojektowano skupia się dokładnie na porównaniu wydajności renderowania dużej liczby elementów.
+
+W tym miejscu warto odnieść się do świetnego artykułu autorstwa Pana Paula Lewisa \cite{rendering-performance} na temat optymalizacji renderowania w przeglądarce. Proces ten składa się z pięciu kroków przedstawionych na rysunku \ref{fig:rysunek_10}. 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_10.png}
+    \caption{Grafika przedstawiająca kolejność faz renderowania w przeglądarce}
+    \label{fig:rysunek_10}
+\end{figure}
+
+Na początku JavaScript wykonuje zmianę na dokumencie HTML.
+Następnie przeglądarka wylicza na podstawie arkusza styli (CSS) pozycję elementów na płótnie przeglądarki.
+Następnie znając rozmieszczenie elementów na stronie, przeglądarka wylicza ich wzajemne pozycje oraz rozmiar.
+Elementy na stronie mają na siebie wzajemny wpływ na przykład dla dwóch bloków <li>.
+W zależności od wysokości pierwszego bloku, drugi blok może zostać wyrenderowany, bądź też nie jeżeli wykracza on poza widoczny obszar rysowania, a także możemy wyliczyć dokładną pozycję na płótnie.
+Znając pozycję oraz rozmiary elementów, przechodzimy do fazy malowania.
+Pixele zostają malowane na wielu warstwach. W ostatniej fazie kompozycji, warstwy wyświetlone na ekran w konkretnej kolejności (odpowiada za to między innymi atrybut z-index w języku CSS).
+
+Jak widzimy, renderowanie pojedynczej klatki na stronie jest bardzo skomplikowanym procesem, który w idealnym przypadku powinien następować około 60 razy na sekundę (w zależności od  częstotliwości odświeżania ekranu ).
+Bardzo istotnym mechanizmem który przeglądarki stosuje w celu optymalizacji ilości pracy jest pomijanie niepotrzebnych fragmentów.
+Jeżeli zmianie uległa tylko pewna część strony, na przykład kolor tekstu, możemy pominąć etap wyliczania layoutu strony.
+Jeżeli nastąpi zmiana stanu, w której nie wystąpiła zmiana ani layoutu ani nie występuje potrzeba ponownego malowania, przeglądarka użyje poprzedniego zestawu gotowych warstw.
+Zrozumienie tego mechanizmu jest istotnym czynnikiem na którym oparłem konstrukcję testów wydajnościowych.
+
+Wracając do samej konstrukcji testu. Znając już mechanizm omijania czynności podczas renderowania obrazu w przeglądarce możemy przedstawić problem renderowania list.
+Załóżmy, że mamy listę 20 wyrenderowanych elementów na stronie. Do listy możemy dopisać nowe wartości albo na początku albo na końcu.
+W pierwszym kroku, dopisuję jeden nowy element do listy, na końcu co przedstawiono na rysunku \ref{fig:rysunek_11}. Każdy element na liście ma przypisany indeks.
+Dopisując nowy element do listy, w optymalnym przypadku, powinienem wyrenderować tylko jeden nowy element i dokładnie tak się stanie. Co stanie się, gdy dopiszę nowy element na początku listy? Otóż wszystkie indeksy zostaną przesunięte o 1.
+React wykryje zmianę jednego elementu na liście, i przeglądarka wyrenderuje tylko jeden nowy element . Widzimy także, że znaczna część fazy layoutu będzie taka sama, gdyż na ekranie zmieni się tylko jeden widoczny element.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_11.png}
+    \caption{Ilustracja przedstawiająca problem dopisywania elementu na koniec listy}
+    \label{fig:rysunek_11}
+\end{figure}
+
+Co stanie się w przypadku dopisania jednego nowego elementu na początku listy? Problem ten zaprezentowano na rysunku 12. Każdy indeks przypisany do elementu zostanie przesunięty o jeden.
+Z racji tej, React ponownie wyrenderuje każdy element (gdyż uzna, iż jest to nowy element). Spowoduje to zmianę kodu HTML która zmusi przeglądarkę do pełnego prze renderowania wszystkich warstw oraz wyliczenia całego layoutu na nowo.
+Oczywiście w skali 20 elementów które nie posiadają skomplikowanej struktury HTML i stylowania CSS nie powinno to robić problemu.
+Jednak w dobie nowoczesnych aplikacji, listy (np lista filmów netflixa) posiadają masę małych elementów przez co lista nawet 50 elementów może spowodować zauważalne opóźnienia podczas użytkowania aplikacji.
+
+W jaki sposób możemy poradzić sobie z tym problemem? Istnieją dwa sposoby dzięki którym React obiecuje znacznie wyższą wydajność w porównaniu do czystego kodu JavaScript.
+Pierwszym z nich jest unikalny indeks elementu \cite{react-lists}. Zamiast stosować klucza równego indeksowi elementu, musimy podać klucz który jest unikalny w ramach elementu.
+Przykładowo dla każdego elementu stworzymy parę (klucz, hasz). W tym momencie, jeżeli dodamy nowy element na początku listy, React spojrzy na listę kluczy, i zobaczy, że nie zmieniły się one, a dodano tylko jeden nowy element.
+Zamiast 22 renredowań, otrzymamy tylko jedno.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_12.png}
+    \caption{Ilustracja przedstawiająca problem dopisywania elementów na początek listy}
+    \label{fig:rysunek_12}
+\end{figure}
+
+Drugim sposobem poradzenia sobie z minimalizacją ilości renderowania jest koncepcja wirtualnego modelu DOM \cite{virtualdom}.
+Jest to mechanizm, który tworzy reprezentację interfejsu użytkownika w pamięci i synchronizuje ją z modelem DOM przeglądarki. Proces ten nazywa się rekoncyliacją \cite{reconcilation}.
+Pozwala to na wyrenderowanie tylko tych elementów, które różnią się między reprezentacją w pamięci a reprezentacją faktyczną drzewa DOM.
+
+Znając już konkretny problem, z którym aplikacje SPA muszą się mierzyć, postanowiono zaprojektować szereg akcji manipulujących listą elementów oraz zbadać, ile czasu zajmie konkretnego frameworkowi wykonanie takiej czynności.
+
 \subsection{Budowa aplikacji}
 \subsection{Przygotowanie aplikacji do badania}
 \subsection{Konteneryzacja aplikacji}
@@ -98,26 +193,11 @@ Tak więc na potrzeby pracy istotnym jest, wprowadzenie jednoznacznej definicji 
 
 
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_10.png}
-    \caption{Grafika przedstawiająca kolejność faz renderowania w przeglądarce}
-    \label{fig:rysunek_10}
-\end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_11.png}
-    \caption{Ilustracja przedstawiająca problem dopisywania elementu na koniec listy}
-    \label{fig:rysunek_11}
-\end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_12.png}
-    \caption{Ilustracja przedstawiająca problem dopisywania elementów na początek listy}
-    \label{fig:rysunek_12}
-\end{figure}
+
+
+
 
 \begin{figure}[!ht]
     \centering
