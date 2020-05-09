@@ -224,6 +224,24 @@ Cel \emph{install} jak sama nazwa wskazuje, przygotuje folder \emph{node\_module
 Drugi cel \emph{production} zajmie się procesem pakowania aplikacji i optymalizacji kodu w celach produkcyjnych \cite{react-perf}.
 
 \subsection{Przygotowanie aplikacji do badania}
+
+Kolejnym krokiem podczas przygotowania aplikacji do badania, jest zautomatyzowanie procesu budowania i transferowania aplikacji. Przygotowujemy je tym samym do konteneryzacji \cite{kontenery}. W ramach tej części procesu, stworzono 3 skrypty.
+\begin{itemize}
+    \item Compile all applications - skrypt ten ma na celu przejście po wszystkich folderach aplikacji, i wykonanie komend install oraz production.Komendy wykonują szereg intensywnych zadań polegających na pobraniu dużej ilości danych a następnie transpilacji \cite{Transpilator} i optymalizacji kodu które są zadaniami wysoce obciążającymi procesor. Dlatego też przygotowanie aplikacji sekwencyjnie zajmuje dużo czasu i jest nieefektywne.
+    Skrypt ten został zoptymalizowany aby wykonywał procesowanie współbieżne za pomocą mechanizmu obietnic \cite{promise}  w Javascript, dzięki temu w pełni wykorzystuje możliwości procesora.
+    \item Copy released apps - Prosty skrypt mający na celu przekopiowanie folderu dist z każdej aplikacji do głównego folderu "releases".
+    \item Create index html file - skrypt ten ma na celu stworzenie pliku index.html. W pliku tym zawrzemy informację o przygotowanych aplikacjach. Plik ten będzie dla nas istotny w dalszej części procesowania, gdy automat będzie wykrywać dostępne  aplikacje do badania.
+\end{itemize}
+
+Cały proces przedstawiony został na rysunku \ref{fig:rysunek_15}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_15.png}
+    \caption{Ilustracja procesu przygotowania aplikacji do konteneryzacji}
+    \label{fig:rysunek_15}
+\end{figure}
+
 \subsection{Konteneryzacja aplikacji}
 \subsection{Moduł badania}
 \subsection{Moduł analizy}
@@ -237,14 +255,6 @@ Drugi cel \emph{production} zajmie się procesem pakowania aplikacji i optymaliz
 \subsection{Zamiana miejscami dwóch wierszy}
 \subsection{Usunięcie pojedynczego wiersza}
 \subsection{Usunięcie wszystkich wierszy}
-
-
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_15.png}
-%     \caption{Ilustracja procesu przygotowania aplikacji do konteneryzacji}
-%     \label{fig:rysunek_15}
-% \end{figure}
 
 % \begin{figure}[!ht]
 %     \centering
