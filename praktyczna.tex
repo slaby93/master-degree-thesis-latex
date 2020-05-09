@@ -243,6 +243,51 @@ Cały proces przedstawiony został na rysunku \ref{fig:rysunek_15}.
 \end{figure}
 
 \subsection{Konteneryzacja aplikacji}
+
+Na tym etapie, dysponuje już zbudowanymi paczkami aplikacji. Aplikacje zostały zoptymalizowany do produkcyjnego użytku. Dodatkowo posiadam plik index.html stanowiący punkt wejścia do dalszego procesowania.
+
+Kolejnym krokiem jest stworzenie mechanizmu umożliwiającego dostęp do aplikacji. W normalnym środowisku służą do tego serwery aplikacji \cite{web-server}. Przykładem takiego serwera jest Nginx lub Apache.
+Z racji, iż instalacja takich serwerów wiążę się z pobraniem dużej ilości danych oraz każdorazową konfiguracją środowiska, skonteneryzowane rozwiązania znacząco przyspieszy i uprości pracę.
+
+Jednym z założeń narzędzia jest, aby całość działała w odizolowanym środowisku przy użyciu platformy docker \cite{docker}. W zależności od systemu operacyjnego, zestaw instrukcji potrzebnych do instalacji serwera może być całkowicie inny \cite{nginx-windows}\cite{nginx-linux}.
+Dlatego też wykorzystanie odizolowanej warstwy abstrakcji nad systemem operacyjnym jest istotnym zabiegiem.
+
+Istotnym detalem dotyczącym platformy docker jest jej zasada działania. Aplikacje składają się z warstw obrazów, co przedstawiono na rysunku \ref{fig:rysunek_16}.
+Aby rozpocząć nasz własny obraz, należy wybrać obraz bazowy. W celu zmniejszenia wagi obrazów, zazwyczaj stosuje się obrazy czystych, okrojonych wersji systemu Linux.
+Przykładem takiego obrazu jest obraz alpine \cite{docker-alpine}, który jest systemem Linux o wadze 5 MB. Następny obraz jako swoją bazę wykorzysta obraz alpine, i doda kolejną warstwę oprogramowania.
+Możliwym jest także jako bazę nowego obrazu, wybranie pełnoprawnej wersji systemu Linux na przykład bazą może być Ubuntu \cite{ubuntu}.
+Dzięki wykorzystaniu podejścia komponentowego, rozwiązanie to jest bardzo generyczne i pozwala na publikację tego samego oprogramowania na wiele różnych sposobów.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_16.png}
+    \caption{Ilustracja przedstawiająca warstwy składające się na  przykładowy obraz dockera}
+    \label{fig:rysunek_16}
+\end{figure}
+
+W celu stworzenia kontenera, należy utworzyć plik Dockerfile który jest plikiem typu YAML. W pliku tym precyzujemy, jaki obraz dockera ma być bazą naszego nowego obrazu.
+Podczas pisania implementacji narzędzia, użyto obrazu \emph{nginx:1.17.6-alpine}. Następnie kopiowane są przygotowane w poprzednich krokach aplikacje do folderu \emph{/var/www}.
+Jest to folder który NGINX wykorzystuje do serwowania plikóœ. Kolejny krokiem jest przygotowanie wcześniej stworzonego pliku nginx.conf jako pliku konfiguracyjnego serwera NGINX.
+Prezycje się w nim wiele istotnych opcji, lecz dla nas jedyną inretesującą opcja jest ścieżka do folderu aplikacji, port oraz plik index.html. Następnie następuje etap budowy nowego kontenera.
+
+Z racji, iż nowy kontener musi być zbudowany od nowa za każdym razem, gdy zmienimy kod aplikacji, stworzono plik Makefile mający na celu usprawnienie całego procesu.
+Należy wykonać komendę \textbf{make\ build\_nginx\_image}.
+Po zbudowaniu obrazu, możemy uruchomić nasz serwer za pomocą komendy \textbf{make\ start\_nginx\_docker}. Będzie on dostępny pod adresem \textbf{http://localhost:8085}.
+
+Ostatnim elementem jest opisanie faktycznego wyniku całego procesu. W tym celu, wchodzimy na stronę \textbf{http://localhost:8085}. Naszym oczom ukaże się bardzo prosta strona startowa przedstawiona na rysunku \ref{fig:rysunek_17}.
+Strona ta będzie potrzebna kolejnemu modułowi badawczemu opartemu na Selenium, w celu wykrycia, jakie aplikacje są dostępne do badania.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_17.png}
+    \caption{Grafika przedstawiająca plik index.html wraz z dostępnymi aplikacjami do badania}
+    \label{fig:rysunek_17}
+\end{figure}
+
+Możemy kliknąć na odnośnik przenoszący nas do konkretnej aplikacji.
+Należy tylko pamiętać o poprawieniu portu, czyli aby przejść do implementacji reacta, należy wejść w link \linebreak \textbf{http://localhost:8085/react/}.
+
+
 \subsection{Moduł badania}
 \subsection{Moduł analizy}
 
@@ -256,19 +301,7 @@ Cały proces przedstawiony został na rysunku \ref{fig:rysunek_15}.
 \subsection{Usunięcie pojedynczego wiersza}
 \subsection{Usunięcie wszystkich wierszy}
 
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_16.png}
-%     \caption{Ilustracja przedstawiająca warstwy składające się na  przykładowy obraz dockera}
-%     \label{fig:rysunek_16}
-% \end{figure}
 
-% \begin{figure}[!ht]
-%     \centering
-%     \includegraphics[width=12cm]{rysunek_17.png}
-%     \caption{Grafika przedstawiająca plik index.html wraz z dostępnymi aplikacjami do badania}
-%     \label{fig:rysunek_17}
-% \end{figure}
 
 % \begin{figure}[!ht]
 %     \centering

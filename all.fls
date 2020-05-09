@@ -419,6 +419,16 @@ INPUT .\img\rysunek_15.png
 INPUT .\img\rysunek_15.png
 INPUT .\img\rysunek_15.png
 INPUT .\img\rysunek_15.png
+INPUT img\rysunek_16.png
+INPUT .\img\rysunek_16.png
+INPUT .\img\rysunek_16.png
+INPUT .\img\rysunek_16.png
+INPUT .\img\rysunek_16.png
+INPUT img\rysunek_17.png
+INPUT .\img\rysunek_17.png
+INPUT .\img\rysunek_17.png
+INPUT .\img\rysunek_17.png
+INPUT .\img\rysunek_17.png
 OUTPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\podsumowanie.aux
 INPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\podsumowanie.tex
 INPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\podsumowanie.tex
@@ -508,6 +518,8 @@ INPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.out
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\base\8r.enc
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\rtcxr.pfb
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\rtcxr.pfb
+INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\rtxb.pfb
+INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\rtxb.pfb
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\rtxi.pfb
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\rtxi.pfb
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\rtxr.pfb
