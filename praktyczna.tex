@@ -1,6 +1,80 @@
 \chapter{Część praktyczna}
+Cykl życia standardowej strony internetowej przedstawiono na rysunku \ref{fig:rysunek_7}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_7.png}
+    \caption{Ilustracja przedstawiająca cykl życia statycznej strony internetowej}
+    \label{fig:rysunek_7}
+\end{figure}
+
+\begin{itemize}
+	\item Użytkownik otwiera przeglądarkę i odwiedza stronę WWW.
+    \item Przeglądarka wysyła zapytanie do serwera z żądaniem zasobów.
+    \item Serwer odsyła plik HTML w którym znajdują się odnośniki do plików JavaScript oraz CSS.
+    \item Przeglądarka pobiera pliki JavaScript oraz CSS
+    \item Przeglądarka renderuje stronę dla użytkownika.
+    \item Użytkownik klika w odnośnik do kolejnej strony ( w przykładzie strona logowania)
+    \item Przeglądarka pobiera cały nowy plik HTML
+    \item Przeglądarka renderuje nową stronę od nowa.
+    \item Przeglądarka ponownie pobiera dodatkowe pliki JavaScript oraz CSS (zakładamy, że przeglądarka nie przechowuje plików w pamięci podręcznej).
+    \item Przeglądarka renderuje stronę od nowa.
+\end{itemize}
+
+Jak widzimy, cały proces odwiedzenia dwóch stron w tej samej domenie wymaga każdorazowego przeładowania strony oraz pobrania tych samych danych.
+Proces ten wymaga ciągłego pobierania plików HTML, pobierania plików dodatkowych co obciąża procesor, pamięć łącze oraz sam serwer.
+
+Dla porównania, przedstawiona poniżej ilustracja pokazuje cykl działania aplikacji SPA (rysunek \ref{fig:rysunek_8})
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_8.png}
+    \caption{Ilustracja przedstawiająca cykl działania aplikacji SPA}
+    \label{fig:rysunek_8}
+\end{figure}
+
+\begin{itemize}
+    \item Użytkownik odwiedza tę samą stronę .
+    \item Przeglądarka pobiera plik HTML z definicją potrzebnych zasobów. Zazwyczaj sekcja body pliku jest pusta.
+    \item Przeglądarka pobiera dodatkowe pliki JavaScript oraz CSS.
+    \item Często pliki te są zoptymalizowane poprzez kompresję i sklejone w jeden plik tak, aby wykonać tylko jedno zapytanie zamiast dwóch.
+    \item Pliki JavaScript, generują treść strony HTML.
+    \item Przeglądarka może ( ale nie musi ) wykonać dodatkowe zapytanie o dane do jednego z endpointów serwera.
+    \item Użytkownik klika na odnośnik do kolejnej strony. Przeglądarka nie pobiera już dodatkowego pliku HTML, jako, że aplikacja jest dynamiczna. Skrypt JavaScript może, ale nie musi pobrać dodatkowych informacji z serwera.    
+\end{itemize}
+
+Jak widzimy, wykonano znacznie mniej zapytań do serwera. Dodatkowe zapytania które skrypt może wykonać w celu pobrania danych zazwyczaj są znacznie mniejsze od pełnego pliku HTML z wybraną treścią.
+Dodatkowo, przeglądarka nie przeładowuje strony przy każdej zmianie podstrony, co także odciąża procesor jak i łącze sieciowe.
 
 \section{Problem pomiaru wydajności aplikacji SPA}
+
+Z racji, że w aplikacjach SPA nigdy nie następuje przeładowanie strony, a ich działanie jest ciągłe pojawia się problem następującej natury. 
+
+W celu ułatwienia zrozumienia problemu posłużę się przykładem przedstawionym na rysunku \ref{fig:rysunek_9}. Załóżmy że jesteśmy na platformie Netflix. Otworzyliśmy stronę z listą dostępnych filmów do obejrzenia. 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{rysunek_9.png}
+    \caption{Grafika przedstawiająca mechanizm działania aplikacji dynamicznych}
+    \label{fig:rysunek_9}
+\end{figure}
+
+Aplikacja w stanie początkowym nie posiada żadnych filmów. Użytkownik klika przycisk pobierz listę filmów. Efektem ubocznym (side effect)  jest wysłanie informacji o akcji do menedżera stanu.
+Menedżer stanu wysyła zapytanie do serwera o listę filmów do zaproponowania. Serwer odpowiada z danymi, i menadżera stanu przechodzi w nowy stan.
+Podstrona otrzymuje informacje o nowym stanie. Pobiera nowy stan z menedżera stanu i prze renderuje widok.
+
+
+Problem pojawia się gdy chcemy określić kiedy cała procedura została zakończona.
+Samo sprawdzenie czy przycisk został naciśnięty nie jest wystarczające, gdyż z perspektywy użytkownika, procedura obejmuje także rezultat efektu ubocznego.
+Zapytanie do serwera zajmie od kilkudziesięciu milisekund do nawet i kilku czy kilkunastu sekund.
+Samo renderowanie także nie jest deterministyczny w kontekście czasu operacji gdyż wpływ na nie mają inne usługi korzystające z procesora czy pamięci komputera.
+Z racji, iż frameworki internetowe muszą być generyczne, nikomu jeszcze nie udało się stworzyć idealnego i jednolitego mechanizmu wyznaczania, czy dana akcja została zakończona czy nie.
+
+Tak więc na potrzeby pracy istotnym jest, wprowadzenie jednoznacznej definicji akcji w aplikacji.
+
+\emph{Akcja aplikacji - jest to zbiór procedur oraz zdarzeń i ich obsługi następujący w chwili interakcji użytkownika z aplikacją.}
+
+
 
 \section{Specyfikacja wymagań}
 
@@ -22,26 +96,7 @@
 \subsection{Usunięcie pojedynczego wiersza}
 \subsection{Usunięcie wszystkich wierszy}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_7.png}
-    \caption{Ilustracja przedstawiająca cykl życia statycznej strony internetowej}
-    \label{fig:rysunek_7}
-\end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_8.png}
-    \caption{Ilustracja przedstawiająca cykl działania aplikacji SPA}
-    \label{fig:rysunek_8}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{rysunek_9.png}
-    \caption{Grafika przedstawiająca mechanizm działania aplikacji dynamicznych}
-    \label{fig:rysunek_9}
-\end{figure}
 
 \begin{figure}[!ht]
     \centering

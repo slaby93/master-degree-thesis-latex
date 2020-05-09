@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  8 MAY 2020 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  9 MAY 2020 10:52
 entering extended mode
 **c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
 (c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
@@ -592,7 +592,7 @@ Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is usel
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 ...ojedynczego wiersza}{13}{subsection.3.4.7}
+l.31 ...ojedynczego wiersza}{16}{subsection.3.4.7}
                                                   % [1
 
 
@@ -697,184 +697,185 @@ Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is usel
 
  (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\praktyczna.tex
 Rozdzia\PlPrIeC {\l } 3.
-<./img/rysunek_7.png, id=311, 758.835pt x 381.3447pt>
+<./img/rysunek_7.png, id=312, 758.835pt x 381.3447pt>
 File: ./img/rysunek_7.png Graphic file (type png)
 <use ./img/rysunek_7.png>
-Package pdftex.def Info: ./img/rysunek_7.png  used on input line 27.
+Package pdftex.def Info: ./img/rysunek_7.png  used on input line 6.
 (pdftex.def)             Requested size: 341.43306pt x 171.58606pt.
-<./img/rysunek_8.png, id=312, 706.5597pt x 758.835pt>
+<./img/rysunek_8.png, id=314, 706.5597pt x 758.835pt>
 File: ./img/rysunek_8.png Graphic file (type png)
 <use ./img/rysunek_8.png>
-Package pdftex.def Info: ./img/rysunek_8.png  used on input line 34.
+Package pdftex.def Info: ./img/rysunek_8.png  used on input line 31.
 (pdftex.def)             Requested size: 341.43306pt x 366.70297pt.
-<./img/rysunek_9.png, id=313, 758.835pt x 466.1415pt>
-File: ./img/rysunek_9.png Graphic file (type png)
-<use ./img/rysunek_9.png>
-Package pdftex.def Info: ./img/rysunek_9.png  used on input line 41.
-(pdftex.def)             Requested size: 341.43306pt x 209.74039pt.
-<./img/rysunek_10.png, id=314, 529.7391pt x 111.5367pt>
-File: ./img/rysunek_10.png Graphic file (type png)
-<use ./img/rysunek_10.png>
-Package pdftex.def Info: ./img/rysunek_10.png  used on input line 48.
-(pdftex.def)             Requested size: 341.43306pt x 71.8904pt.
-<./img/rysunek_11.png, id=315, 758.835pt x 589.9641pt>
-File: ./img/rysunek_11.png Graphic file (type png)
-<use ./img/rysunek_11.png>
-Package pdftex.def Info: ./img/rysunek_11.png  used on input line 55.
-(pdftex.def)             Requested size: 341.43306pt x 265.45438pt.
-<./img/rysunek_12.png, id=316, 758.835pt x 558.4062pt>
-File: ./img/rysunek_12.png Graphic file (type png)
-<use ./img/rysunek_12.png>
-Package pdftex.def Info: ./img/rysunek_12.png  used on input line 62.
-(pdftex.def)             Requested size: 341.43306pt x 251.2549pt.
-<./img/rysunek_13.png, id=317, 742.2129pt x 758.835pt>
-File: ./img/rysunek_13.png Graphic file (type png)
-<use ./img/rysunek_13.png>
-Package pdftex.def Info: ./img/rysunek_13.png  used on input line 69.
-(pdftex.def)             Requested size: 341.43306pt x 349.07993pt.
-<./img/rysunek_14.png, id=318, 758.835pt x 144.0582pt>
-File: ./img/rysunek_14.png Graphic file (type png)
-<use ./img/rysunek_14.png>
-Package pdftex.def Info: ./img/rysunek_14.png  used on input line 76.
-(pdftex.def)             Requested size: 341.43306pt x 64.81898pt.
-<./img/rysunek_15.png, id=319, 626.0991pt x 758.835pt>
-File: ./img/rysunek_15.png Graphic file (type png)
-<use ./img/rysunek_15.png>
-Package pdftex.def Info: ./img/rysunek_15.png  used on input line 83.
-(pdftex.def)             Requested size: 341.43306pt x 413.81741pt.
-<./img/rysunek_16.png, id=320, 180.675pt x 154.8987pt>
-File: ./img/rysunek_16.png Graphic file (type png)
-<use ./img/rysunek_16.png>
-Package pdftex.def Info: ./img/rysunek_16.png  used on input line 90.
-(pdftex.def)             Requested size: 341.43306pt x 292.7506pt.
-<./img/rysunek_17.png, id=321, 229.5777pt x 128.6406pt>
-File: ./img/rysunek_17.png Graphic file (type png)
-<use ./img/rysunek_17.png>
-Package pdftex.def Info: ./img/rysunek_17.png  used on input line 97.
-(pdftex.def)             Requested size: 341.43306pt x 191.32924pt.
-<./img/rysunek_18.png, id=322, 427.8384pt x 758.835pt>
-File: ./img/rysunek_18.png Graphic file (type png)
-<use ./img/rysunek_18.png>
-Package pdftex.def Info: ./img/rysunek_18.png  used on input line 104.
-(pdftex.def)             Requested size: 341.43306pt x 605.6099pt.
-<./img/rysunek_19.png, id=323, 758.835pt x 461.0826pt>
-File: ./img/rysunek_19.png Graphic file (type png)
-<use ./img/rysunek_19.png>
-Package pdftex.def Info: ./img/rysunek_19.png  used on input line 111.
-(pdftex.def)             Requested size: 341.43306pt x 207.46414pt.
-<./img/rysunek_20.png, id=324, 758.835pt x 393.8715pt>
-File: ./img/rysunek_20.png Graphic file (type png)
-<use ./img/rysunek_20.png>
-Package pdftex.def Info: ./img/rysunek_20.png  used on input line 118.
-(pdftex.def)             Requested size: 341.43306pt x 177.2225pt.
-<./img/rysunek_21.png, id=325, 758.835pt x 384.4764pt>
-File: ./img/rysunek_21.png Graphic file (type png)
-<use ./img/rysunek_21.png>
-Package pdftex.def Info: ./img/rysunek_21.png  used on input line 125.
-(pdftex.def)             Requested size: 341.43306pt x 172.99518pt.
-<./img/rysunek_22.png, id=326, 758.835pt x 457.4691pt>
-File: ./img/rysunek_22.png Graphic file (type png)
-<use ./img/rysunek_22.png>
-Package pdftex.def Info: ./img/rysunek_22.png  used on input line 132.
-(pdftex.def)             Requested size: 341.43306pt x 205.83826pt.
-<./img/rysunek_23.png, id=327, 653.5617pt x 422.2977pt>
-File: ./img/rysunek_23.png Graphic file (type png)
-<use ./img/rysunek_23.png>
-Package pdftex.def Info: ./img/rysunek_23.png  used on input line 139.
-(pdftex.def)             Requested size: 341.43306pt x 220.62062pt.
-<./img/rysunek_24.png, id=328, 758.835pt x 310.2792pt>
-File: ./img/rysunek_24.png Graphic file (type png)
-<use ./img/rysunek_24.png>
-Package pdftex.def Info: ./img/rysunek_24.png  used on input line 146.
-(pdftex.def)             Requested size: 341.43306pt x 139.61014pt.
-<./img/rysunek_25.png, id=329, 758.835pt x 310.2792pt>
-File: ./img/rysunek_25.png Graphic file (type png)
-<use ./img/rysunek_25.png>
-Package pdftex.def Info: ./img/rysunek_25.png  used on input line 153.
-(pdftex.def)             Requested size: 341.43306pt x 139.61014pt.
-<./img/rysunek_26.png, id=330, 758.835pt x 509.0217pt>
-File: ./img/rysunek_26.png Graphic file (type png)
-<use ./img/rysunek_26.png>
-Package pdftex.def Info: ./img/rysunek_26.png  used on input line 160.
-(pdftex.def)             Requested size: 341.43306pt x 229.03433pt.
-<./img/rysunek_27.png, id=331, 724.6272pt x 307.1475pt>
-File: ./img/rysunek_27.png Graphic file (type png)
-<use ./img/rysunek_27.png>
-Package pdftex.def Info: ./img/rysunek_27.png  used on input line 167.
-(pdftex.def)             Requested size: 341.43306pt x 144.72021pt.
-<./img/rysunek_28.png, id=332, 389.2944pt x 455.301pt>
-File: ./img/rysunek_28.png Graphic file (type png)
-<use ./img/rysunek_28.png>
-Package pdftex.def Info: ./img/rysunek_28.png  used on input line 174.
-(pdftex.def)             Requested size: 341.43306pt x 399.33223pt.
-<./img/rysunek_29.png, id=333, 261.6174pt x 143.0946pt>
-File: ./img/rysunek_29.png Graphic file (type png)
-<use ./img/rysunek_29.png>
-Package pdftex.def Info: ./img/rysunek_29.png  used on input line 181.
-(pdftex.def)             Requested size: 341.43306pt x 186.7653pt.
-<./img/rysunek_30.png, id=334, 578.16pt x 371.2269pt>
-File: ./img/rysunek_30.png Graphic file (type png)
-<use ./img/rysunek_30.png>
-Package pdftex.def Info: ./img/rysunek_30.png  used on input line 188.
-(pdftex.def)             Requested size: 341.43306pt x 219.22588pt.
-<./img/rysunek_31.png, id=335, 388.8126pt x 189.3474pt>
-File: ./img/rysunek_31.png Graphic file (type png)
-<use ./img/rysunek_31.png>
-Package pdftex.def Info: ./img/rysunek_31.png  used on input line 195.
-(pdftex.def)             Requested size: 341.43306pt x 166.28528pt.
-<./img/rysunek_32.png, id=336, 393.3897pt x 148.6353pt>
-File: ./img/rysunek_32.png Graphic file (type png)
-<use ./img/rysunek_32.png>
-Package pdftex.def Info: ./img/rysunek_32.png  used on input line 202.
-(pdftex.def)             Requested size: 341.43306pt x 129.00775pt.
-<./img/rysunek_33.png, id=337, 388.5717pt x 181.1568pt>
-File: ./img/rysunek_33.png Graphic file (type png)
-<use ./img/rysunek_33.png>
-Package pdftex.def Info: ./img/rysunek_33.png  used on input line 209.
-(pdftex.def)             Requested size: 341.43306pt x 159.1835pt.
-<./img/rysunek_34.png, id=338, 1284.8pt x 825.0825pt>
-File: ./img/rysunek_34.png Graphic file (type png)
-<use ./img/rysunek_34.png>
-Package pdftex.def Info: ./img/rysunek_34.png  used on input line 216.
-(pdftex.def)             Requested size: 341.43306pt x 219.26271pt.
-<./img/rysunek_35.png, id=339, 1284.8pt x 825.0825pt>
-File: ./img/rysunek_35.png Graphic file (type png)
-<use ./img/rysunek_35.png>
-Package pdftex.def Info: ./img/rysunek_35.png  used on input line 223.
-(pdftex.def)             Requested size: 341.43306pt x 219.26271pt.
-<./img/rysunek_36.png, id=340, 578.16pt x 371.28712pt>
-File: ./img/rysunek_36.png Graphic file (type png)
-<use ./img/rysunek_36.png>
-Package pdftex.def Info: ./img/rysunek_36.png  used on input line 230.
-(pdftex.def)             Requested size: 341.43306pt x 219.26144pt.
-<./img/rysunek_37.png, id=341, 1284.8pt x 825.0825pt>
-File: ./img/rysunek_37.png Graphic file (type png)
-<use ./img/rysunek_37.png>
-Package pdftex.def Info: ./img/rysunek_37.png  used on input line 237.
-(pdftex.def)             Requested size: 341.43306pt x 219.26271pt.
-<./img/rysunek_38.png, id=342, 578.16pt x 371.2269pt>
-File: ./img/rysunek_38.png Graphic file (type png)
-<use ./img/rysunek_38.png>
-Package pdftex.def Info: ./img/rysunek_38.png  used on input line 244.
-(pdftex.def)             Requested size: 341.43306pt x 219.22588pt.
-<./img/rysunek_39.png, id=343, 578.16pt x 371.2269pt>
-File: ./img/rysunek_39.png Graphic file (type png)
-<use ./img/rysunek_39.png>
-Package pdftex.def Info: ./img/rysunek_39.png  used on input line 251.
-(pdftex.def)             Requested size: 341.43306pt x 219.22588pt.
-<./img/rysunek_40.png, id=344, 578.16pt x 371.2269pt>
-File: ./img/rysunek_40.png Graphic file (type png)
-<use ./img/rysunek_40.png>
-Package pdftex.def Info: ./img/rysunek_40.png  used on input line 258.
-(pdftex.def)             Requested size: 341.43306pt x 219.22588pt.
-)
 
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 96.
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 41.
 
 [13
 
 
-] [14 <./img/rysunek_7.png> <./img/rysunek_8.png>] [15 <./img/rysunek_9.png> <./img/rysunek_10.png> <./img/rysunek_11.png>] [16 <./img/rysunek_12.png> <./img/rysunek_13.png>] [17 <./img/rysunek_14.png> <./img/rysunek_15.png>] [18 <./img/rysunek_16.png> <./img/rysunek_17.png>] [19 <./img/rysunek_18.png>] [20 <./img/rysunek_19.png> <./img/rysunek_20.png> <./img/rysunek_21.png>] [21 <./img/rysunek_22.png> <./img/rysunek_23.png> <./img/rysunek_24.png>] [22 <./img/rysunek_25.png> <./img/rysunek_26.png> <./img/rysunek_27.png>] [23 <./img/rysunek_28.png> <./img/rysunek_29.png>] [24 <./img/rysunek_30.png> <./img/rysunek_31.png> <./img/rysunek_32.png>] [25 <./img/rysunek_33.png> <./img/rysunek_34.png>] [26 <./img/rysunek_35.png> <./img/rysunek_36.png>] [27 <./img/rysunek_37.png> <./img/rysunek_38.png>] [28 <./img/rysunek_39.png> <./img/rysunek_40.png>]
+ <./img/rysunek_7.png>] [14 <./img/rysunek_8.png>]
+<./img/rysunek_9.png, id=328, 758.835pt x 466.1415pt>
+File: ./img/rysunek_9.png Graphic file (type png)
+<use ./img/rysunek_9.png>
+Package pdftex.def Info: ./img/rysunek_9.png  used on input line 57.
+(pdftex.def)             Requested size: 341.43306pt x 209.74039pt.
+<./img/rysunek_10.png, id=329, 529.7391pt x 111.5367pt>
+File: ./img/rysunek_10.png Graphic file (type png)
+<use ./img/rysunek_10.png>
+Package pdftex.def Info: ./img/rysunek_10.png  used on input line 103.
+(pdftex.def)             Requested size: 341.43306pt x 71.8904pt.
+ [15 <./img/rysunek_9.png>]
+<./img/rysunek_11.png, id=336, 758.835pt x 589.9641pt>
+File: ./img/rysunek_11.png Graphic file (type png)
+<use ./img/rysunek_11.png>
+Package pdftex.def Info: ./img/rysunek_11.png  used on input line 110.
+(pdftex.def)             Requested size: 341.43306pt x 265.45438pt.
+<./img/rysunek_12.png, id=337, 758.835pt x 558.4062pt>
+File: ./img/rysunek_12.png Graphic file (type png)
+<use ./img/rysunek_12.png>
+Package pdftex.def Info: ./img/rysunek_12.png  used on input line 117.
+(pdftex.def)             Requested size: 341.43306pt x 251.2549pt.
+<./img/rysunek_13.png, id=338, 742.2129pt x 758.835pt>
+File: ./img/rysunek_13.png Graphic file (type png)
+<use ./img/rysunek_13.png>
+Package pdftex.def Info: ./img/rysunek_13.png  used on input line 124.
+(pdftex.def)             Requested size: 341.43306pt x 349.07993pt.
+<./img/rysunek_14.png, id=339, 758.835pt x 144.0582pt>
+File: ./img/rysunek_14.png Graphic file (type png)
+<use ./img/rysunek_14.png>
+Package pdftex.def Info: ./img/rysunek_14.png  used on input line 131.
+(pdftex.def)             Requested size: 341.43306pt x 64.81898pt.
+<./img/rysunek_15.png, id=340, 626.0991pt x 758.835pt>
+File: ./img/rysunek_15.png Graphic file (type png)
+<use ./img/rysunek_15.png>
+Package pdftex.def Info: ./img/rysunek_15.png  used on input line 138.
+(pdftex.def)             Requested size: 341.43306pt x 413.81741pt.
+<./img/rysunek_16.png, id=341, 180.675pt x 154.8987pt>
+File: ./img/rysunek_16.png Graphic file (type png)
+<use ./img/rysunek_16.png>
+Package pdftex.def Info: ./img/rysunek_16.png  used on input line 145.
+(pdftex.def)             Requested size: 341.43306pt x 292.7506pt.
+<./img/rysunek_17.png, id=342, 229.5777pt x 128.6406pt>
+File: ./img/rysunek_17.png Graphic file (type png)
+<use ./img/rysunek_17.png>
+Package pdftex.def Info: ./img/rysunek_17.png  used on input line 152.
+(pdftex.def)             Requested size: 341.43306pt x 191.32924pt.
+<./img/rysunek_18.png, id=343, 427.8384pt x 758.835pt>
+File: ./img/rysunek_18.png Graphic file (type png)
+<use ./img/rysunek_18.png>
+Package pdftex.def Info: ./img/rysunek_18.png  used on input line 159.
+(pdftex.def)             Requested size: 341.43306pt x 605.6099pt.
+<./img/rysunek_19.png, id=344, 758.835pt x 461.0826pt>
+File: ./img/rysunek_19.png Graphic file (type png)
+<use ./img/rysunek_19.png>
+Package pdftex.def Info: ./img/rysunek_19.png  used on input line 166.
+(pdftex.def)             Requested size: 341.43306pt x 207.46414pt.
+<./img/rysunek_20.png, id=345, 758.835pt x 393.8715pt>
+File: ./img/rysunek_20.png Graphic file (type png)
+<use ./img/rysunek_20.png>
+Package pdftex.def Info: ./img/rysunek_20.png  used on input line 173.
+(pdftex.def)             Requested size: 341.43306pt x 177.2225pt.
+<./img/rysunek_21.png, id=346, 758.835pt x 384.4764pt>
+File: ./img/rysunek_21.png Graphic file (type png)
+<use ./img/rysunek_21.png>
+Package pdftex.def Info: ./img/rysunek_21.png  used on input line 180.
+(pdftex.def)             Requested size: 341.43306pt x 172.99518pt.
+<./img/rysunek_22.png, id=347, 758.835pt x 457.4691pt>
+File: ./img/rysunek_22.png Graphic file (type png)
+<use ./img/rysunek_22.png>
+Package pdftex.def Info: ./img/rysunek_22.png  used on input line 187.
+(pdftex.def)             Requested size: 341.43306pt x 205.83826pt.
+<./img/rysunek_23.png, id=348, 653.5617pt x 422.2977pt>
+File: ./img/rysunek_23.png Graphic file (type png)
+<use ./img/rysunek_23.png>
+Package pdftex.def Info: ./img/rysunek_23.png  used on input line 194.
+(pdftex.def)             Requested size: 341.43306pt x 220.62062pt.
+<./img/rysunek_24.png, id=349, 758.835pt x 310.2792pt>
+File: ./img/rysunek_24.png Graphic file (type png)
+<use ./img/rysunek_24.png>
+Package pdftex.def Info: ./img/rysunek_24.png  used on input line 201.
+(pdftex.def)             Requested size: 341.43306pt x 139.61014pt.
+<./img/rysunek_25.png, id=350, 758.835pt x 310.2792pt>
+File: ./img/rysunek_25.png Graphic file (type png)
+<use ./img/rysunek_25.png>
+Package pdftex.def Info: ./img/rysunek_25.png  used on input line 208.
+(pdftex.def)             Requested size: 341.43306pt x 139.61014pt.
+<./img/rysunek_26.png, id=351, 758.835pt x 509.0217pt>
+File: ./img/rysunek_26.png Graphic file (type png)
+<use ./img/rysunek_26.png>
+Package pdftex.def Info: ./img/rysunek_26.png  used on input line 215.
+(pdftex.def)             Requested size: 341.43306pt x 229.03433pt.
+<./img/rysunek_27.png, id=352, 724.6272pt x 307.1475pt>
+File: ./img/rysunek_27.png Graphic file (type png)
+<use ./img/rysunek_27.png>
+Package pdftex.def Info: ./img/rysunek_27.png  used on input line 222.
+(pdftex.def)             Requested size: 341.43306pt x 144.72021pt.
+<./img/rysunek_28.png, id=353, 389.2944pt x 455.301pt>
+File: ./img/rysunek_28.png Graphic file (type png)
+<use ./img/rysunek_28.png>
+Package pdftex.def Info: ./img/rysunek_28.png  used on input line 229.
+(pdftex.def)             Requested size: 341.43306pt x 399.33223pt.
+<./img/rysunek_29.png, id=354, 261.6174pt x 143.0946pt>
+File: ./img/rysunek_29.png Graphic file (type png)
+<use ./img/rysunek_29.png>
+Package pdftex.def Info: ./img/rysunek_29.png  used on input line 236.
+(pdftex.def)             Requested size: 341.43306pt x 186.7653pt.
+<./img/rysunek_30.png, id=355, 578.16pt x 371.2269pt>
+File: ./img/rysunek_30.png Graphic file (type png)
+<use ./img/rysunek_30.png>
+Package pdftex.def Info: ./img/rysunek_30.png  used on input line 243.
+(pdftex.def)             Requested size: 341.43306pt x 219.22588pt.
+<./img/rysunek_31.png, id=356, 388.8126pt x 189.3474pt>
+File: ./img/rysunek_31.png Graphic file (type png)
+<use ./img/rysunek_31.png>
+Package pdftex.def Info: ./img/rysunek_31.png  used on input line 250.
+(pdftex.def)             Requested size: 341.43306pt x 166.28528pt.
+<./img/rysunek_32.png, id=357, 393.3897pt x 148.6353pt>
+File: ./img/rysunek_32.png Graphic file (type png)
+<use ./img/rysunek_32.png>
+Package pdftex.def Info: ./img/rysunek_32.png  used on input line 257.
+(pdftex.def)             Requested size: 341.43306pt x 129.00775pt.
+<./img/rysunek_33.png, id=358, 388.5717pt x 181.1568pt>
+File: ./img/rysunek_33.png Graphic file (type png)
+<use ./img/rysunek_33.png>
+Package pdftex.def Info: ./img/rysunek_33.png  used on input line 264.
+(pdftex.def)             Requested size: 341.43306pt x 159.1835pt.
+<./img/rysunek_34.png, id=359, 1284.8pt x 825.0825pt>
+File: ./img/rysunek_34.png Graphic file (type png)
+<use ./img/rysunek_34.png>
+Package pdftex.def Info: ./img/rysunek_34.png  used on input line 271.
+(pdftex.def)             Requested size: 341.43306pt x 219.26271pt.
+<./img/rysunek_35.png, id=360, 1284.8pt x 825.0825pt>
+File: ./img/rysunek_35.png Graphic file (type png)
+<use ./img/rysunek_35.png>
+Package pdftex.def Info: ./img/rysunek_35.png  used on input line 278.
+(pdftex.def)             Requested size: 341.43306pt x 219.26271pt.
+<./img/rysunek_36.png, id=361, 578.16pt x 371.28712pt>
+File: ./img/rysunek_36.png Graphic file (type png)
+<use ./img/rysunek_36.png>
+Package pdftex.def Info: ./img/rysunek_36.png  used on input line 285.
+(pdftex.def)             Requested size: 341.43306pt x 219.26144pt.
+<./img/rysunek_37.png, id=362, 1284.8pt x 825.0825pt>
+File: ./img/rysunek_37.png Graphic file (type png)
+<use ./img/rysunek_37.png>
+Package pdftex.def Info: ./img/rysunek_37.png  used on input line 292.
+(pdftex.def)             Requested size: 341.43306pt x 219.26271pt.
+<./img/rysunek_38.png, id=363, 578.16pt x 371.2269pt>
+File: ./img/rysunek_38.png Graphic file (type png)
+<use ./img/rysunek_38.png>
+Package pdftex.def Info: ./img/rysunek_38.png  used on input line 299.
+(pdftex.def)             Requested size: 341.43306pt x 219.22588pt.
+<./img/rysunek_39.png, id=364, 578.16pt x 371.2269pt>
+File: ./img/rysunek_39.png Graphic file (type png)
+<use ./img/rysunek_39.png>
+Package pdftex.def Info: ./img/rysunek_39.png  used on input line 306.
+(pdftex.def)             Requested size: 341.43306pt x 219.22588pt.
+<./img/rysunek_40.png, id=365, 578.16pt x 371.2269pt>
+File: ./img/rysunek_40.png Graphic file (type png)
+<use ./img/rysunek_40.png>
+Package pdftex.def Info: ./img/rysunek_40.png  used on input line 313.
+(pdftex.def)             Requested size: 341.43306pt x 219.22588pt.
+) [16 <./img/rysunek_10.png>] [17 <./img/rysunek_11.png> <./img/rysunek_12.png>] [18 <./img/rysunek_13.png> <./img/rysunek_14.png>] [19 <./img/rysunek_15.png>] [20 <./img/rysunek_16.png> <./img/rysunek_17.png>] [21 <./img/rysunek_18.png>] [22 <./img/rysunek_19.png> <./img/rysunek_20.png> <./img/rysunek_21.png>] [23 <./img/rysunek_22.png> <./img/rysunek_23.png> <./img/rysunek_24.png>] [24 <./img/rysunek_25.png> <./img/rysunek_26.png> <./img/rysunek_27.png>] [25 <./img/rysunek_28.png> <./img/rysunek_29.png>] [26 <./img/rysunek_30.png> <./img/rysunek_31.png> <./img/rysunek_32.png>] [27 <./img/rysunek_33.png> <./img/rysunek_34.png>] [28 <./img/rysunek_35.png> <./img/rysunek_36.png>] [29 <./img/rysunek_37.png> <./img/rysunek_38.png>] [30 <./img/rysunek_39.png> <./img/rysunek_40.png>]
 \openout2 = `podsumowanie.aux'.
 
  (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\podsumowanie.tex
@@ -883,7 +884,7 @@ Rozdzia\PlPrIeC {\l } 4.
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 98.
 
-[29
+[31
 
 
 
@@ -925,7 +926,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 74.
 
-[30
+[32
 
 
 
@@ -940,7 +941,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--132
 [][][]$\T1/txtt/m/n/12 https : / / developer . mozilla . org / en-[]US / docs / Learn / Common _ questions /
  []
 
-[31]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 194--195
 [][][]$\T1/txtt/m/n/12 https : / / www . selenium . dev / documentation / en / introduction / the _ selenium _
  []
@@ -950,7 +951,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--214
 [][][]$\T1/txtt/m/n/12 https : / / developer . mozilla . org / en-[]US / docs / Web / JavaScript / Memory _
  []
 
-[32]) [33]
+[34]) [35]
 \openout2 = `spis.aux'.
 
  (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\spis.tex (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.lof
@@ -971,7 +972,7 @@ Overfull \hbox (31.64395pt too wide) in paragraph at lines 28--28
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 30.
 
-[34
+[36
 
 
 
@@ -990,7 +991,7 @@ Overfull \hbox (6.51596pt too wide) in paragraph at lines 43--43
 \tf@lof=\write6
 \openout6 = `all.lof'.
 
-) [35]
+) [37]
 \openout2 = `Oswiadczenie_udostepnienie.aux'.
 
  (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\Oswiadczenie_udostepnienie.tex
@@ -1036,7 +1037,7 @@ Underfull \hbox (badness 6575) in paragraph at lines 54--54
 []\T1/txr/m/n/12 Tytuª pra-cy dy-plo-mo-wej:  Ana-li-za po-rów-naw-cza no-wo-cze-snych
  []
 
-[36
+[38
 
 
 
@@ -1097,7 +1098,7 @@ Overfull \hbox (8.2079pt too wide) in paragraph at lines 54--61
 \T1/txr/m/n/12 orze-cze-nia przez komisj[] dyscyplinarn[] oraz zªo-»e-nie za-wia-do-mie-nia o po-peª-nie-niu przest[]pstwa. 
  []
 
-[37
+[39
 
 
 
@@ -1117,17 +1118,17 @@ Package rerunfilecheck Info: File `all.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 16029 strings out of 480930
- 238124 string characters out of 2909548
- 508917 words of memory out of 3000000
+ 16031 strings out of 480930
+ 238138 string characters out of 2909548
+ 504963 words of memory out of 3000000
  31362 multiletter control sequences out of 15000+200000
  635933 words of font info for 179 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,15n,55p,809b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,16n,55p,809b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (38 pages, 35866015 bytes).
+Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (40 pages, 35872282 bytes).
 PDF statistics:
- 718 PDF objects out of 1000 (max. 8388607)
- 155 named destinations out of 1000 (max. 500000)
+ 730 PDF objects out of 1000 (max. 8388607)
+ 157 named destinations out of 1000 (max. 500000)
  497 words of extra memory for PDF output out of 10000 (max. 10000000)
 
