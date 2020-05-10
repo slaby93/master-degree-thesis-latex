@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  9 MAY 2020 12:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  10 MAY 2020 12:59
 entering extended mode
 **c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
 (c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
@@ -646,7 +646,7 @@ Overfull \hbox (9.6339pt too wide) in paragraph at lines 4--5
 File: ./img/rysunek_1.png Graphic file (type png)
 <use ./img/rysunek_1.png>
 Package pdftex.def Info: ./img/rysunek_1.png  used on input line 24.
-(pdftex.def)             Requested size: 341.43306pt x 340.92976pt.
+(pdftex.def)             Requested size: 284.52756pt x 284.10814pt.
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 42.
 
@@ -662,18 +662,18 @@ Overfull \hbox (8.27989pt too wide) in paragraph at lines 43--46
 File: ./img/rysunek_2.png Graphic file (type png)
 <use ./img/rysunek_2.png>
 Package pdftex.def Info: ./img/rysunek_2.png  used on input line 51.
-(pdftex.def)             Requested size: 341.43306pt x 221.12796pt.
+(pdftex.def)             Requested size: 398.33858pt x 257.98662pt.
 <./img/rysunek_3.png, id=250, 606.76688pt x 400.49625pt>
 File: ./img/rysunek_3.png Graphic file (type png)
 <use ./img/rysunek_3.png>
 Package pdftex.def Info: ./img/rysunek_3.png  used on input line 61.
-(pdftex.def)             Requested size: 341.43306pt x 225.36414pt.
+(pdftex.def)             Requested size: 398.33858pt x 262.9289pt.
 [7 <./img/rysunek_1.png>]
 <./img/rysunek_4.png, id=263, 478.03593pt x 297.36093pt>
 File: ./img/rysunek_4.png Graphic file (type png)
 <use ./img/rysunek_4.png>
 Package pdftex.def Info: ./img/rysunek_4.png  used on input line 71.
-(pdftex.def)             Requested size: 341.43306pt x 212.38458pt.
+(pdftex.def)             Requested size: 398.33858pt x 247.78503pt.
  [8 <./img/rysunek_2.png> <./img/rysunek_3.png>] [9 <./img/rysunek_4.png>]
 <./img/rysunek_5.png, id=285, 665.48625pt x 264.23718pt>
 File: ./img/rysunek_5.png Graphic file (type png)
@@ -685,7 +685,7 @@ File: ./img/rysunek_6.png Graphic file (type png)
 <use ./img/rysunek_6.png>
 Package pdftex.def Info: ./img/rysunek_6.png  used on input line 124.
 (pdftex.def)             Requested size: 341.43306pt x 131.0214pt.
-) [10 <./img/rysunek_5.png>] [11 <./img/rysunek_6.png>]
+ [10 <./img/rysunek_5.png>]) [11 <./img/rysunek_6.png>]
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 95.
 
@@ -1215,7 +1215,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  49i,16n,55p,809b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (50 pages, 35931307 bytes).
+Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (50 pages, 35931341 bytes).
 PDF statistics:
  836 PDF objects out of 1000 (max. 8388607)
  167 named destinations out of 1000 (max. 500000)
