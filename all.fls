@@ -550,9 +550,6 @@ INPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\podsumowanie.te
 OUTPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\bibliografia.aux
 INPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\bibliografia.tex
 INPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\bibliografia.tex
-INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\t1txtt.fd
-INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\t1txtt.fd
-INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\tfm\public\txfonts\t1xtt.tfm
 OUTPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\spis.aux
 INPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\spis.tex
 INPUT c:\Users\aorus\Documents\GitHub\master-degree-thesis-latex\spis.tex
@@ -639,8 +636,6 @@ INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\rtxi.
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\rtxi.pfb
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\rtxr.pfb
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\rtxr.pfb
-INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\t1xtt.pfb
-INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\t1xtt.pfb
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\txsy.pfb
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\txfonts\txsy.pfb
 INPUT C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\fonts\type1\urw\helvetic\uhvb8a.pfb

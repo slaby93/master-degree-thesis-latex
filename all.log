@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  10 MAY 2020 14:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  10 MAY 2020 14:37
 entering extended mode
 **c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
 (c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
@@ -1020,36 +1020,17 @@ Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is usel
 \openout2 = `bibliografia.aux'.
 
 (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\bibliografia.tex
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 16.
- (C:\Users\aorus\AppData\Roaming\MiKTeX\2.9\tex/latex/txfonts\t1txtt.fd
-File: t1txtt.fd 2000/12/15 v3.1
-)
-Overfull \hbox (84.99382pt too wide) in paragraph at lines 16--17
-[][][]$\T1/txtt/m/n/12 https : / / scotch . io / tutorials / javascript-[]transpilers-[]what-[]they-[]are-[]why-[]we-[]need-[]them$[][] 
- []
-
-
-Overfull \hbox (43.1219pt too wide) in paragraph at lines 30--31
-[][][]$\T1/txtt/m/n/12 https : / / pdfs . semanticscholar . org / fa9f / f75f32de61cddafa8805ea433d4d8a0e20da .
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
-[][][]$\T1/txtt/m/n/12 http : / / yadda . icm . edu . pl / baztech / element / bwmeta1 . element .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
-[][][]$\T1/txtt/m/n/12 http : / / cdn . lxqnsys . com / 05 _ You _ Don '[] t % 20 _ Know _ JS _ Async _ & _ Performance .
+[]\T1/txr/m/n/12 http://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-article-BSW4-0034-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 72--73
-[][][]$\T1/txtt/m/n/12 http : / / yadda . icm . edu . pl / yadda / element / bwmeta1 . element .
+[]\T1/txr/m/n/12 http://yadda.icm.edu.pl/yadda/element/bwmeta1.element.baztech-5c6271b4-27e3-42d0-
  []
 
 
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 74.
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 78.
 
 [49
 
@@ -1057,28 +1038,18 @@ Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is usel
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-[][][]$\T1/txtt/m/n/12 https : / / developer . mozilla . org / en / docs / Web / JavaScript / Reference /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-[][][]$\T1/txtt/m/n/12 https : / / developer . mozilla . org / en-[]US / docs / Learn / Common _ questions /
+Overfull \hbox (9.29472pt too wide) in paragraph at lines 131--132
+[]\T1/txr/m/n/12 https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server 
  []
 
 [50]
-Overfull \hbox (153.7217pt too wide) in paragraph at lines 195--196
-[][][]$\T1/txtt/m/n/12 https : / / phppot . com / demo / php-[]calendar-[]event-[]management-[]using-[]fullcalendar-[]javascript-[]library/$[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
+[]\T1/txr/m/n/12 https://phppot.com/demo/php-calendar-event-management-using-fullcalendar-javascript-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
-[][][]$\T1/txtt/m/n/12 https : / / www . selenium . dev / documentation / en / introduction / the _ selenium _
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
-[][][]$\T1/txtt/m/n/12 https : / / developer . mozilla . org / en-[]US / docs / Web / JavaScript / Memory _
+Overfull \hbox (9.11473pt too wide) in paragraph at lines 207--208
+[]\T1/txr/m/n/12 https://www.selenium.dev/documentation/en/introduction/the_selenium_project_and_tools/ 
  []
 
 [51]) [52]
@@ -1248,17 +1219,17 @@ Package rerunfilecheck Info: File `all.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 16054 strings out of 480930
- 238392 string characters out of 2909548
- 495206 words of memory out of 3000000
- 31365 multiletter control sequences out of 15000+200000
- 635933 words of font info for 179 fonts, out of 3000000 for 9000
+ 16020 strings out of 480930
+ 237860 string characters out of 2909548
+ 493206 words of memory out of 3000000
+ 31335 multiletter control sequences out of 15000+200000
+ 635611 words of font info for 178 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,15n,55p,809b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (57 pages, 35940563 bytes).
+ 49i,15n,55p,809b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (57 pages, 35920737 bytes).
 PDF statistics:
- 892 PDF objects out of 1000 (max. 8388607)
+ 841 PDF objects out of 1000 (max. 8388607)
  177 named destinations out of 1000 (max. 500000)
  497 words of extra memory for PDF output out of 10000 (max. 10000000)
 
