@@ -1,9 +1,9 @@
 \chapter{Część praktyczna}
 Cykl życia standardowej strony internetowej przedstawiono na rysunku \ref{fig:rysunek_7}
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_7.png}
+    \includegraphics[width=\textwidth]{rysunek_7.png}
     \caption{Ilustracja przedstawiająca cykl życia statycznej strony internetowej}
     \label{fig:rysunek_7}
 \end{figure}
@@ -26,9 +26,9 @@ Proces ten wymaga ciągłego pobierania plików HTML, pobierania plików dodatko
 
 Dla porównania, przedstawiona poniżej ilustracja pokazuje cykl działania aplikacji SPA (rysunek \ref{fig:rysunek_8})
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_8.png}
+    \includegraphics[width=\textwidth]{rysunek_8.png}
     \caption{Ilustracja przedstawiająca cykl działania aplikacji SPA}
     \label{fig:rysunek_8}
 \end{figure}
@@ -52,9 +52,9 @@ Z racji, że w aplikacjach SPA nigdy nie następuje przeładowanie strony, a ich
 
 W celu ułatwienia zrozumienia problemu posłużę się przykładem przedstawionym na rysunku \ref{fig:rysunek_9}. Załóżmy że jesteśmy na platformie Netflix. Otworzyliśmy stronę z listą dostępnych filmów do obejrzenia. 
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_9.png}
+    \includegraphics[width=\textwidth]{rysunek_9.png}
     \caption{Grafika przedstawiająca mechanizm działania aplikacji dynamicznych}
     \label{fig:rysunek_9}
 \end{figure}
@@ -118,9 +118,9 @@ Test który zaprojektowano skupia się dokładnie na porównaniu wydajności ren
 
 W tym miejscu warto odnieść się do świetnego artykułu autorstwa Pana Paula Lewisa \cite{rendering-performance} na temat optymalizacji renderowania w przeglądarce. Proces ten składa się z pięciu kroków przedstawionych na rysunku \ref{fig:rysunek_10}. 
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_10.png}
+    \includegraphics[width=\textwidth]{rysunek_10.png}
     \caption{Grafika przedstawiająca kolejność faz renderowania w przeglądarce}
     \label{fig:rysunek_10}
 \end{figure}
@@ -145,9 +145,9 @@ W pierwszym kroku, dopisuję jeden nowy element do listy, na końcu co przedstaw
 Dopisując nowy element do listy, w optymalnym przypadku, powinienem wyrenderować tylko jeden nowy element i dokładnie tak się stanie. Co stanie się, gdy dopiszę nowy element na początku listy? Otóż wszystkie indeksy zostaną przesunięte o 1.
 React wykryje zmianę jednego elementu na liście, i przeglądarka wyrenderuje tylko jeden nowy element . Widzimy także, że znaczna część fazy layoutu będzie taka sama, gdyż na ekranie zmieni się tylko jeden widoczny element.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_11.png}
+    \includegraphics[width=\textwidth]{rysunek_11.png}
     \caption{Ilustracja przedstawiająca problem dopisywania elementu na koniec listy}
     \label{fig:rysunek_11}
 \end{figure}
@@ -162,9 +162,9 @@ Pierwszym z nich jest unikalny indeks elementu \cite{react-lists}. Zamiast stoso
 Przykładowo dla każdego elementu stworzymy parę (klucz, hasz). W tym momencie, jeżeli dodamy nowy element na początku listy, React spojrzy na listę kluczy, i zobaczy, że nie zmieniły się one, a dodano tylko jeden nowy element.
 Zamiast 22 renredowań, otrzymamy tylko jedno.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_12.png}
+    \includegraphics[width=\textwidth]{rysunek_12.png}
     \caption{Ilustracja przedstawiająca problem dopisywania elementów na początek listy}
     \label{fig:rysunek_12}
 \end{figure}
@@ -178,9 +178,9 @@ Znając już konkretny problem, z którym aplikacje SPA muszą się mierzyć, po
 \subsection{Budowa aplikacji}
 
 Każda aplikacja będzie składać się z szeregu przycisków. W wewnętrznym stanie aplikacji, będziemy trzymać listę wartości do wyrenderowania. Wartości które będziemy renderować będą stringiem o długości 10 znaków. Proces zmiany aplikacji prezentuję na poniższym rysunku.
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_13.png}
+    \includegraphics[width=\textwidth]{rysunek_13.png}
     \caption{Ilustracja mechanizmu przebiegu badania}
     \label{fig:rysunek_13}
 \end{figure}
@@ -191,9 +191,9 @@ Zmiana stanu z kolei spowoduje ponowne wyrenderowanie komponentu wyświetlające
 
 Na rysunku poniżej przedstawiam listę akcji jakie aplikacja musi implementować:
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_14.png}
+    \includegraphics[width=\textwidth]{rysunek_14.png}
     \caption{Grafika przedstawiająca zaimplementowane przyciski w aplikacji}
     \label{fig:rysunek_14}
 \end{figure}
@@ -235,9 +235,9 @@ Kolejnym krokiem podczas przygotowania aplikacji do badania, jest zautomatyzowan
 
 Cały proces przedstawiony został na rysunku \ref{fig:rysunek_15}.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_15.png}
+    \includegraphics[width=\textwidth]{rysunek_15.png}
     \caption{Ilustracja procesu przygotowania aplikacji do konteneryzacji}
     \label{fig:rysunek_15}
 \end{figure}
@@ -258,9 +258,9 @@ Przykładem takiego obrazu jest obraz alpine \cite{docker-alpine}, który jest s
 Możliwym jest także jako bazę nowego obrazu, wybranie pełnoprawnej wersji systemu Linux na przykład bazą może być Ubuntu \cite{ubuntu}.
 Dzięki wykorzystaniu podejścia komponentowego, rozwiązanie to jest bardzo generyczne i pozwala na publikację tego samego oprogramowania na wiele różnych sposobów.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_16.png}
+    \includegraphics[width=10cm]{rysunek_16.png}
     \caption{Ilustracja przedstawiająca warstwy składające się na  przykładowy obraz dockera}
     \label{fig:rysunek_16}
 \end{figure}
@@ -277,9 +277,9 @@ Po zbudowaniu obrazu, możemy uruchomić nasz serwer za pomocą komendy \textbf{
 Ostatnim elementem jest opisanie faktycznego wyniku całego procesu. W tym celu, wchodzimy na stronę \textbf{http://localhost:8085}. Naszym oczom ukaże się bardzo prosta strona startowa przedstawiona na rysunku \ref{fig:rysunek_17}.
 Strona ta będzie potrzebna kolejnemu modułowi badawczemu opartemu na Selenium, w celu wykrycia, jakie aplikacje są dostępne do badania.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_17.png}
+    \includegraphics[width=10cm]{rysunek_17.png}
     \caption{Grafika przedstawiająca plik index.html wraz z dostępnymi aplikacjami do badania}
     \label{fig:rysunek_17}
 \end{figure}
@@ -305,9 +305,9 @@ Zobrazowano to na przykładzie języka PHP na rysunku \ref{fig:rysunek_18}.
 
 Oto najprostszy, wiekowy już przykład aplikacji kalendarza napisanej w PHP. Gdy będziemy chcieli zmienić miesiąc z marca na kwiecień, nastąpi przeładowanie całej strony.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_18.png}
+    \includegraphics[width=\textwidth]{rysunek_18.png}
     \caption{Ilustracja mechanizmu działania strony statycznej na przykładzie aplikacji kalendarza przy użyciu języka PHP}
     \label{fig:rysunek_18}
 \end{figure}
@@ -315,9 +315,9 @@ Oto najprostszy, wiekowy już przykład aplikacji kalendarza napisanej w PHP. Gd
 Teraz, z punktu badawczego chcemy ustalić ile trwała cała akcja. Prosimy nasz automat o naciśnięcie przycisku.
 Poszukujemy odpowiedzi na pytanie, ile czasu upłynie, od momentu naciśnięcia przycisku do momentu wyrenderowania nowej treści. Przeanalizujmy więc cały proces ukazany na rysunku \ref{fig:rysunek_19}.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_19.png}
+    \includegraphics[width=\textwidth]{rysunek_19.png}
     \caption{Grafika przedstawiająca proces przeładowania strony statycznej}
     \label{fig:rysunek_19}
 \end{figure}
@@ -328,9 +328,9 @@ Przeglądarka posiada wbudowane w swoje API szereg zdarzeń które deweloperzy, 
 W naszym przypadku, będzie to First Meaningful Paint \cite{rail-model} które oznacza, kiedy pierwsza treść dostępna dla użytkownika zostaje w pełni namalowana.
 Kolejność zdarzeń ukazano na rysunku \ref{fig:rysunek_20}.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_20.png}
+    \includegraphics[width=\textwidth]{rysunek_20.png}
     \caption{Ilustracja procesu ładowania aplikacji oraz zdarzenia rejestrowane przez przeglądarkę}
     \label{fig:rysunek_20}
 \end{figure}
@@ -360,16 +360,16 @@ Jako przykład mamy podobny kalendarz jak na stronie statycznej, tym razem z uż
 Na rysunku \ref{fig:rysunek_21} przedstawiono zmianę daty aplikacji dynamicznej z punktu widzenia użytkownika.
 Na rysunku \ref{fig:rysunek_22} przedstawiono rozpisaną kolejność zdarzeń z punktu widzenia komputera.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_21.png}
+    \includegraphics[width=\textwidth]{rysunek_21.png}
     \caption{Ilustracja mechanizmu zmiany daty w przypadku aplikacji dynamicznej z punktu widzenia użytkownika}
     \label{fig:rysunek_21}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_22.png}
+    \includegraphics[width=\textwidth]{rysunek_22.png}
     \caption{Ilustracja przedstawiająca proces zmiany treści strony w przypadku aplikacji dynamicznej z punktu widzenia komputera}
     \label{fig:rysunek_22}
 \end{figure}
@@ -404,9 +404,9 @@ Drugim elementem jest sama przeglądarka, w tym celu wykorzystam obraz \emph{sel
 Ostatnim elementem jest skrypt który wykorzystując stworzony serwis Selenium, wyśle on odpowiednie informacje do przeglądarki,
 zagreguje dane oraz zachowa je na dyski do dalszego procesowania i analizy. Proces ten zobrazowano na rysunku \ref{fig:rysunek_23}.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_23.png}
+    \includegraphics[width=\textwidth]{rysunek_23.png}
     \caption{Ilustracja procesu współpracy pomiędzy Selenium a przeglądarką}
     \label{fig:rysunek_23}
 \end{figure}
@@ -420,16 +420,16 @@ Jeżeli którykolwiek z nich po 3 próbach nadal nie będzie mógł się połąc
 Próbę uzyskania połączenia zobrazowano na rysunku \ref{fig:rysunek_24}.
 Z kolei na rysunku \ref{fig:rysunek_25} widzimy, iż pomimo początkowych problemów z uzyskaniem połączenia, mechanizm zadziałał poprawnie i udało się nawiązać połączenie.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_24.png}
+    \includegraphics[width=\textwidth]{rysunek_24.png}
     \caption{Wycinek wpisów skryptu przeprowadzającego badanie w środowisku docker-compose. Ilustruje on inicjalizację skryptu oraz mechanizm uzyskiwania połączenia pomiędzy Skryptem - Przeglądarką - Selenium}
     \label{fig:rysunek_24}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_25.png}
+    \includegraphics[width=\textwidth]{rysunek_25.png}
     \caption{Wycinek skryptu ukazujący uzyskanie połączenia do Selenium pomimo początkowych problemów}
     \label{fig:rysunek_25}
 \end{figure}
@@ -460,9 +460,9 @@ Każda akcja jest stworzona jako funkcja, która w momencie uruchomienia tworzy 
 w przeglądarkę jakim jest Performance API \cite{mozilla-perf}. Wpis taki, posiada precyzję sięgającą 5 mikrosekund \cite{mozilla-high-res-api}.
 Tak więc dla jednego obiegu takiego testu mamy 700 wpisów. Całą operację przedstawiono na rysunku \ref{fig:rysunek_26}.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_26.png}
+    \includegraphics[width=\textwidth]{rysunek_26.png}
     \caption{Grafika przedstawia rozpoczęcie badania}
     \label{fig:rysunek_26}
 \end{figure}
@@ -471,9 +471,9 @@ Po zakończeniu testu (rysunek \ref{fig:rysunek_27}), skrypt komunikuje się z S
 Wpisy te zostają zapisane w postaci pliku JSON w folderze results.
 Dla każdej badanej aplikacji i każdego testu, zostaną zapisane 3 pliki wynikowe, po jednym dla każdego z dostępnych logów.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_27.png}
+    \includegraphics[width=\textwidth]{rysunek_27.png}
     \caption{Grafika przedstawia skrypt zakańczający badanie po zapisaniu zebranych danych na dysk - widzimy, że ważnym elementem jest zamknięcie połączenia do Selenium}
     \label{fig:rysunek_27}
 \end{figure}
@@ -482,11 +482,11 @@ Dla każdej badanej aplikacji i każdego testu, zostaną zapisane 3 pliki wyniko
 
 W module tym, zajmiemy się przygotowaniem zebranych danych i skondensowanym ich do postaci pojedynczego pliku JSON zawierającego istotne dla nas informacje.
 Skrypt ten jest napisany w sposób generyczny, tak więc dla każdego nowego rodzaju testu powinniśmy przygotować nowy skrypt parsujący.
-Podstawowa struktura pliku jest jednak ujednolicona i pozwala nam na generyczne procesowanie pliku. Struktura danych przedstawiona została na grafice poniżej:
+Podstawowa struktura pliku jest jednak ujednolicona i pozwala nam na generyczne procesowanie pliku. Struktura danych przedstawiona została na grafice \ref{fig:rysunek_28}:
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_28.png}
+    \includegraphics[width=8cm]{rysunek_28.png}
     \caption{Ilustracja struktury wyniku badania na które zostanie poddane dalszej obróbce}
     \label{fig:rysunek_28}
 \end{figure}
@@ -496,14 +496,14 @@ Do celów badania, jedynie wpisy przeglądarki zawierały istotne dane (rysunek 
 Wynikiem całego skryptu jest pojedyńczy plik index.json zawierający taki sam podział na aplikacje, badania i przebiegi.
 Atomowym wpisem dla każdego badania jest pomiar. Pomiar zawiera w sobie nazwę akcji jaka została wykonana oraz zmierzoną wartość.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_29.png}
+    \includegraphics[width=\textwidth]{rysunek_29.png}
     \caption{Grafika przedstawiająca wpis zebranego pomiaru}
     \label{fig:rysunek_29}
 \end{figure}
 
-
+\clearpage
 \section{Analiza wyników}
 
 Finalny zestaw badań jakie wykonano objęły następujące parametry:
@@ -519,9 +519,9 @@ Finalny zestaw badań jakie wykonano objęły następujące parametry:
 Pierwsze badanie polega na zmierzeniu czasu potrzebnego do rozpoczęcia malowania strony. Oczekujemy tutaj na zdarzenie first paint \cite{mdn-first-paint}.
 Wyniki zaprezentowano na rysunku \ref{fig:rysunek_30}.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_30.png}
+    \includegraphics[width=\textwidth]{rysunek_30.png}
     \caption{Diagram kolumnowy ukazujący wynik badania czasu potrzebnego do rozpoczęcia malowania strony}
     \label{fig:rysunek_30}
 \end{figure}
@@ -534,23 +534,23 @@ Vue jest także o 19.04 milisekundy szybsze od Angulara co stanowi 56.743\% leps
 Główny wpływ na otrzymane wyniki będą mieć waga narzędzia oraz ilość kodu który musi być pobrany oraz uruchomiony zanim narzędzie zacznie renderować wymaganą treść.
 Dodatkowe informacje możemy wyłuskać patrząc na ilość bajtów pobranych przez przeglądarkę co ukazano na rysunku \ref{fig:rysunek_31} - Angular2, rysunek \ref{fig:rysunek_32} - React oraz rysunek \ref{fig:rysunek_33} - Vue.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_31.png}
+    \includegraphics[width=\textwidth]{rysunek_31.png}
     \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji Angular2}
     \label{fig:rysunek_31}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_32.png}
+    \includegraphics[width=\textwidth]{rysunek_32.png}
     \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji React}
     \label{fig:rysunek_32}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_33.png}
+    \includegraphics[width=\textwidth]{rysunek_33.png}
     \caption{Grafika ukazująca rozmiar plików zasobów dla aplikacji Vue}
     \label{fig:rysunek_33}
 \end{figure}
@@ -560,6 +560,7 @@ Vue który pobiera 122 kB czyli o 8.955\% mniej danych, ładuje się w czasie 33
 Wskazuje to jednoznacznie, że kod Reacta pomimo większej wagi, wykonuje mniej operacji przed pierwszym renderowaniem.
 Na ostatnim miejscu w tym badaniu znajduje się Angular2 który potrzebuje 185 kB oraz 52.595 milisekund na załadowanie pierwszego piksela.
 
+\clearpage
 \subsection{Dodanie 1000 wierszy na początku listy}
 
 W badaniu tym do istniejącej listy 1000 elementów dodajemy kolejne 1000 elementów na początek listy.
@@ -567,9 +568,9 @@ Akcję tą powtarzamy 100 krotnie, czyli zaczynając od 1000 elementów aż do 1
 Problem badawczy tego zadania opisano w rozdziale Projekt testu wydajności.
 Wyniki badania zobrazowano na rysunku \ref{fig:rysunek_34}.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_34.png}
+    \includegraphics[width=\textwidth]{rysunek_34.png}
     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu dodania 1000 elementów na początek listy}
     \label{fig:rysunek_34}
 \end{figure}
@@ -581,15 +582,15 @@ React oraz Vue w przypadku uśrednionym, plasują się na drugiej pozycji, gdyż
 Najmniejsze rozproszenie wyników prezentuje Vue, którego średnia i mediana są bardzo zbliżone,
 a odchylenie standardowe najniższe spośród badanych narzędzi, co świadczy o stabilności rozwiązania.
 
-
+\clearpage
 \subsection{Dodanie 1000 wierszy na końcu listy}
 
 Dopisywanie elementów do końca listy jest mało obciążającym zadaniem dla naszych narzędzi. Nie musimy przesuwać żadnych elementów, jedynie wyrenderować nowo dodane.
 Oczekujemy, iż wyniki (rysunek \ref{fig:rysunek_35}) będą miały małe odchylenie standardowe (gdyż ilość poprzednich elementów nie powinna mieć wpływu na dodanie nowych).
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_35.png}
+    \includegraphics[width=\textwidth]{rysunek_35.png}
     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu dodania 1000 elementów na koniec listy}
     \label{fig:rysunek_35}
 \end{figure}
@@ -601,13 +602,14 @@ Jednak warto zaznaczyć, iż odchylenie standardowe tego badania wskazuje, że A
 Ciekawą sytuację natomiast możemy zaobserwować dla wyników średniej oraz mediany pomiędzy React oraz Vue.
 Wyniki są bardzo zbliżone, jednak odchylenie standardowe wskazuje, że to Vue jest stabilniejszym rozwiązaniem.
 
+\clearpage
 \subsection{Zamiana wszystkich wierszy na liście}
 
 Badanie to wskazuje, jak szybko jesteśmy w stanie przerenderować listę 1000 elementów. Wyniki ukazano na rysunku \ref{fig:rysunek_36}.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_36.png}
+    \includegraphics[width=\textwidth]{rysunek_36.png}
     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zmiany wszystkich wartości listy dla 1000 elementów}
     \label{fig:rysunek_36}
 \end{figure}
@@ -616,11 +618,12 @@ Minimalna wartość jest bardzo zbliżona dla każdego z badanych narzędzi. Mak
 Średnia arytmetyczna wskazuje nam, iż Angular2 jest najszybszym narzędziem, jednak odchylenie standardowe wskazuje, iż jest także najbardziej niestabilnym.
 W tym badaniu React udało się uzyskać odchylenie poniżej 2 milisekund, co jest wynikiem bardzo dobrym.
 
+\clearpage
 \subsection{Aktualizacja 500 wierszy}
 W badaniu tym, aktualizujemy tylko połowę wyrenderowanych wierszy. Wyniki ukazano na rysunku \ref{fig:rysunek_37}.
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_37.png}
+    \includegraphics[width=\textwidth]{rysunek_37.png}
     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zmiany wartości dla 500 elementów listy}
     \label{fig:rysunek_37}
 \end{figure}
@@ -629,14 +632,14 @@ W przypadku wartości maksymalnych, Angular2 znacząco odbiega od reszty narzęd
 W uśrednionym przypadku, widzimy zgodność średniej arytmetycznej i mediany, które wskazują, iż Angular2 jest najszybszym narzędziem.
 Ponownie już odchylenie standardowe wskazuje iż jest także najmniej stabilnym czasowo narzędziem.
 
-
+\clearpage
 \subsection{Zamiana miejscami dwóch wierszy}
 
 Zamiana miejscami dwóch wierszy jest najmniej wymagającym badania z całej pracy. Z tego powodu oczekujemy niskich wartości odchylenia standardowego. Wyniki ukazano na rysunku \ref{fig:rysunek_38}.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_38.png}
+    \includegraphics[width=\textwidth]{rysunek_38.png}
     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu zamiany miejscami dwóch wartości na liście elementów}
     \label{fig:rysunek_38}
 \end{figure}
@@ -644,13 +647,14 @@ Zamiana miejscami dwóch wierszy jest najmniej wymagającym badania z całej pra
 I tak wartość minimalna wskazuje, iż Angular2 jest najszybszy. Wartości maksymalne są prawie identyczne.
 Są one w granicy błędu pomiarowego. Średnia arytmetyczna i mediana zgodnie wskazują, iż Angular2 jest najszybszy w średnim przypadku, znowu z zastrzeżeniem, gdyż odchylenie standardowe wynosi aż 6.3 milisekundy.
 
+\clearpage
 \subsection{Usunięcie pojedynczego wiersza}
 
 Badanie to polega na usunięciu pierwszego w kolejności wiersza na początku listy. Powoduje to przesunięcie całej listy o jeden wiersz. Wyniki ukazano na rysunku \ref{fig:rysunek_39}.
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_39.png}
+    \includegraphics[width=\textwidth]{rysunek_39.png}
     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu usunięcia pojedynczej wartości z listy elementów}
     \label{fig:rysunek_39}
 \end{figure}
@@ -660,13 +664,14 @@ Wartości maksymalne mieszczą się w granicy błędu pomiarowego dla każdego z
 Jednak ponownie odchylenie standardowe wskazuje na znaczące wahania wartości wokół średniej wartości dla Angular2.
 Vue oraz React poza wartością minimalną mieszczą się w granicy błędu pomiarowego.
 
+\clearpage
 \subsection{Usunięcie wszystkich wierszy}
 
 Ostatnie badanie skupia się na usunięciu wszystkich wierszy. Spowoduje to przerenderowanie całej listy. Wyniki ukazano na rysunku \ref{fig:rysunek_40}. 
 
-\begin{figure}[!ht]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=12cm]{rysunek_40.png}
+    \includegraphics[width=\textwidth]{rysunek_40.png}
     \caption{Diagram kolumnowy obrazujący wynik badania pomiaru czasu usunięcia wszystkich wartości z listy elementów}
     \label{fig:rysunek_40}
 \end{figure}

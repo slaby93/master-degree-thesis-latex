@@ -14,24 +14,24 @@
 \contentsline {chapter}{\numberline {3}Część praktyczna}{13}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Problem pomiaru wydajności aplikacji SPA}{15}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Specyfikacja wymagań}{16}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Architektura rozwiązania}{16}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Projekt testu wydajności}{16}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Budowa aplikacji}{19}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Przygotowanie aplikacji do badania}{21}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Konteneryzacja aplikacji}{21}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Moduł badania}{24}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Moduł analizy}{31}{subsection.3.3.6}%
-\contentsline {section}{\numberline {3.4}Analiza wyników}{32}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Czas załadowania aplikacji}{33}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Dodanie 1000 wierszy na początku listy}{34}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Dodanie 1000 wierszy na końcu listy}{36}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Zamiana wszystkich wierszy na liście}{36}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Aktualizacja 500 wierszy}{37}{subsection.3.4.5}%
-\contentsline {subsection}{\numberline {3.4.6}Zamiana miejscami dwóch wierszy}{38}{subsection.3.4.6}%
-\contentsline {subsection}{\numberline {3.4.7}Usunięcie pojedynczego wiersza}{38}{subsection.3.4.7}%
-\contentsline {subsection}{\numberline {3.4.8}Usunięcie wszystkich wierszy}{39}{subsection.3.4.8}%
-\contentsline {chapter}{\numberline {4}Podsumowanie}{41}{chapter.4}%
-\contentsline {chapter}{Bibliografia}{42}{section*.42}%
-\contentsline {chapter}{Spis rysunków}{46}{section*.44}%
-\contentsline {chapter}{Oświadczenie o udostępnianiu pracy dyplomowej}{48}{chapter*.45}%
-\contentsline {chapter}{Oświadczenie autorskie}{49}{chapter*.45}%
+\contentsline {section}{\numberline {3.3}Architektura rozwiązania}{17}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Projekt testu wydajności}{17}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Budowa aplikacji}{21}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Przygotowanie aplikacji do badania}{22}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Konteneryzacja aplikacji}{23}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Moduł badania}{25}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Moduł analizy}{34}{subsection.3.3.6}%
+\contentsline {section}{\numberline {3.4}Analiza wyników}{36}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Czas załadowania aplikacji}{36}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Dodanie 1000 wierszy na początku listy}{39}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Dodanie 1000 wierszy na końcu listy}{40}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Zamiana wszystkich wierszy na liście}{41}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Aktualizacja 500 wierszy}{42}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Zamiana miejscami dwóch wierszy}{43}{subsection.3.4.6}%
+\contentsline {subsection}{\numberline {3.4.7}Usunięcie pojedynczego wiersza}{44}{subsection.3.4.7}%
+\contentsline {subsection}{\numberline {3.4.8}Usunięcie wszystkich wierszy}{45}{subsection.3.4.8}%
+\contentsline {chapter}{\numberline {4}Podsumowanie}{46}{chapter.4}%
+\contentsline {chapter}{Bibliografia}{47}{section*.42}%
+\contentsline {chapter}{Spis rysunków}{51}{section*.44}%
+\contentsline {chapter}{Oświadczenie o udostępnianiu pracy dyplomowej}{53}{chapter*.45}%
+\contentsline {chapter}{Oświadczenie autorskie}{54}{chapter*.45}%
