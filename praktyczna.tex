@@ -152,7 +152,7 @@ React wykryje zmianę jednego elementu na liście, i przeglądarka wyrenderuje t
     \label{fig:rysunek_11}
 \end{figure}
 
-Co stanie się w przypadku dopisania jednego nowego elementu na początku listy? Problem ten zaprezentowano na rysunku 12. Każdy indeks przypisany do elementu zostanie przesunięty o jeden.
+Co stanie się w przypadku dopisania jednego nowego elementu na początku listy? Problem ten zaprezentowano na rysunku \ref{fig:rysunek_12}. Każdy indeks przypisany do elementu zostanie przesunięty o jeden.
 Z racji tej, React ponownie wyrenderuje każdy element (gdyż uzna, iż jest to nowy element). Spowoduje to zmianę kodu HTML która zmusi przeglądarkę do pełnego prze renderowania wszystkich warstw oraz wyliczenia całego layoutu na nowo.
 Oczywiście w skali 20 elementów które nie posiadają skomplikowanej struktury HTML i stylowania CSS nie powinno to robić problemu.
 Jednak w dobie nowoczesnych aplikacji, listy (np lista filmów netflixa) posiadają masę małych elementów przez co lista nawet 50 elementów może spowodować zauważalne opóźnienia podczas użytkowania aplikacji.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  10 MAY 2020 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  10 MAY 2020 13:05
 entering extended mode
 **c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
 (c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
@@ -742,7 +742,7 @@ File: ./img/rysunek_11.png Graphic file (type png)
 Package pdftex.def Info: ./img/rysunek_11.png  used on input line 150.
 (pdftex.def)             Requested size: 341.43306pt x 265.45438pt.
  [18 <./img/rysunek_11.png>]
-<./img/rysunek_12.png, id=360, 758.835pt x 558.4062pt>
+<./img/rysunek_12.png, id=362, 758.835pt x 558.4062pt>
 File: ./img/rysunek_12.png Graphic file (type png)
 <use ./img/rysunek_12.png>
 Package pdftex.def Info: ./img/rysunek_12.png  used on input line 167.
@@ -752,24 +752,24 @@ Overfull \hbox (3.59987pt too wide) in paragraph at lines 172--175
 \T1/txr/m/n/12 rekoncyliacj[] [[]]. Po-zwa-la to na wy-ren-de-ro-wa-nie tyl-ko tych ele-men-tów, któ-re ró»ni[] si[] mi[]dzy
  []
 
-<./img/rysunek_13.png, id=363, 742.2129pt x 758.835pt>
+<./img/rysunek_13.png, id=365, 742.2129pt x 758.835pt>
 File: ./img/rysunek_13.png Graphic file (type png)
 <use ./img/rysunek_13.png>
 Package pdftex.def Info: ./img/rysunek_13.png  used on input line 183.
 (pdftex.def)             Requested size: 341.43306pt x 349.07993pt.
-<./img/rysunek_14.png, id=364, 758.835pt x 144.0582pt>
+<./img/rysunek_14.png, id=366, 758.835pt x 144.0582pt>
 File: ./img/rysunek_14.png Graphic file (type png)
 <use ./img/rysunek_14.png>
 Package pdftex.def Info: ./img/rysunek_14.png  used on input line 196.
 (pdftex.def)             Requested size: 341.43306pt x 64.81898pt.
 [19 <./img/rysunek_12.png>] [20 <./img/rysunek_13.png> <./img/rysunek_14.png>]
-<./img/rysunek_15.png, id=387, 626.0991pt x 758.835pt>
+<./img/rysunek_15.png, id=388, 626.0991pt x 758.835pt>
 File: ./img/rysunek_15.png Graphic file (type png)
 <use ./img/rysunek_15.png>
 Package pdftex.def Info: ./img/rysunek_15.png  used on input line 240.
 (pdftex.def)             Requested size: 341.43306pt x 413.81741pt.
  [21] [22 <./img/rysunek_15.png>]
-<./img/rysunek_16.png, id=416, 180.675pt x 154.8987pt>
+<./img/rysunek_16.png, id=417, 180.675pt x 154.8987pt>
 File: ./img/rysunek_16.png Graphic file (type png)
 <use ./img/rysunek_16.png>
 Package pdftex.def Info: ./img/rysunek_16.png  used on input line 263.
@@ -780,7 +780,7 @@ Overfull \hbox (5.07196pt too wide) in paragraph at lines 268--272
  []
 
 [23 <./img/rysunek_16.png>]
-<./img/rysunek_17.png, id=426, 229.5777pt x 128.6406pt>
+<./img/rysunek_17.png, id=427, 229.5777pt x 128.6406pt>
 File: ./img/rysunek_17.png Graphic file (type png)
 <use ./img/rysunek_17.png>
 Package pdftex.def Info: ./img/rysunek_17.png  used on input line 282.
@@ -800,12 +800,12 @@ Overfull \hbox (0.84871pt too wide) in paragraph at lines 306--307
 []\T1/txr/m/n/12 Oto naj-prost-szy, wie-ko-wy ju» przy-kªad apli-ka-cji ka-len-da-rza na-pi-sa-nej w PHP. Gdy b[]dziemy
  []
 
-<./img/rysunek_18.png, id=428, 427.8384pt x 758.835pt>
+<./img/rysunek_18.png, id=429, 427.8384pt x 758.835pt>
 File: ./img/rysunek_18.png Graphic file (type png)
 <use ./img/rysunek_18.png>
 Package pdftex.def Info: ./img/rysunek_18.png  used on input line 310.
 (pdftex.def)             Requested size: 341.43306pt x 605.6099pt.
-<./img/rysunek_19.png, id=430, 758.835pt x 461.0826pt>
+<./img/rysunek_19.png, id=431, 758.835pt x 461.0826pt>
 File: ./img/rysunek_19.png Graphic file (type png)
 <use ./img/rysunek_19.png>
 Package pdftex.def Info: ./img/rysunek_19.png  used on input line 320.
@@ -815,18 +815,18 @@ Package pdftex.def Info: ./img/rysunek_19.png  used on input line 320.
 LaTeX Warning: Text page 25 contains only floats.
 
 [25 <./img/rysunek_18.png>]
-<./img/rysunek_20.png, id=446, 758.835pt x 393.8715pt>
+<./img/rysunek_20.png, id=447, 758.835pt x 393.8715pt>
 File: ./img/rysunek_20.png Graphic file (type png)
 <use ./img/rysunek_20.png>
 Package pdftex.def Info: ./img/rysunek_20.png  used on input line 333.
 (pdftex.def)             Requested size: 341.43306pt x 177.2225pt.
  [26 <./img/rysunek_19.png> <./img/rysunek_20.png>]
-<./img/rysunek_21.png, id=459, 758.835pt x 384.4764pt>
+<./img/rysunek_21.png, id=460, 758.835pt x 384.4764pt>
 File: ./img/rysunek_21.png Graphic file (type png)
 <use ./img/rysunek_21.png>
 Package pdftex.def Info: ./img/rysunek_21.png  used on input line 365.
 (pdftex.def)             Requested size: 341.43306pt x 172.99518pt.
-<./img/rysunek_22.png, id=460, 758.835pt x 457.4691pt>
+<./img/rysunek_22.png, id=461, 758.835pt x 457.4691pt>
 File: ./img/rysunek_22.png Graphic file (type png)
 <use ./img/rysunek_22.png>
 Package pdftex.def Info: ./img/rysunek_22.png  used on input line 372.
@@ -837,34 +837,34 @@ Overfull \hbox (9.22475pt too wide) in paragraph at lines 377--385
  []
 
 [27 <./img/rysunek_21.png>] [28 <./img/rysunek_22.png>]
-<./img/rysunek_23.png, id=483, 653.5617pt x 422.2977pt>
+<./img/rysunek_23.png, id=484, 653.5617pt x 422.2977pt>
 File: ./img/rysunek_23.png Graphic file (type png)
 <use ./img/rysunek_23.png>
 Package pdftex.def Info: ./img/rysunek_23.png  used on input line 409.
 (pdftex.def)             Requested size: 341.43306pt x 220.62062pt.
-<./img/rysunek_24.png, id=486, 758.835pt x 310.2792pt>
+<./img/rysunek_24.png, id=487, 758.835pt x 310.2792pt>
 File: ./img/rysunek_24.png Graphic file (type png)
 <use ./img/rysunek_24.png>
 Package pdftex.def Info: ./img/rysunek_24.png  used on input line 425.
 (pdftex.def)             Requested size: 341.43306pt x 139.61014pt.
-<./img/rysunek_25.png, id=487, 758.835pt x 310.2792pt>
+<./img/rysunek_25.png, id=488, 758.835pt x 310.2792pt>
 File: ./img/rysunek_25.png Graphic file (type png)
 <use ./img/rysunek_25.png>
 Package pdftex.def Info: ./img/rysunek_25.png  used on input line 432.
 (pdftex.def)             Requested size: 341.43306pt x 139.61014pt.
  [29 <./img/rysunek_23.png>] [30 <./img/rysunek_24.png> <./img/rysunek_25.png>]
-<./img/rysunek_26.png, id=507, 758.835pt x 509.0217pt>
+<./img/rysunek_26.png, id=508, 758.835pt x 509.0217pt>
 File: ./img/rysunek_26.png Graphic file (type png)
 <use ./img/rysunek_26.png>
 Package pdftex.def Info: ./img/rysunek_26.png  used on input line 465.
 (pdftex.def)             Requested size: 341.43306pt x 229.03433pt.
-<./img/rysunek_27.png, id=509, 724.6272pt x 307.1475pt>
+<./img/rysunek_27.png, id=510, 724.6272pt x 307.1475pt>
 File: ./img/rysunek_27.png Graphic file (type png)
 <use ./img/rysunek_27.png>
 Package pdftex.def Info: ./img/rysunek_27.png  used on input line 476.
 (pdftex.def)             Requested size: 341.43306pt x 144.72021pt.
  [31 <./img/rysunek_26.png> <./img/rysunek_27.png>]
-<./img/rysunek_28.png, id=520, 389.2944pt x 455.301pt>
+<./img/rysunek_28.png, id=521, 389.2944pt x 455.301pt>
 File: ./img/rysunek_28.png Graphic file (type png)
 <use ./img/rysunek_28.png>
 Package pdftex.def Info: ./img/rysunek_28.png  used on input line 489.
@@ -874,34 +874,34 @@ Overfull \hbox (10.0047pt too wide) in paragraph at lines 494--498
 []\T1/txr/m/n/12 Dla ka»-de-go z dost[]pnych wpi-sów, przy-go-to-wa-no po jed-nej funk-cji pozwalaj[]cej na ekstrakcj[]
  []
 
-<./img/rysunek_29.png, id=522, 261.6174pt x 143.0946pt>
+<./img/rysunek_29.png, id=523, 261.6174pt x 143.0946pt>
 File: ./img/rysunek_29.png Graphic file (type png)
 <use ./img/rysunek_29.png>
 Package pdftex.def Info: ./img/rysunek_29.png  used on input line 501.
 (pdftex.def)             Requested size: 341.43306pt x 186.7653pt.
 [32 <./img/rysunek_28.png>]
-<./img/rysunek_30.png, id=531, 578.16pt x 371.2269pt>
+<./img/rysunek_30.png, id=532, 578.16pt x 371.2269pt>
 File: ./img/rysunek_30.png Graphic file (type png)
 <use ./img/rysunek_30.png>
 Package pdftex.def Info: ./img/rysunek_30.png  used on input line 524.
 (pdftex.def)             Requested size: 341.43306pt x 219.22588pt.
  [33 <./img/rysunek_29.png> <./img/rysunek_30.png>]
-<./img/rysunek_31.png, id=544, 388.8126pt x 189.3474pt>
+<./img/rysunek_31.png, id=545, 388.8126pt x 189.3474pt>
 File: ./img/rysunek_31.png Graphic file (type png)
 <use ./img/rysunek_31.png>
 Package pdftex.def Info: ./img/rysunek_31.png  used on input line 539.
 (pdftex.def)             Requested size: 341.43306pt x 166.28528pt.
-<./img/rysunek_32.png, id=545, 393.3897pt x 148.6353pt>
+<./img/rysunek_32.png, id=546, 393.3897pt x 148.6353pt>
 File: ./img/rysunek_32.png Graphic file (type png)
 <use ./img/rysunek_32.png>
 Package pdftex.def Info: ./img/rysunek_32.png  used on input line 546.
 (pdftex.def)             Requested size: 341.43306pt x 129.00775pt.
-<./img/rysunek_33.png, id=546, 388.5717pt x 181.1568pt>
+<./img/rysunek_33.png, id=547, 388.5717pt x 181.1568pt>
 File: ./img/rysunek_33.png Graphic file (type png)
 <use ./img/rysunek_33.png>
 Package pdftex.def Info: ./img/rysunek_33.png  used on input line 553.
 (pdftex.def)             Requested size: 341.43306pt x 159.1835pt.
-<./img/rysunek_34.png, id=548, 1284.8pt x 825.0825pt>
+<./img/rysunek_34.png, id=549, 1284.8pt x 825.0825pt>
 File: ./img/rysunek_34.png Graphic file (type png)
 <use ./img/rysunek_34.png>
 Package pdftex.def Info: ./img/rysunek_34.png  used on input line 572.
@@ -912,34 +912,34 @@ Overfull \hbox (13.9407pt too wide) in paragraph at lines 587--589
  []
 
 [35 <./img/rysunek_33.png> <./img/rysunek_34.png>]
-<./img/rysunek_35.png, id=566, 1284.8pt x 825.0825pt>
+<./img/rysunek_35.png, id=567, 1284.8pt x 825.0825pt>
 File: ./img/rysunek_35.png Graphic file (type png)
 <use ./img/rysunek_35.png>
 Package pdftex.def Info: ./img/rysunek_35.png  used on input line 592.
 (pdftex.def)             Requested size: 341.43306pt x 219.26271pt.
-<./img/rysunek_36.png, id=568, 578.16pt x 371.28712pt>
+<./img/rysunek_36.png, id=569, 578.16pt x 371.28712pt>
 File: ./img/rysunek_36.png Graphic file (type png)
 <use ./img/rysunek_36.png>
 Package pdftex.def Info: ./img/rysunek_36.png  used on input line 610.
 (pdftex.def)             Requested size: 341.43306pt x 219.26144pt.
  [36 <./img/rysunek_35.png>]
-<./img/rysunek_37.png, id=578, 1284.8pt x 825.0825pt>
+<./img/rysunek_37.png, id=579, 1284.8pt x 825.0825pt>
 File: ./img/rysunek_37.png Graphic file (type png)
 <use ./img/rysunek_37.png>
 Package pdftex.def Info: ./img/rysunek_37.png  used on input line 623.
 (pdftex.def)             Requested size: 341.43306pt x 219.26271pt.
  [37 <./img/rysunek_36.png> <./img/rysunek_37.png>]
-<./img/rysunek_38.png, id=587, 578.16pt x 371.2269pt>
+<./img/rysunek_38.png, id=588, 578.16pt x 371.2269pt>
 File: ./img/rysunek_38.png Graphic file (type png)
 <use ./img/rysunek_38.png>
 Package pdftex.def Info: ./img/rysunek_38.png  used on input line 639.
 (pdftex.def)             Requested size: 341.43306pt x 219.22588pt.
-<./img/rysunek_39.png, id=589, 578.16pt x 371.2269pt>
+<./img/rysunek_39.png, id=590, 578.16pt x 371.2269pt>
 File: ./img/rysunek_39.png Graphic file (type png)
 <use ./img/rysunek_39.png>
 Package pdftex.def Info: ./img/rysunek_39.png  used on input line 653.
 (pdftex.def)             Requested size: 341.43306pt x 219.22588pt.
-<./img/rysunek_40.png, id=591, 578.16pt x 371.2269pt>
+<./img/rysunek_40.png, id=592, 578.16pt x 371.2269pt>
 File: ./img/rysunek_40.png Graphic file (type png)
 <use ./img/rysunek_40.png>
 Package pdftex.def Info: ./img/rysunek_40.png  used on input line 669.
@@ -1209,15 +1209,15 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
 Here is how much of TeX's memory you used:
  16041 strings out of 480930
  238226 string characters out of 2909548
- 493990 words of memory out of 3000000
+ 494990 words of memory out of 3000000
  31362 multiletter control sequences out of 15000+200000
  635933 words of font info for 179 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,16n,55p,809b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (50 pages, 35931341 bytes).
+Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (50 pages, 35931525 bytes).
 PDF statistics:
- 836 PDF objects out of 1000 (max. 8388607)
+ 837 PDF objects out of 1000 (max. 8388607)
  167 named destinations out of 1000 (max. 500000)
  497 words of extra memory for PDF output out of 10000 (max. 10000000)
 
