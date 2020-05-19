@@ -1,28 +1,27 @@
 \chapter{Część praktyczna}
-Cykl życia standardowej strony internetowej przedstawiono na rysunku \ref{fig:rysunek_7}
+Cykl życia standardowej strony internetowej może przedstawić od następujących kroków przedstawionych na rysunku \ref{fig:rysunek_7}
 
 \begin{figure}[htbp]
     \centering
-    \advance\leftskip-3cm
-    \includegraphics[width=21cm]{rysunek_7.png}
+    \includegraphics[width=14cm]{rysunek_7.png}
     \caption{Ilustracja przedstawiająca cykl życia statycznej strony internetowej}
     \label{fig:rysunek_7}
 \end{figure}
 
 \begin{itemize}
-	\item Użytkownik otwiera przeglądarkę i odwiedza stronę WWW.
-    \item Przeglądarka wysyła zapytanie do serwera z żądaniem zasobów.
-    \item Serwer odsyła plik HTML w którym znajdują się odnośniki do plików JavaScript oraz CSS.
-    \item Przeglądarka pobiera pliki JavaScript oraz CSS
-    \item Przeglądarka renderuje stronę dla użytkownika.
-    \item Użytkownik klika w odnośnik do kolejnej strony ( w przykładzie strona logowania)
-    \item Przeglądarka pobiera cały nowy plik HTML
-    \item Przeglądarka renderuje nową stronę od nowa.
-    \item Przeglądarka ponownie pobiera dodatkowe pliki JavaScript oraz CSS (zakładamy, że przeglądarka nie przechowuje plików w pamięci podręcznej).
+	\item Użytkownik otwiera przeglądarkę i odwiedza stronę WWW;
+    \item Przeglądarka wysyła zapytanie do serwera z żądaniem zasobów;
+    \item Serwer odsyła plik HTML w którym znajdują się odnośniki do plików JavaScript oraz CSS;
+    \item Przeglądarka pobiera pliki JavaScript oraz CSS;
+    \item Przeglądarka renderuje stronę dla użytkownika;
+    \item Użytkownik klika w odnośnik do kolejnej strony ( w przykładzie strona logowania);
+    \item Przeglądarka pobiera cały nowy plik HTML;
+    \item Przeglądarka renderuje nową stronę od nowa;
+    \item Przeglądarka ponownie pobiera dodatkowe pliki JavaScript oraz CSS (zakładamy, że przeglądarka nie przechowuje plików w pamięci podręcznej);
     \item Przeglądarka renderuje stronę od nowa.
 \end{itemize}
 
-Jak widzimy, cały proces odwiedzenia dwóch stron w tej samej domenie wymaga każdorazowego przeładowania strony oraz pobrania tych samych danych.
+Jak zostało przedstawione, cały proces odwiedzenia dwóch stron w tej samej domenie wymaga każdorazowego przeładowania strony oraz pobrania tych samych danych.
 Proces ten wymaga ciągłego pobierania plików HTML, pobierania plików dodatkowych co obciąża procesor, pamięć łącze oraz sam serwer.
 
 Dla porównania, przedstawiona poniżej ilustracja pokazuje cykl działania aplikacji SPA (rysunek \ref{fig:rysunek_8})
@@ -36,16 +35,16 @@ Dla porównania, przedstawiona poniżej ilustracja pokazuje cykl działania apli
 \end{figure}
 
 \begin{itemize}
-    \item Użytkownik odwiedza tę samą stronę .
-    \item Przeglądarka pobiera plik HTML z definicją potrzebnych zasobów. Zazwyczaj sekcja body pliku jest pusta.
-    \item Przeglądarka pobiera dodatkowe pliki JavaScript oraz CSS.
-    \item Często pliki te są zoptymalizowane poprzez kompresję i sklejone w jeden plik tak, aby wykonać tylko jedno zapytanie zamiast dwóch.
-    \item Pliki JavaScript, generują treść strony HTML.
-    \item Przeglądarka może ( ale nie musi ) wykonać dodatkowe zapytanie o dane do jednego z endpointów serwera.
-    \item Użytkownik klika na odnośnik do kolejnej strony. Przeglądarka nie pobiera już dodatkowego pliku HTML, jako, że aplikacja jest dynamiczna. Skrypt JavaScript może, ale nie musi pobrać dodatkowych informacji z serwera.    
+    \item Użytkownik odwiedza tę samą stronę;
+    \item Przeglądarka pobiera plik HTML z definicją potrzebnych zasobów. Zazwyczaj sekcja body pliku jest pusta;
+    \item Przeglądarka pobiera dodatkowe pliki JavaScript oraz CSS;
+    \item Często pliki te są zoptymalizowane poprzez kompresję i sklejone w jeden plik tak, aby wykonać tylko jedno zapytanie zamiast dwóch;
+    \item Pliki JavaScript, generują treść strony HTML;
+    \item Przeglądarka może ( ale nie musi ) wykonać dodatkowe zapytanie o dane do jednego z endpointów serwera;
+    \item Użytkownik klika na odnośnik do kolejnej strony. Przeglądarka nie pobiera już dodatkowego pliku HTML, jako, że aplikacja jest dynamiczna. Skrypt JavaScript może, ale nie musi pobrać dodatkowych informacji z serwera.
 \end{itemize}
 
-Jak widzimy, wykonano znacznie mniej zapytań do serwera. Dodatkowe zapytania które skrypt może wykonać w celu pobrania danych zazwyczaj są znacznie mniejsze od pełnego pliku HTML z wybraną treścią.
+Jak zostało przedstawione, wykonano znacznie mniej zapytań do serwera. Dodatkowe zapytania które skrypt może wykonać w celu pobrania danych zazwyczaj są znacznie mniejsze od pełnego pliku HTML z wybraną treścią.
 Dodatkowo, przeglądarka nie przeładowuje strony przy każdej zmianie podstrony, co także odciąża procesor jak i łącze sieciowe.
 
 \section{Problem pomiaru wydajności aplikacji SPA}
@@ -86,15 +85,15 @@ Jak pokazano w przeglądzie istniejących rozwiązań, na rynku brak jest narzę
 Na potrzeby pracy stworzono narzędzie do rozwiązania zadanego problemu badawczego. W ramach projektu, założono co następuje:
 
 \begin{itemize}
-    \item Narzędzie jest generyczne - nie zakładamy konkretnej technologii aplikacji tak, że każdy istniejący jak i przyszły framework może zostać przebadany.
-    \item Stworzona zostanie ujednolicona lecz generyczna metoda dodawania nowej aplikacji do puli już istniejących. 
-    \item Narzędzie musi posiadać obsługę różnych typów akcji aplikacji.
+    \item Narzędzie jest generyczne - nie zakładamy konkretnej technologii aplikacji tak, że każdy istniejący jak i przyszły framework może zostać przebadany
+    \item Stworzona zostanie ujednolicona lecz generyczna metoda dodawania nowej aplikacji do puli już istniejących
+    \item Narzędzie musi posiadać obsługę różnych typów akcji aplikacji
     \item Narzędzie musi potrafić działać w odizolowanym środowisku (docker)
-    \item Narzędzie będzie zautomatyzowane w znacznym stopniu.
-    \item Narzędzie będzie składać się z modułów tak, aby było łatwo rozwijalne w przyszłości.
-    \item Narzędzie pozwala na stworzenie różnych zestawów testów tak, aby użytkownik mógł dokładnie przebadać różne warianty akcji aplikacji.
-    \item Stworzony zostanie moduł parsowania danych z badania tak, aby można było otrzymać ujednolicony format wyniku.
-    \item Stworzony zostanie moduł wizualizujący wyniki.
+    \item Narzędzie będzie zautomatyzowane w znacznym stopniu
+    \item Narzędzie będzie składać się z modułów tak, aby było łatwo rozwijalne w przyszłości
+    \item Narzędzie pozwala na stworzenie różnych zestawów testów tak, aby użytkownik mógł dokładnie przebadać różne warianty akcji aplikacji
+    \item Stworzony zostanie moduł parsowania danych z badania tak, aby można było otrzymać ujednolicony format wyniku
+    \item Stworzony zostanie moduł wizualizujący wyniki
 \end{itemize}
 
 \section{Architektura rozwiązania}
@@ -115,15 +114,15 @@ W ramach badania, chcemy porównać wydajność frameworków, a nie zdolności p
     \item Były możliwie proste
     \item Nie wymagały dogłębnej wiedzy programisty
     \item Posiadały ujednoliconą strukturę projektu
-    \item Z racji, iż dla przeglądarki najtrudniejszym zadaniem jest renderowanie elementów,     
+    \item Z racji, iż dla przeglądarki najtrudniejszym zadaniem jest renderowanie elementów
 \end{itemize}
 Test który zaprojektowano skupia się dokładnie na porównaniu wydajności renderowania dużej liczby elementów.
 
 W tym miejscu warto odnieść się do świetnego artykułu autorstwa Pana Paula Lewisa \cite{rendering-performance} na temat optymalizacji renderowania w przeglądarce. Proces ten składa się z pięciu kroków przedstawionych na rysunku \ref{fig:rysunek_10}. 
 
-\begin{figure}[htbp]
+\begin{figure}[]
     \centering
-    \includegraphics[width=\textwidth]{rysunek_10.png}
+    \includegraphics[width=12cm]{rysunek_10.png}
     \caption{Grafika przedstawiająca kolejność faz renderowania w przeglądarce \cite{rendering-performance}}
     \label{fig:rysunek_10}
 \end{figure}
@@ -136,7 +135,7 @@ W zależności od wysokości pierwszego bloku, drugi blok może zostać wyrender
 Znając pozycję oraz rozmiary elementów, przechodzimy do fazy malowania.
 Pixele zostają malowane na wielu warstwach. W ostatniej fazie kompozycji, warstwy wyświetlone na ekran w konkretnej kolejności (odpowiada za to między innymi atrybut z-index w języku CSS).
 
-Jak widzimy, renderowanie pojedynczej klatki na stronie jest bardzo skomplikowanym procesem, który w idealnym przypadku powinien następować około 60 razy na sekundę (w zależności od  częstotliwości odświeżania ekranu ).
+Jak zostało przedstawione, renderowanie pojedynczej klatki na stronie jest bardzo skomplikowanym procesem, który w idealnym przypadku powinien następować około 60 razy na sekundę (w zależności od  częstotliwości odświeżania ekranu ).
 Bardzo istotnym mechanizmem który przeglądarki stosuje w celu optymalizacji ilości pracy jest pomijanie niepotrzebnych fragmentów.
 Jeżeli zmianie uległa tylko pewna część strony, na przykład kolor tekstu, możemy pominąć etap wyliczania layoutu strony.
 Jeżeli nastąpi zmiana stanu, w której nie wystąpiła zmiana ani layoutu ani nie występuje potrzeba ponownego malowania, przeglądarka użyje poprzedniego zestawu gotowych warstw.
@@ -148,11 +147,15 @@ W pierwszym kroku, dopisuję jeden nowy element do listy, na końcu co przedstaw
 Dopisując nowy element do listy, w optymalnym przypadku, powinienem wyrenderować tylko jeden nowy element i dokładnie tak się stanie. Co stanie się, gdy dopiszę nowy element na początku listy? Otóż wszystkie indeksy zostaną przesunięte o 1.
 React wykryje zmianę jednego elementu na liście, i przeglądarka wyrenderuje tylko jeden nowy element . Widzimy także, że znaczna część fazy layoutu będzie taka sama, gdyż na ekranie zmieni się tylko jeden widoczny element.
 
-\begin{figure}[htbp]
+\begin{figure}[]
     \centering
-    \includegraphics[width=\textwidth]{rysunek_11.png}
+    \includegraphics[width=16cm]{rysunek_11.png}
     \caption{Ilustracja przedstawiająca problem dopisywania elementu na koniec listy}
     \label{fig:rysunek_11}
+    \vspace*{\floatsep}
+    \includegraphics[width=16cm]{rysunek_12.png}
+    \caption{Ilustracja przedstawiająca problem dopisywania elementów na początek listy}
+    \label{fig:rysunek_12}
 \end{figure}
 
 Co stanie się w przypadku dopisania jednego nowego elementu na początku listy? Problem ten zaprezentowano na rysunku \ref{fig:rysunek_12}. Każdy indeks przypisany do elementu zostanie przesunięty o jeden.
@@ -164,13 +167,6 @@ W jaki sposób możemy poradzić sobie z tym problemem? Istnieją dwa sposoby dz
 Pierwszym z nich jest unikalny indeks elementu \cite{react-lists}. Zamiast stosować klucza równego indeksowi elementu, musimy podać klucz który jest unikalny w ramach elementu.
 Przykładowo dla każdego elementu stworzymy parę (klucz, hasz). W tym momencie, jeżeli dodamy nowy element na początku listy, React spojrzy na listę kluczy, i zobaczy, że nie zmieniły się one, a dodano tylko jeden nowy element.
 Zamiast 22 renredowań, otrzymamy tylko jedno.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{rysunek_12.png}
-    \caption{Ilustracja przedstawiająca problem dopisywania elementów na początek listy}
-    \label{fig:rysunek_12}
-\end{figure}
 
 Drugim sposobem poradzenia sobie z minimalizacją ilości renderowania jest koncepcja wirtualnego modelu DOM \cite{virtualdom}.
 Jest to mechanizm, który tworzy reprezentację interfejsu użytkownika w pamięci i synchronizuje ją z modelem DOM przeglądarki. Proces ten nazywa się rekoncyliacją \cite{reconcilation}.
@@ -202,8 +198,8 @@ Na rysunku poniżej przedstawiam listę akcji jakie aplikacja musi implementowa�
 \end{figure}
 
 \begin{itemize}
-    \item \emph{Append 250 rows start} - dodaj 250 wierszy na początku listy.
-    \item \emph{Append 250 rows end} - dodaj 250 wierszy na końcu listy.
+    \item \emph{Append 250 rows start} - dodaj 250 wierszy na początku listy
+    \item \emph{Append 250 rows end} - dodaj 250 wierszy na końcu listy
     \item \emph{Replace all rows} - wygeneruj na nowo pełną listę wartości
     \item \emph{Update N rows} - wybierz losowo 250 wierszy i zaktualizuj ich wartości
     \item \emph{Swap rows} - zamień miejscami 2 wiersze
@@ -340,14 +336,14 @@ Kolejność zdarzeń ukazano na rysunku \ref{fig:rysunek_20}.
 
 Tak więc widzimy, że w procesie interakcji ze stroną statyczną, czas jaki będzie potrzebny na przeładowanie strony to nie tylko czas kliknięcia na przycisk, ale także:
 \begin{itemize}
-    \item Czas potrzebny na wysłanie zapytania z automatu do przeglądarki z żądaniem wykonania akcji.
-    \item Czas, jaki przeglądarka potrzebuje na naciśnięcie przycisku.
-    \item Czas wysłania zapytania do serwera.
-    \item Czas, jaki serwer WWW potrzebuje na skonstruowanie odpowiedzi z plikiem HTML dla przeglądarki. Dla nietrywialnych stron, może to stanowić większą część czasu całej akcji.
-    Przykładem takiego mechanizmu są strony napisane przy użyciu Ruby on Rails gdzie do skonstruowania nowej strony HTML,
-    należy przekształcić wzorce HAML \cite{ruby} na plik HTML, często po drodze wykonując zapytanie do bazy (może wielu baz?) danych.
-    \item Czas ponownego przesłania treści nowej strony do przeglądarki.
-    \item Czas procesowania nowego pliku HTML oraz wyrenderowanie nowej strony.    
+    \item Czas potrzebny na wysłanie zapytania z automatu do przeglądarki z żądaniem wykonania akcji
+    \item Czas, jaki przeglądarka potrzebuje na naciśnięcie przycisku
+    \item Czas wysłania zapytania do serwera
+    \item Czas, jaki serwer WWW potrzebuje na skonstruowanie odpowiedzi z plikiem HTML dla przeglądarki. Dla nietrywialnych stron, może to stanowić większą część czasu całej akcji
+    Przykładem takiego mechanizmu są strony napisane przy użyciu Ruby on Rails gdzie do skonstruowania nowej strony HTML
+    należy przekształcić wzorce HAML \cite{ruby} na plik HTML, często po drodze wykonując zapytanie do bazy (może wielu baz?) danych
+    \item Czas ponownego przesłania treści nowej strony do przeglądarki
+    \item Czas procesowania nowego pliku HTML oraz wyrenderowanie nowej strony
 \end{itemize}
 
 Możemy wyróżnić 3 bazowe serwisy stanowiące rdzeń całej operacji.
@@ -389,8 +385,8 @@ które i tak nie jest idealne jest sposób testowania narzędzie Cypress.io.
 \begin{itemize}
     \item Sprawdza, czy w przeglądarce istnieją nierozwiązane zapytania HTTP
     \item Sprawdza, czy aktualnie renderowana jest jakaś nowa zawartość
-    \item Wykonuje serię screenshotów i porównuje, czy zawartość zmienia się w czasie.
-    \item Periodycznie próbkuje, czy zawartość DOM została już zmieniona.
+    \item Wykonuje serię screenshotów i porównuje, czy zawartość zmienia się w czasie
+    \item Periodycznie próbkuje, czy zawartość DOM została już zmieniona
 \end{itemize}
 
 Jednak nawet nowoczesne metody zastosowane w narzędziu Cypress nie są wystarczające aby zapewni, iż nawet poprawnie napisane testy zawsze zakończą się sukcesem.
@@ -450,13 +446,13 @@ Test ten otwiera stronę WWW, i dla każdej kolejnej funkcji na początku dopisu
 i po zakończeniu testu danej funkcji czyści wszystkie wiersze. W badaniu następują kolejne zdarzenia:
 
 \begin{itemize}
-    \item Wykonuje akcje dopisania 1000 elementów na początku listy, i powtarza ją 100 razy.
-    \item Wykonuje akcje dopisania 1000 elementów na końcu listy, i powtarza ją 100 razy.
-    \item Wykonuje akcje zamiany wszystkich wartości na liście, i powtarza ją 100 razy.
-    \item Wykonuje akcje podmiany wartości dla 500 wierszy, i powtarza ją 100 razy.
-    \item Wykonuję akcję zamiany wiersza 0 z 1, i powtarzam ją 100 razy.
-    \item Wykonuję akcję usunięcia pierwszego w kolejności wiersza, i powtarzam ją 100 razy.
-    \item Wykonuję akcję usunięcia wszystkich wierszy, i powtarzam ją 100 razy.
+    \item Wykonuje akcje dopisania 1000 elementów na początku listy, i powtarza ją 100 razy
+    \item Wykonuje akcje dopisania 1000 elementów na końcu listy, i powtarza ją 100 razy
+    \item Wykonuje akcje zamiany wszystkich wartości na liście, i powtarza ją 100 razy
+    \item Wykonuje akcje podmiany wartości dla 500 wierszy, i powtarza ją 100 razy
+    \item Wykonuję akcję zamiany wiersza 0 z 1, i powtarzam ją 100 razy
+    \item Wykonuję akcję usunięcia pierwszego w kolejności wiersza, i powtarzam ją 100 razy
+    \item Wykonuję akcję usunięcia wszystkich wierszy, i powtarzam ją 100 razy
 \end{itemize}
 
 Każda akcja jest stworzona jako funkcja, która w momencie uruchomienia tworzy wpis w przeglądarce używając wysoce precyzyjnego API wbudowanego
@@ -512,9 +508,9 @@ Atomowym wpisem dla każdego badania jest pomiar. Pomiar zawiera w sobie nazwę 
 Finalny zestaw badań jakie wykonano objęły następujące parametry:
 \begin{itemize}
     \item Test wykonano dla 20 powtórzeń dla każdej aplikacji, czyli łącznie 60 powtórzeń
-    \item Każda akcja została powtórzona 100 razy w ramach jednego testu, czyli 2000 razy w ramach pojedynczego badania.
-    \item Łączna liczba punktów pomiarowych wyniosła 42000 pomiarów.
-    \item Na potrzeby pracy przyjęto błąd pomiarowy równy $\pm$ 1 milisekunda.
+    \item Każda akcja została powtórzona 100 razy w ramach jednego testu, czyli 2000 razy w ramach pojedynczego badania
+    \item Łączna liczba punktów pomiarowych wyniosła 42000 pomiarów
+    \item Na potrzeby pracy przyjęto błąd pomiarowy równy $\pm$ 1 milisekunda
 \end{itemize}
 
 \subsection{Czas załadowania aplikacji}
