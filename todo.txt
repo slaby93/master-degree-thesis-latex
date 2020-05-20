@@ -8,6 +8,7 @@ ZROBIONE
 10) 3.5 i 3.6 żeby były na całą stronę
 17) 3.27 - ścisnij
 16) 3.23 - spórbuj zmiescic
+12) 3.8 zrób większe
 
 
 DO ZROBIENIA
@@ -15,7 +16,6 @@ DO ZROBIENIA
 7) zamiast ja kwidzimy to jak zostalo przedstawione
 8) 3.3 - zrób wiekszy, tak, żeby był na całą stronę - 3.3 zrób tak jak 3.2
 11) nie na rysunku poniżej tylko zrobić refenecje
-12) 3.8 zrób większe
 13) 3.10 - zrób własny
 14) 3.14 - zrób tylko po polsku
 15) 3.15 - zrób przetłumacz na jezyk polski

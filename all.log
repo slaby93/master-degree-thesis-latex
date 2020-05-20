@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  20 MAY 2020 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  20 MAY 2020 14:32
 entering extended mode
 **c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
 (c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
@@ -776,11 +776,11 @@ File: ./img/rysunek_13.png Graphic file (type png)
 <use ./img/rysunek_13.png>
 Package pdftex.def Info: ./img/rysunek_13.png  used on input line 182.
 (pdftex.def)             Requested size: 455.24413pt x 465.44762pt.
-<./img/rysunek_14.png, id=374, 758.835pt x 144.0582pt>
+<./img/rysunek_14.png, id=374, 1598.97375pt x 61.73062pt>
 File: ./img/rysunek_14.png Graphic file (type png)
 <use ./img/rysunek_14.png>
 Package pdftex.def Info: ./img/rysunek_14.png  used on input line 195.
-(pdftex.def)             Requested size: 455.24413pt x 86.42458pt.
+(pdftex.def)             Requested size: 455.24413pt x 17.57455pt.
 [21] [22 <./img/rysunek_13.png> <./img/rysunek_14.png>]
 <./img/rysunek_15.png, id=396, 626.0991pt x 758.835pt>
 File: ./img/rysunek_15.png Graphic file (type png)
@@ -1228,7 +1228,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  49i,15n,55p,809b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (55 pages, 30278610 bytes).
+Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (55 pages, 30270376 bytes).
 PDF statistics:
  831 PDF objects out of 1000 (max. 8388607)
  174 named destinations out of 1000 (max. 500000)
