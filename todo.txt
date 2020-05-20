@@ -13,9 +13,9 @@ ZROBIONE
 7) zamiast ja kwidzimy to jak zostalo przedstawione
 8) 3.3 - zrób wiekszy, tak, żeby był na całą stronę - 3.3 zrób tak jak 3.2
 13) 3.10 - zrób własny
+14) 3.14 - zrób tylko po polsku
+15) 3.15 - zrób przetłumacz na jezyk polski
 
 
 DO ZROBIENIA
 4) 2.5 - zrób własna tabelke n apodstawie [12] oraz 2.6
-14) 3.14 - zrób tylko po polsku
-15) 3.15 - zrób przetłumacz na jezyk polski
