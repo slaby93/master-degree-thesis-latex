@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  20 MAY 2020 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  20 MAY 2020 15:47
 entering extended mode
 **c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
 (c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
@@ -989,23 +989,8 @@ Package pdftex.def Info: ./img/rysunek_40.png  used on input line 673.
  (c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\podsumowanie.tex
 Rozdzia\PlPrIeC {\l } 4.
 
-Overfull \hbox (10.25671pt too wide) in paragraph at lines 3--9
-[]\T1/txr/m/n/12 Celem pra-cy by-ªo stwo-rze-nie narz[]dzia pozwalaj[]cego na po-miar ak-cji apli-ka-cji zachodz[]cych
- []
-
-
-Overfull \hbox (17.9639pt too wide) in paragraph at lines 3--9
-\T1/txr/m/n/12 ju» po za-ªa-do-wa-niu stro-ny oraz po-miar ró»-nych in-te-rak-cji ze stron[] na przy-kªa-dzie trzech wiod[]cych
- []
-
-
-Overfull \hbox (27.33588pt too wide) in paragraph at lines 3--9
-\T1/txr/m/n/12 dy-na-micz-nych apli-ka-cji nie jest pro-ble-mem try-wial-nym i wy-ma-ga sze-re-gu narz[]dzi wspóªpracuj[]cych
- []
-
-
-Overfull \hbox (11.37592pt too wide) in paragraph at lines 3--9
-\T1/txr/m/n/12 ze sob[]. Po-wo-du-je to tak-»e, i» sam po-miar b[]dzie za-nie-czysz-czo-ny przez nie-do-kªad-no-±ci narz[]dzie
+Underfull \hbox (badness 3428) in paragraph at lines 3--10
+[]\T1/txr/m/n/12 Celem pra-cy by-ªo stwo-rze-nie narz[]dzia pozwalaj[]cego na po-miar ak-cji apli-ka-cji
  []
 
 )
@@ -1230,7 +1215,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  49i,15n,55p,809b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (56 pages, 27514985 bytes).
+Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (56 pages, 27515039 bytes).
 PDF statistics:
  836 PDF objects out of 1000 (max. 8388607)
  175 named destinations out of 1000 (max. 500000)
