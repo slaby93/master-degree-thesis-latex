@@ -15,7 +15,7 @@ ZROBIONE
 14) 3.14 - zrób tylko po polsku
 15) 3.15 - zrób przetłumacz na jezyk polski
 4) 2.5 - zrób własna tabelke n apodstawie [12] oraz 2.6
+16) 3.23 - spórbuj zmiescic
 
 
 DO ZROBIENIA
-16) 3.23 - spórbuj zmiescic
