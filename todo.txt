@@ -6,6 +6,7 @@ ZROBIONE
 6) w wymianianiu, sredniki a na koncu kropka
 9) 3.4 - przerób na własną wersję
 10) 3.5 i 3.6 żeby były na całą stronę
+17) 3.27 - ścisnij
 
 
 DO ZROBIENIA
@@ -18,4 +19,3 @@ DO ZROBIENIA
 14) 3.14 - zrób tylko po polsku
 15) 3.15 - zrób przetłumacz na jezyk polski
 16) 3.23 - spórbuj zmiescic
-17) 3.27 - ścisnij
