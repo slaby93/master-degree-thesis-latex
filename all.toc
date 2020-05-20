@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {3.3.3}Przygotowanie aplikacji do badania}{23}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Konteneryzacja aplikacji}{23}{subsection.3.3.4}%
 \contentsline {subsection}{\numberline {3.3.5}Moduł badania}{26}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Moduł analizy}{34}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.6}Moduł analizy}{35}{subsection.3.3.6}%
 \contentsline {section}{\numberline {3.4}Analiza wyników}{37}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Czas załadowania aplikacji}{37}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Dodanie 1000 wierszy na początku listy}{39}{subsection.3.4.2}%

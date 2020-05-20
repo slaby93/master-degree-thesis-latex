@@ -24,7 +24,7 @@ Cykl życia standardowej strony internetowej może przedstawić od następujący
 Jak zostało przedstawione, cały proces odwiedzenia dwóch stron w tej samej domenie wymaga każdorazowego przeładowania strony oraz pobrania tych samych danych.
 Proces ten wymaga ciągłego pobierania plików HTML, pobierania plików dodatkowych co obciąża procesor, pamięć łącze oraz sam serwer.
 
-Dla porównania, przedstawiona poniżej ilustracja pokazuje cykl działania aplikacji SPA (rysunek \ref{fig:rysunek_8})
+Dla porównania, przedstawiona na rysunku \ref{fig:rysunek_8} ilustracja pokazuje cykl działania aplikacji SPA
 
 \begin{figure}[htbp]
     \centering
@@ -145,7 +145,7 @@ Wracając do samej konstrukcji testu. Znając już mechanizm omijania czynności
 Załóżmy, że mamy listę 20 wyrenderowanych elementów na stronie. Do listy możemy dopisać nowe wartości albo na początku albo na końcu.
 W pierwszym kroku, dopisuję jeden nowy element do listy, na końcu co przedstawiono na rysunku \ref{fig:rysunek_11}. Każdy element na liście ma przypisany indeks.
 Dopisując nowy element do listy, w optymalnym przypadku, powinienem wyrenderować tylko jeden nowy element i dokładnie tak się stanie. Co stanie się, gdy dopiszę nowy element na początku listy? Otóż wszystkie indeksy zostaną przesunięte o 1.
-React wykryje zmianę jednego elementu na liście, i przeglądarka wyrenderuje tylko jeden nowy element . Widzimy także, że znaczna część fazy layoutu będzie taka sama, gdyż na ekranie zmieni się tylko jeden widoczny element.
+React wykryje zmianę jednego elementu na liście, i przeglądarka wyrenderuje tylko jeden nowy element. Widzimy także, że znaczna część fazy layoutu będzie taka sama, gdyż na ekranie zmieni się tylko jeden widoczny element.
 
 \begin{figure}[]
     \centering
@@ -188,7 +188,7 @@ Na początku stan wewnętrzny aplikacji będzie pustą tablicą. Spowoduje to wy
 Akcja naciśnięcia przycisku spowoduje wygenerowanie 250 wpisów zawierających wylosowane alfanumeryczne wartości. Wartości te muszą być, w miarę możliwości unikatowe.
 Zmiana stanu z kolei spowoduje ponowne wyrenderowanie komponentu wyświetlającego listę. Kolejne akcje będą działać w myśl tej samej zasady.
 
-Na rysunku poniżej przedstawiam listę akcji jakie aplikacja musi implementować:
+Na rysunku \ref{fig:rysunek_14} przedstawiam listę akcji jakie aplikacja musi implementować:
 
 \begin{figure}[htbp]
     \centering
@@ -417,7 +417,7 @@ Z tego powodu stworzono funkcje które pingują Selenium oraz Serwer HTTP w ocze
 Próbujemy połączyć się trzykrotnie z jednosekundowym odstępem czasu. Obydwa mechanizmy pracują asynchronicznie.
 Jeżeli którykolwiek z nich po 3 próbach nadal nie będzie mógł się połączyć, cały skrypt zwróci stosowną wiadomość która pomoże nam określić przyczynę problemu.
 Próbę uzyskania połączenia zobrazowano na rysunku \ref{fig:rysunek_24}.
-Z kolei na rysunku \ref{fig:rysunek_25} widzimy, iż pomimo początkowych problemów z uzyskaniem połączenia, mechanizm zadziałał poprawnie i udało się nawiązać połączenie.
+Z kolei na rysunku \ref{fig:rysunek_25} zostało przedstawione, iż pomimo początkowych problemów z uzyskaniem połączenia, mechanizm zadziałał poprawnie i udało się nawiązać połączenie.
 
 \begin{figure}[htbp]
     \centering
