@@ -5,7 +5,7 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Grafika przedstawiająca wykres zależności czasu do ilości edytowanych elementów na stronie \cite {Molin}\relax }}{8}{figure.caption.4}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Grafika przedstawiająca wykres czasu ładowania aplikacji \cite {Molin}\relax }}{9}{figure.caption.5}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Porównanie metryk kodu dla pojedynczego komponentu \cite {polibuda}\relax }}{10}{figure.caption.6}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Porównanie czasów pobrania danych z bazy \cite {polibuda}\relax }}{11}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Porównanie czasów pobrania danych z bazy liczony w sekundach \cite {polibuda}\relax }}{11}{figure.caption.7}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Ilustracja przedstawiająca cykl życia statycznej strony internetowej\relax }}{14}{figure.caption.8}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Ilustracja przedstawiająca cykl działania aplikacji SPA\relax }}{15}{figure.caption.9}%

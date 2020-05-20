@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  20 MAY 2020 15:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.8)  20 MAY 2020 16:20
 entering extended mode
 **c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
 (c:/Users/aorus/Documents/GitHub/master-degree-thesis-latex/all.tex
@@ -675,17 +675,17 @@ File: ./img/rysunek_4.png Graphic file (type png)
 Package pdftex.def Info: ./img/rysunek_4.png  used on input line 67.
 (pdftex.def)             Requested size: 398.33858pt x 247.78503pt.
  [9 <./img/rysunek_4.png>]
-<./img/rysunek_5.png, id=285, 665.48625pt x 264.23718pt>
+<./img/rysunek_5.png, id=285, 462.97969pt x 164.86594pt>
 File: ./img/rysunek_5.png Graphic file (type png)
 <use ./img/rysunek_5.png>
 Package pdftex.def Info: ./img/rysunek_5.png  used on input line 109.
-(pdftex.def)             Requested size: 341.43306pt x 135.56958pt.
+(pdftex.def)             Requested size: 455.24413pt x 162.11339pt.
  [10 <./img/rysunek_5.png>]
-<./img/rysunek_6.png, id=297, 657.2053pt x 252.19218pt>
+<./img/rysunek_6.png, id=297, 460.72125pt x 213.79875pt>
 File: ./img/rysunek_6.png Graphic file (type png)
 <use ./img/rysunek_6.png>
 Package pdftex.def Info: ./img/rysunek_6.png  used on input line 120.
-(pdftex.def)             Requested size: 341.43306pt x 131.0214pt.
+(pdftex.def)             Requested size: 455.24413pt x 211.25688pt.
 ) [11 <./img/rysunek_6.png>]
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is useless on input line 95.
@@ -1209,13 +1209,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
 Here is how much of TeX's memory you used:
  16018 strings out of 480930
  237836 string characters out of 2909548
- 493206 words of memory out of 3000000
+ 493226 words of memory out of 3000000
  31335 multiletter control sequences out of 15000+200000
  635611 words of font info for 178 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,15n,55p,809b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxb.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/aorus/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (56 pages, 27515039 bytes).
+Output written on c:/Users\aorus\Documents\GitHub\master-degree-thesis-latex\all.pdf (56 pages, 27443562 bytes).
 PDF statistics:
  836 PDF objects out of 1000 (max. 8388607)
  175 named destinations out of 1000 (max. 500000)

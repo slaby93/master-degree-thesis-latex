@@ -7,7 +7,6 @@ ZROBIONE
 9) 3.4 - przerób na własną wersję
 10) 3.5 i 3.6 żeby były na całą stronę
 17) 3.27 - ścisnij
-16) 3.23 - spórbuj zmiescic
 12) 3.8 zrób większe
 11) nie na rysunku poniżej tylko zrobić refenecje
 7) zamiast ja kwidzimy to jak zostalo przedstawione
@@ -15,7 +14,8 @@ ZROBIONE
 13) 3.10 - zrób własny
 14) 3.14 - zrób tylko po polsku
 15) 3.15 - zrób przetłumacz na jezyk polski
+4) 2.5 - zrób własna tabelke n apodstawie [12] oraz 2.6
 
 
 DO ZROBIENIA
-4) 2.5 - zrób własna tabelke n apodstawie [12] oraz 2.6
+16) 3.23 - spórbuj zmiescic
